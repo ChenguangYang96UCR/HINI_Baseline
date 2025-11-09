@@ -1,0 +1,2048 @@
+Running: year=2015 → downstream_year=2016, seed=0
+Random seed set to 42
+
+==============================
+PRE-TRAINING
+==============================
+create PreTrain instance...
+pre-training...
+(T) | Epoch=001, loss=6.4106, this epoch 0.2962, total 0.2962
++++model saved ! 2015.pth
+(T) | Epoch=002, loss=6.3826, this epoch 0.0379, total 0.3341
++++model saved ! 2015.pth
+(T) | Epoch=003, loss=6.3740, this epoch 0.0363, total 0.3704
++++model saved ! 2015.pth
+(T) | Epoch=004, loss=6.3877, this epoch 0.0367, total 0.4072
+(T) | Epoch=005, loss=6.3712, this epoch 0.0321, total 0.4393
++++model saved ! 2015.pth
+(T) | Epoch=006, loss=6.3668, this epoch 0.0347, total 0.4740
++++model saved ! 2015.pth
+(T) | Epoch=007, loss=6.3751, this epoch 0.0348, total 0.5088
+(T) | Epoch=008, loss=6.3626, this epoch 0.0325, total 0.5413
++++model saved ! 2015.pth
+(T) | Epoch=009, loss=6.3621, this epoch 0.0344, total 0.5758
++++model saved ! 2015.pth
+(T) | Epoch=010, loss=6.3616, this epoch 0.0346, total 0.6104
++++model saved ! 2015.pth
+(T) | Epoch=011, loss=6.3666, this epoch 0.0341, total 0.6445
+(T) | Epoch=012, loss=6.3615, this epoch 0.0322, total 0.6768
++++model saved ! 2015.pth
+(T) | Epoch=013, loss=6.3557, this epoch 0.0344, total 0.7111
++++model saved ! 2015.pth
+(T) | Epoch=014, loss=6.3672, this epoch 0.0343, total 0.7454
+(T) | Epoch=015, loss=6.3608, this epoch 0.0320, total 0.7774
+(T) | Epoch=016, loss=6.3647, this epoch 0.0321, total 0.8095
+(T) | Epoch=017, loss=6.3559, this epoch 0.0318, total 0.8413
+(T) | Epoch=018, loss=6.3552, this epoch 0.0325, total 0.8737
++++model saved ! 2015.pth
+(T) | Epoch=019, loss=6.3548, this epoch 0.0354, total 0.9091
++++model saved ! 2015.pth
+(T) | Epoch=020, loss=6.3544, this epoch 0.0340, total 0.9432
++++model saved ! 2015.pth
+(T) | Epoch=021, loss=6.3543, this epoch 0.0343, total 0.9774
++++model saved ! 2015.pth
+(T) | Epoch=022, loss=6.3559, this epoch 0.0342, total 1.0117
+(T) | Epoch=023, loss=6.3539, this epoch 0.0319, total 1.0435
++++model saved ! 2015.pth
+(T) | Epoch=024, loss=6.3535, this epoch 0.0342, total 1.0777
++++model saved ! 2015.pth
+(T) | Epoch=025, loss=6.3558, this epoch 0.0341, total 1.1118
+(T) | Epoch=026, loss=6.3545, this epoch 0.0318, total 1.1437
+(T) | Epoch=027, loss=6.3551, this epoch 0.0318, total 1.1755
+(T) | Epoch=028, loss=6.3527, this epoch 0.0315, total 1.2070
++++model saved ! 2015.pth
+(T) | Epoch=029, loss=6.3541, this epoch 0.0353, total 1.2423
+(T) | Epoch=030, loss=6.3523, this epoch 0.0320, total 1.2744
++++model saved ! 2015.pth
+(T) | Epoch=031, loss=6.3535, this epoch 0.0343, total 1.3086
+(T) | Epoch=032, loss=6.3522, this epoch 0.0321, total 1.3408
++++model saved ! 2015.pth
+(T) | Epoch=033, loss=6.3535, this epoch 0.0345, total 1.3753
+(T) | Epoch=034, loss=6.3556, this epoch 0.0322, total 1.4075
+(T) | Epoch=035, loss=6.3530, this epoch 0.0321, total 1.4395
+(T) | Epoch=036, loss=6.3526, this epoch 0.0319, total 1.4715
+(T) | Epoch=037, loss=6.3541, this epoch 0.0322, total 1.5037
+(T) | Epoch=038, loss=6.3529, this epoch 0.0319, total 1.5356
+(T) | Epoch=039, loss=6.3550, this epoch 0.0318, total 1.5674
+(T) | Epoch=040, loss=6.3527, this epoch 0.0315, total 1.5989
+(T) | Epoch=041, loss=6.3527, this epoch 0.0318, total 1.6306
+(T) | Epoch=042, loss=6.3526, this epoch 0.0316, total 1.6623
+(T) | Epoch=043, loss=6.3521, this epoch 0.0320, total 1.6943
++++model saved ! 2015.pth
+(T) | Epoch=044, loss=6.3527, this epoch 0.0339, total 1.7281
+(T) | Epoch=045, loss=6.3527, this epoch 0.0320, total 1.7602
+(T) | Epoch=046, loss=6.3531, this epoch 0.0320, total 1.7922
+(T) | Epoch=047, loss=6.3528, this epoch 0.0317, total 1.8239
+(T) | Epoch=048, loss=6.3525, this epoch 0.0317, total 1.8556
+(T) | Epoch=049, loss=6.3525, this epoch 0.0324, total 1.8880
+(T) | Epoch=050, loss=6.3525, this epoch 0.0320, total 1.9200
+(T) | Epoch=051, loss=6.3525, this epoch 0.0322, total 1.9522
+(T) | Epoch=052, loss=6.3531, this epoch 0.0316, total 1.9838
+(T) | Epoch=053, loss=6.3523, this epoch 0.0321, total 2.0159
+(T) | Epoch=054, loss=6.3524, this epoch 0.0319, total 2.0478
+(T) | Epoch=055, loss=6.3532, this epoch 0.0322, total 2.0801
+(T) | Epoch=056, loss=6.3526, this epoch 0.0317, total 2.1118
+(T) | Epoch=057, loss=6.3530, this epoch 0.0321, total 2.1438
+(T) | Epoch=058, loss=6.3536, this epoch 0.0320, total 2.1758
+(T) | Epoch=059, loss=6.3523, this epoch 0.0317, total 2.2075
+(T) | Epoch=060, loss=6.3521, this epoch 0.0319, total 2.2394
++++model saved ! 2015.pth
+(T) | Epoch=061, loss=6.3529, this epoch 0.0339, total 2.2733
+(T) | Epoch=062, loss=6.3528, this epoch 0.0320, total 2.3054
+(T) | Epoch=063, loss=6.3530, this epoch 0.0317, total 2.3371
+(T) | Epoch=064, loss=6.3521, this epoch 0.0315, total 2.3686
+(T) | Epoch=065, loss=6.3527, this epoch 0.0324, total 2.4009
+(T) | Epoch=066, loss=6.3521, this epoch 0.0317, total 2.4326
+(T) | Epoch=067, loss=6.3528, this epoch 0.0322, total 2.4648
+(T) | Epoch=068, loss=6.3520, this epoch 0.0318, total 2.4966
++++model saved ! 2015.pth
+(T) | Epoch=069, loss=6.3524, this epoch 0.0341, total 2.5307
+(T) | Epoch=070, loss=6.3523, this epoch 0.0319, total 2.5626
+(T) | Epoch=071, loss=6.3523, this epoch 0.0320, total 2.5946
+(T) | Epoch=072, loss=6.3518, this epoch 0.0317, total 2.6264
++++model saved ! 2015.pth
+(T) | Epoch=073, loss=6.3523, this epoch 0.0354, total 2.6618
+(T) | Epoch=074, loss=6.3519, this epoch 0.0319, total 2.6937
+(T) | Epoch=075, loss=6.3518, this epoch 0.0315, total 2.7252
++++model saved ! 2015.pth
+(T) | Epoch=076, loss=6.3517, this epoch 0.0344, total 2.7596
++++model saved ! 2015.pth
+(T) | Epoch=077, loss=6.3528, this epoch 0.0342, total 2.7938
+(T) | Epoch=078, loss=6.3522, this epoch 0.0320, total 2.8258
+(T) | Epoch=079, loss=6.3524, this epoch 0.0322, total 2.8580
+(T) | Epoch=080, loss=6.3519, this epoch 0.0320, total 2.8901
+(T) | Epoch=081, loss=6.3519, this epoch 0.0319, total 2.9220
+(T) | Epoch=082, loss=6.3520, this epoch 0.0315, total 2.9535
+(T) | Epoch=083, loss=6.3519, this epoch 0.0321, total 2.9856
+(T) | Epoch=084, loss=6.3520, this epoch 0.0316, total 3.0172
+(T) | Epoch=085, loss=6.3518, this epoch 0.0320, total 3.0492
+(T) | Epoch=086, loss=6.3520, this epoch 0.0319, total 3.0811
+(T) | Epoch=087, loss=6.3518, this epoch 0.0316, total 3.1127
+(T) | Epoch=088, loss=6.3520, this epoch 0.0320, total 3.1448
+(T) | Epoch=089, loss=6.3518, this epoch 0.0320, total 3.1768
+(T) | Epoch=090, loss=6.3515, this epoch 0.0316, total 3.2084
++++model saved ! 2015.pth
+(T) | Epoch=091, loss=6.3517, this epoch 0.0345, total 3.2429
+(T) | Epoch=092, loss=6.3517, this epoch 0.0318, total 3.2747
+(T) | Epoch=093, loss=6.3514, this epoch 0.0320, total 3.3067
++++model saved ! 2015.pth
+(T) | Epoch=094, loss=6.3514, this epoch 0.0342, total 3.3409
++++model saved ! 2015.pth
+(T) | Epoch=095, loss=6.3514, this epoch 0.0344, total 3.3753
++++model saved ! 2015.pth
+(T) | Epoch=096, loss=6.3531, this epoch 0.0341, total 3.4095
+(T) | Epoch=097, loss=6.3523, this epoch 0.0319, total 3.4414
+(T) | Epoch=098, loss=6.3519, this epoch 0.0316, total 3.4730
+(T) | Epoch=099, loss=6.3518, this epoch 0.0321, total 3.5051
+(T) | Epoch=100, loss=6.3520, this epoch 0.0321, total 3.5372
+(T) | Epoch=101, loss=6.3517, this epoch 0.0319, total 3.5691
+(T) | Epoch=102, loss=6.3516, this epoch 0.0316, total 3.6007
+(T) | Epoch=103, loss=6.3517, this epoch 0.0318, total 3.6325
+(T) | Epoch=104, loss=6.3515, this epoch 0.0318, total 3.6643
+(T) | Epoch=105, loss=6.3516, this epoch 0.0317, total 3.6960
+(T) | Epoch=106, loss=6.3517, this epoch 0.0321, total 3.7281
+(T) | Epoch=107, loss=6.3513, this epoch 0.0317, total 3.7598
++++model saved ! 2015.pth
+(T) | Epoch=108, loss=6.3518, this epoch 0.0343, total 3.7941
+(T) | Epoch=109, loss=6.3515, this epoch 0.0318, total 3.8259
+(T) | Epoch=110, loss=6.3517, this epoch 0.0320, total 3.8579
+(T) | Epoch=111, loss=6.3518, this epoch 0.0317, total 3.8897
+(T) | Epoch=112, loss=6.3517, this epoch 0.0322, total 3.9219
+(T) | Epoch=113, loss=6.3517, this epoch 0.0317, total 3.9536
+(T) | Epoch=114, loss=6.3514, this epoch 0.0317, total 3.9853
+(T) | Epoch=115, loss=6.3518, this epoch 0.0322, total 4.0175
+(T) | Epoch=116, loss=6.3527, this epoch 0.0319, total 4.0494
+(T) | Epoch=117, loss=6.3514, this epoch 0.0322, total 4.0816
+(T) | Epoch=118, loss=6.3515, this epoch 0.0319, total 4.1135
+(T) | Epoch=119, loss=6.3517, this epoch 0.0321, total 4.1456
+(T) | Epoch=120, loss=6.3517, this epoch 0.0322, total 4.1778
+(T) | Epoch=121, loss=6.3525, this epoch 0.0317, total 4.2095
+(T) | Epoch=122, loss=6.3514, this epoch 0.0322, total 4.2418
+(T) | Epoch=123, loss=6.3514, this epoch 0.0319, total 4.2737
+(T) | Epoch=124, loss=6.3514, this epoch 0.0318, total 4.3054
+(T) | Epoch=125, loss=6.3516, this epoch 0.0319, total 4.3373
+(T) | Epoch=126, loss=6.3515, this epoch 0.0321, total 4.3695
+(T) | Epoch=127, loss=6.3519, this epoch 0.0325, total 4.4019
+(T) | Epoch=128, loss=6.3516, this epoch 0.0321, total 4.4340
+(T) | Epoch=129, loss=6.3517, this epoch 0.0318, total 4.4658
+(T) | Epoch=130, loss=6.3514, this epoch 0.0319, total 4.4978
+(T) | Epoch=131, loss=6.3515, this epoch 0.0321, total 4.5299
+(T) | Epoch=132, loss=6.3514, this epoch 0.0318, total 4.5617
+(T) | Epoch=133, loss=6.3516, this epoch 0.0319, total 4.5936
+(T) | Epoch=134, loss=6.3519, this epoch 0.0322, total 4.6258
+(T) | Epoch=135, loss=6.3515, this epoch 0.0317, total 4.6575
+(T) | Epoch=136, loss=6.3518, this epoch 0.0316, total 4.6892
+(T) | Epoch=137, loss=6.3513, this epoch 0.0320, total 4.7211
+(T) | Epoch=138, loss=6.3516, this epoch 0.0317, total 4.7528
+(T) | Epoch=139, loss=6.3514, this epoch 0.0323, total 4.7851
+(T) | Epoch=140, loss=6.3512, this epoch 0.0320, total 4.8172
++++model saved ! 2015.pth
+(T) | Epoch=141, loss=6.3512, this epoch 0.0342, total 4.8514
+(T) | Epoch=142, loss=6.3515, this epoch 0.0321, total 4.8835
+(T) | Epoch=143, loss=6.3513, this epoch 0.0321, total 4.9156
+(T) | Epoch=144, loss=6.3516, this epoch 0.0319, total 4.9475
+(T) | Epoch=145, loss=6.3513, this epoch 0.0320, total 4.9794
+(T) | Epoch=146, loss=6.3514, this epoch 0.0320, total 5.0114
+(T) | Epoch=147, loss=6.3512, this epoch 0.0319, total 5.0433
+(T) | Epoch=148, loss=6.3513, this epoch 0.0316, total 5.0748
+(T) | Epoch=149, loss=6.3518, this epoch 0.0318, total 5.1066
+(T) | Epoch=150, loss=6.3517, this epoch 0.0317, total 5.1384
+(T) | Epoch=151, loss=6.3512, this epoch 0.0316, total 5.1700
+(T) | Epoch=152, loss=6.3516, this epoch 0.0318, total 5.2018
+(T) | Epoch=153, loss=6.3514, this epoch 0.0317, total 5.2335
+(T) | Epoch=154, loss=6.3515, this epoch 0.0317, total 5.2652
+(T) | Epoch=155, loss=6.3514, this epoch 0.0317, total 5.2969
+(T) | Epoch=156, loss=6.3514, this epoch 0.0321, total 5.3289
+(T) | Epoch=157, loss=6.3514, this epoch 0.0321, total 5.3610
+(T) | Epoch=158, loss=6.3514, this epoch 0.0323, total 5.3933
+(T) | Epoch=159, loss=6.3513, this epoch 0.0317, total 5.4251
+(T) | Epoch=160, loss=6.3514, this epoch 0.0323, total 5.4574
+(T) | Epoch=161, loss=6.3516, this epoch 0.0319, total 5.4892
+(T) | Epoch=162, loss=6.3514, this epoch 0.0316, total 5.5209
+(T) | Epoch=163, loss=6.3515, this epoch 0.0318, total 5.5527
+(T) | Epoch=164, loss=6.3522, this epoch 0.0317, total 5.5843
+(T) | Epoch=165, loss=6.3515, this epoch 0.0324, total 5.6167
+(T) | Epoch=166, loss=6.3515, this epoch 0.0321, total 5.6488
+(T) | Epoch=167, loss=6.3513, this epoch 0.0320, total 5.6808
+(T) | Epoch=168, loss=6.3511, this epoch 0.0322, total 5.7130
++++model saved ! 2015.pth
+(T) | Epoch=169, loss=6.3515, this epoch 0.0359, total 5.7489
+(T) | Epoch=170, loss=6.3515, this epoch 0.0320, total 5.7808
+(T) | Epoch=171, loss=6.3513, this epoch 0.0320, total 5.8128
+(T) | Epoch=172, loss=6.3517, this epoch 0.0319, total 5.8447
+(T) | Epoch=173, loss=6.3512, this epoch 0.0322, total 5.8769
+(T) | Epoch=174, loss=6.3514, this epoch 0.0321, total 5.9090
+(T) | Epoch=175, loss=6.3512, this epoch 0.0320, total 5.9410
+(T) | Epoch=176, loss=6.3514, this epoch 0.0319, total 5.9729
+(T) | Epoch=177, loss=6.3511, this epoch 0.0320, total 6.0048
++++model saved ! 2015.pth
+(T) | Epoch=178, loss=6.3512, this epoch 0.0342, total 6.0390
+(T) | Epoch=179, loss=6.3515, this epoch 0.0321, total 6.0711
+(T) | Epoch=180, loss=6.3511, this epoch 0.0318, total 6.1029
+(T) | Epoch=181, loss=6.3512, this epoch 0.0317, total 6.1347
+(T) | Epoch=182, loss=6.3516, this epoch 0.0320, total 6.1667
+(T) | Epoch=183, loss=6.3516, this epoch 0.0317, total 6.1984
+(T) | Epoch=184, loss=6.3515, this epoch 0.0318, total 6.2302
+(T) | Epoch=185, loss=6.3511, this epoch 0.0317, total 6.2619
++++model saved ! 2015.pth
+(T) | Epoch=186, loss=6.3513, this epoch 0.0344, total 6.2963
+(T) | Epoch=187, loss=6.3514, this epoch 0.0319, total 6.3282
+(T) | Epoch=188, loss=6.3516, this epoch 0.0319, total 6.3601
+(T) | Epoch=189, loss=6.3513, this epoch 0.0320, total 6.3921
+(T) | Epoch=190, loss=6.3512, this epoch 0.0322, total 6.4243
+(T) | Epoch=191, loss=6.3515, this epoch 0.0393, total 6.4636
+(T) | Epoch=192, loss=6.3511, this epoch 0.0343, total 6.4979
+(T) | Epoch=193, loss=6.3513, this epoch 0.0346, total 6.5324
+(T) | Epoch=194, loss=6.3513, this epoch 0.0361, total 6.5685
+(T) | Epoch=195, loss=6.3511, this epoch 0.0342, total 6.6028
+(T) | Epoch=196, loss=6.3515, this epoch 0.0340, total 6.6367
+(T) | Epoch=197, loss=6.3513, this epoch 0.0339, total 6.6706
+(T) | Epoch=198, loss=6.3510, this epoch 0.0344, total 6.7050
++++model saved ! 2015.pth
+(T) | Epoch=199, loss=6.3515, this epoch 0.0408, total 6.7458
+(T) | Epoch=200, loss=6.3515, this epoch 0.0360, total 6.7819
+(T) | Epoch=201, loss=6.3512, this epoch 0.0348, total 6.8167
+(T) | Epoch=202, loss=6.3512, this epoch 0.0349, total 6.8516
+(T) | Epoch=203, loss=6.3512, this epoch 0.0347, total 6.8863
+(T) | Epoch=204, loss=6.3512, this epoch 0.0357, total 6.9220
+(T) | Epoch=205, loss=6.3511, this epoch 0.0358, total 6.9578
+(T) | Epoch=206, loss=6.3512, this epoch 0.0351, total 6.9929
+(T) | Epoch=207, loss=6.3514, this epoch 0.0355, total 7.0284
+(T) | Epoch=208, loss=6.3515, this epoch 0.0350, total 7.0634
+(T) | Epoch=209, loss=6.3513, this epoch 0.0349, total 7.0982
+(T) | Epoch=210, loss=6.3514, this epoch 0.0344, total 7.1327
+(T) | Epoch=211, loss=6.3513, this epoch 0.0371, total 7.1698
+(T) | Epoch=212, loss=6.3509, this epoch 0.0359, total 7.2057
++++model saved ! 2015.pth
+(T) | Epoch=213, loss=6.3512, this epoch 0.0388, total 7.2444
+(T) | Epoch=214, loss=6.3511, this epoch 0.0350, total 7.2794
+(T) | Epoch=215, loss=6.3511, this epoch 0.0349, total 7.3143
+(T) | Epoch=216, loss=6.3513, this epoch 0.0337, total 7.3480
+(T) | Epoch=217, loss=6.3513, this epoch 0.0348, total 7.3828
+(T) | Epoch=218, loss=6.3511, this epoch 0.0352, total 7.4179
+(T) | Epoch=219, loss=6.3510, this epoch 0.0356, total 7.4535
+(T) | Epoch=220, loss=6.3511, this epoch 0.0342, total 7.4877
+(T) | Epoch=221, loss=6.3511, this epoch 0.0345, total 7.5222
+(T) | Epoch=222, loss=6.3512, this epoch 0.0354, total 7.5576
+(T) | Epoch=223, loss=6.3509, this epoch 0.0369, total 7.5945
+(T) | Epoch=224, loss=6.3513, this epoch 0.0355, total 7.6300
+(T) | Epoch=225, loss=6.3511, this epoch 0.0318, total 7.6617
+(T) | Epoch=226, loss=6.3511, this epoch 0.0320, total 7.6938
+(T) | Epoch=227, loss=6.3510, this epoch 0.0317, total 7.7255
+(T) | Epoch=228, loss=6.3510, this epoch 0.0316, total 7.7571
+(T) | Epoch=229, loss=6.3509, this epoch 0.0322, total 7.7894
+(T) | Epoch=230, loss=6.3511, this epoch 0.0319, total 7.8213
+(T) | Epoch=231, loss=6.3513, this epoch 0.0320, total 7.8533
+(T) | Epoch=232, loss=6.3510, this epoch 0.0320, total 7.8853
+(T) | Epoch=233, loss=6.3513, this epoch 0.0318, total 7.9172
+(T) | Epoch=234, loss=6.3513, this epoch 0.0319, total 7.9491
+(T) | Epoch=235, loss=6.3509, this epoch 0.0317, total 7.9808
++++model saved ! 2015.pth
+(T) | Epoch=236, loss=6.3510, this epoch 0.0352, total 8.0160
+(T) | Epoch=237, loss=6.3509, this epoch 0.0324, total 8.0483
+(T) | Epoch=238, loss=6.3516, this epoch 0.0318, total 8.0802
+(T) | Epoch=239, loss=6.3517, this epoch 0.0318, total 8.1120
+(T) | Epoch=240, loss=6.3510, this epoch 0.0319, total 8.1439
+(T) | Epoch=241, loss=6.3509, this epoch 0.0319, total 8.1758
+(T) | Epoch=242, loss=6.3513, this epoch 0.0318, total 8.2076
+(T) | Epoch=243, loss=6.3510, this epoch 0.0322, total 8.2397
+(T) | Epoch=244, loss=6.3512, this epoch 0.0317, total 8.2715
+(T) | Epoch=245, loss=6.3511, this epoch 0.0320, total 8.3035
+(T) | Epoch=246, loss=6.3511, this epoch 0.0321, total 8.3356
+(T) | Epoch=247, loss=6.3509, this epoch 0.0318, total 8.3674
++++model saved ! 2015.pth
+(T) | Epoch=248, loss=6.3510, this epoch 0.0370, total 8.4044
+(T) | Epoch=249, loss=6.3510, this epoch 0.0317, total 8.4360
+(T) | Epoch=250, loss=6.3509, this epoch 0.0317, total 8.4677
+(T) | Epoch=251, loss=6.3512, this epoch 0.0321, total 8.4998
+(T) | Epoch=252, loss=6.3508, this epoch 0.0319, total 8.5318
++++model saved ! 2015.pth
+(T) | Epoch=253, loss=6.3510, this epoch 0.0357, total 8.5674
+(T) | Epoch=254, loss=6.3510, this epoch 0.0318, total 8.5992
+(T) | Epoch=255, loss=6.3511, this epoch 0.0318, total 8.6311
+(T) | Epoch=256, loss=6.3510, this epoch 0.0323, total 8.6634
+(T) | Epoch=257, loss=6.3508, this epoch 0.0321, total 8.6955
++++model saved ! 2015.pth
+(T) | Epoch=258, loss=6.3512, this epoch 0.0356, total 8.7311
+(T) | Epoch=259, loss=6.3511, this epoch 0.0316, total 8.7628
+(T) | Epoch=260, loss=6.3508, this epoch 0.0320, total 8.7948
++++model saved ! 2015.pth
+(T) | Epoch=261, loss=6.3511, this epoch 0.0346, total 8.8294
+(T) | Epoch=262, loss=6.3508, this epoch 0.0320, total 8.8614
+(T) | Epoch=263, loss=6.3510, this epoch 0.0319, total 8.8933
+(T) | Epoch=264, loss=6.3508, this epoch 0.0320, total 8.9253
+(T) | Epoch=265, loss=6.3507, this epoch 0.0322, total 8.9574
++++model saved ! 2015.pth
+(T) | Epoch=266, loss=6.3511, this epoch 0.0340, total 8.9914
+(T) | Epoch=267, loss=6.3507, this epoch 0.0319, total 9.0233
++++model saved ! 2015.pth
+(T) | Epoch=268, loss=6.3509, this epoch 0.0344, total 9.0577
+(T) | Epoch=269, loss=6.3507, this epoch 0.0320, total 9.0897
+(T) | Epoch=270, loss=6.3509, this epoch 0.0320, total 9.1217
+(T) | Epoch=271, loss=6.3508, this epoch 0.0321, total 9.1538
+(T) | Epoch=272, loss=6.3506, this epoch 0.0320, total 9.1858
++++model saved ! 2015.pth
+(T) | Epoch=273, loss=6.3507, this epoch 0.0341, total 9.2200
+(T) | Epoch=274, loss=6.3506, this epoch 0.0317, total 9.2517
+(T) | Epoch=275, loss=6.3506, this epoch 0.0323, total 9.2840
+(T) | Epoch=276, loss=6.3507, this epoch 0.0319, total 9.3159
+(T) | Epoch=277, loss=6.3507, this epoch 0.0322, total 9.3481
+(T) | Epoch=278, loss=6.3505, this epoch 0.0315, total 9.3797
++++model saved ! 2015.pth
+(T) | Epoch=279, loss=6.3508, this epoch 0.0353, total 9.4150
+(T) | Epoch=280, loss=6.3505, this epoch 0.0318, total 9.4468
+(T) | Epoch=281, loss=6.3505, this epoch 0.0316, total 9.4784
+(T) | Epoch=282, loss=6.3506, this epoch 0.0320, total 9.5104
+(T) | Epoch=283, loss=6.3506, this epoch 0.0322, total 9.5426
+(T) | Epoch=284, loss=6.3504, this epoch 0.0316, total 9.5742
++++model saved ! 2015.pth
+(T) | Epoch=285, loss=6.3503, this epoch 0.0344, total 9.6086
++++model saved ! 2015.pth
+(T) | Epoch=286, loss=6.3504, this epoch 0.0343, total 9.6429
+(T) | Epoch=287, loss=6.3501, this epoch 0.0319, total 9.6748
++++model saved ! 2015.pth
+(T) | Epoch=288, loss=6.3501, this epoch 0.0344, total 9.7092
++++model saved ! 2015.pth
+(T) | Epoch=289, loss=6.3501, this epoch 0.0344, total 9.7436
++++model saved ! 2015.pth
+(T) | Epoch=290, loss=6.3501, this epoch 0.0345, total 9.7781
+(T) | Epoch=291, loss=6.3499, this epoch 0.0320, total 9.8101
++++model saved ! 2015.pth
+(T) | Epoch=292, loss=6.3500, this epoch 0.0342, total 9.8443
+(T) | Epoch=293, loss=6.3499, this epoch 0.0322, total 9.8764
++++model saved ! 2015.pth
+(T) | Epoch=294, loss=6.3497, this epoch 0.0343, total 9.9108
++++model saved ! 2015.pth
+(T) | Epoch=295, loss=6.3498, this epoch 0.0341, total 9.9449
+(T) | Epoch=296, loss=6.3496, this epoch 0.0319, total 9.9768
++++model saved ! 2015.pth
+(T) | Epoch=297, loss=6.3495, this epoch 0.0343, total 10.0111
++++model saved ! 2015.pth
+(T) | Epoch=298, loss=6.3496, this epoch 0.0344, total 10.0456
+(T) | Epoch=299, loss=6.3497, this epoch 0.0320, total 10.0775
+(T) | Epoch=300, loss=6.3493, this epoch 0.0316, total 10.1092
++++model saved ! 2015.pth
+(T) | Epoch=301, loss=6.3487, this epoch 0.0344, total 10.1436
++++model saved ! 2015.pth
+(T) | Epoch=302, loss=6.3492, this epoch 0.0340, total 10.1776
+(T) | Epoch=303, loss=6.3484, this epoch 0.0319, total 10.2095
++++model saved ! 2015.pth
+(T) | Epoch=304, loss=6.3487, this epoch 0.0344, total 10.2439
+(T) | Epoch=305, loss=6.3475, this epoch 0.0323, total 10.2762
++++model saved ! 2015.pth
+(T) | Epoch=306, loss=6.3481, this epoch 0.0341, total 10.3103
+(T) | Epoch=307, loss=6.3470, this epoch 0.0318, total 10.3422
++++model saved ! 2015.pth
+(T) | Epoch=308, loss=6.3471, this epoch 0.0345, total 10.3767
+(T) | Epoch=309, loss=6.3454, this epoch 0.0322, total 10.4089
++++model saved ! 2015.pth
+(T) | Epoch=310, loss=6.3455, this epoch 0.0345, total 10.4434
+(T) | Epoch=311, loss=6.3446, this epoch 0.0319, total 10.4753
++++model saved ! 2015.pth
+(T) | Epoch=312, loss=6.3436, this epoch 0.0342, total 10.5095
++++model saved ! 2015.pth
+(T) | Epoch=313, loss=6.3430, this epoch 0.0347, total 10.5442
++++model saved ! 2015.pth
+(T) | Epoch=314, loss=6.3401, this epoch 0.0343, total 10.5785
++++model saved ! 2015.pth
+(T) | Epoch=315, loss=6.3386, this epoch 0.0344, total 10.6129
++++model saved ! 2015.pth
+(T) | Epoch=316, loss=6.3358, this epoch 0.0343, total 10.6472
++++model saved ! 2015.pth
+(T) | Epoch=317, loss=6.3314, this epoch 0.0344, total 10.6816
++++model saved ! 2015.pth
+(T) | Epoch=318, loss=6.3269, this epoch 0.0340, total 10.7156
++++model saved ! 2015.pth
+(T) | Epoch=319, loss=6.3153, this epoch 0.0344, total 10.7500
++++model saved ! 2015.pth
+(T) | Epoch=320, loss=6.3054, this epoch 0.0347, total 10.7847
++++model saved ! 2015.pth
+(T) | Epoch=321, loss=6.2923, this epoch 0.0346, total 10.8193
++++model saved ! 2015.pth
+(T) | Epoch=322, loss=6.2679, this epoch 0.0342, total 10.8535
++++model saved ! 2015.pth
+(T) | Epoch=323, loss=6.2350, this epoch 0.0341, total 10.8877
++++model saved ! 2015.pth
+(T) | Epoch=324, loss=6.1811, this epoch 0.0343, total 10.9220
++++model saved ! 2015.pth
+(T) | Epoch=325, loss=6.1223, this epoch 0.0341, total 10.9561
++++model saved ! 2015.pth
+(T) | Epoch=326, loss=6.0537, this epoch 0.0340, total 10.9902
++++model saved ! 2015.pth
+(T) | Epoch=327, loss=5.9397, this epoch 0.0343, total 11.0245
++++model saved ! 2015.pth
+(T) | Epoch=328, loss=5.8229, this epoch 0.0344, total 11.0588
++++model saved ! 2015.pth
+(T) | Epoch=329, loss=5.7436, this epoch 0.0344, total 11.0933
++++model saved ! 2015.pth
+(T) | Epoch=330, loss=5.8730, this epoch 0.0341, total 11.1274
+(T) | Epoch=331, loss=5.8660, this epoch 0.0321, total 11.1595
+(T) | Epoch=332, loss=5.7268, this epoch 0.0321, total 11.1916
++++model saved ! 2015.pth
+(T) | Epoch=333, loss=6.5533, this epoch 0.0344, total 11.2260
+(T) | Epoch=334, loss=5.7881, this epoch 0.0320, total 11.2580
+(T) | Epoch=335, loss=5.7279, this epoch 0.0321, total 11.2901
+(T) | Epoch=336, loss=5.7077, this epoch 0.0314, total 11.3215
++++model saved ! 2015.pth
+(T) | Epoch=337, loss=5.7292, this epoch 0.0359, total 11.3575
+(T) | Epoch=338, loss=5.7176, this epoch 0.0320, total 11.3894
+(T) | Epoch=339, loss=5.7252, this epoch 0.0321, total 11.4215
+(T) | Epoch=340, loss=5.7787, this epoch 0.0320, total 11.4535
+(T) | Epoch=341, loss=5.6987, this epoch 0.0319, total 11.4853
++++model saved ! 2015.pth
+(T) | Epoch=342, loss=5.7908, this epoch 0.0352, total 11.5205
+(T) | Epoch=343, loss=5.7277, this epoch 0.0319, total 11.5524
+(T) | Epoch=344, loss=5.6856, this epoch 0.0316, total 11.5840
++++model saved ! 2015.pth
+(T) | Epoch=345, loss=5.6922, this epoch 0.0390, total 11.6229
+(T) | Epoch=346, loss=5.6787, this epoch 0.0345, total 11.6575
++++model saved ! 2015.pth
+(T) | Epoch=347, loss=5.7009, this epoch 0.0379, total 11.6954
+(T) | Epoch=348, loss=5.7159, this epoch 0.0357, total 11.7311
+(T) | Epoch=349, loss=5.7077, this epoch 0.0349, total 11.7659
+(T) | Epoch=350, loss=5.6646, this epoch 0.0345, total 11.8005
++++model saved ! 2015.pth
+(T) | Epoch=351, loss=5.6621, this epoch 0.0349, total 11.8354
++++model saved ! 2015.pth
+(T) | Epoch=352, loss=5.7667, this epoch 0.0345, total 11.8699
+(T) | Epoch=353, loss=5.6724, this epoch 0.0324, total 11.9023
+(T) | Epoch=354, loss=5.7083, this epoch 0.0318, total 11.9341
+(T) | Epoch=355, loss=5.6604, this epoch 0.0318, total 11.9659
++++model saved ! 2015.pth
+(T) | Epoch=356, loss=5.7055, this epoch 0.0361, total 12.0021
+(T) | Epoch=357, loss=5.6741, this epoch 0.0323, total 12.0344
+(T) | Epoch=358, loss=5.6842, this epoch 0.0322, total 12.0666
+(T) | Epoch=359, loss=5.6918, this epoch 0.0321, total 12.0987
+(T) | Epoch=360, loss=5.6949, this epoch 0.0321, total 12.1308
+(T) | Epoch=361, loss=5.8252, this epoch 0.0319, total 12.1627
+(T) | Epoch=362, loss=5.6978, this epoch 0.0325, total 12.1951
+(T) | Epoch=363, loss=5.7159, this epoch 0.0321, total 12.2272
+(T) | Epoch=364, loss=5.8784, this epoch 0.0320, total 12.2592
+(T) | Epoch=365, loss=5.8230, this epoch 0.0320, total 12.2912
+(T) | Epoch=366, loss=5.9978, this epoch 0.0318, total 12.3230
+(T) | Epoch=367, loss=5.6928, this epoch 0.0322, total 12.3551
+(T) | Epoch=368, loss=5.7134, this epoch 0.0332, total 12.3883
+(T) | Epoch=369, loss=5.7544, this epoch 0.0319, total 12.4202
+(T) | Epoch=370, loss=5.7785, this epoch 0.0319, total 12.4521
+(T) | Epoch=371, loss=5.7213, this epoch 0.0319, total 12.4840
+(T) | Epoch=372, loss=5.7511, this epoch 0.0323, total 12.5163
+(T) | Epoch=373, loss=5.7254, this epoch 0.0321, total 12.5484
+(T) | Epoch=374, loss=5.7416, this epoch 0.0315, total 12.5799
+(T) | Epoch=375, loss=5.6866, this epoch 0.0320, total 12.6119
+(T) | Epoch=376, loss=5.6758, this epoch 0.0316, total 12.6434
+(T) | Epoch=377, loss=5.7584, this epoch 0.0319, total 12.6753
+(T) | Epoch=378, loss=5.6620, this epoch 0.0323, total 12.7076
+(T) | Epoch=379, loss=5.6800, this epoch 0.0319, total 12.7395
+(T) | Epoch=380, loss=5.7039, this epoch 0.0318, total 12.7713
+(T) | Epoch=381, loss=5.7052, this epoch 0.0322, total 12.8035
+(T) | Epoch=382, loss=5.6552, this epoch 0.0318, total 12.8353
++++model saved ! 2015.pth
+(T) | Epoch=383, loss=5.6631, this epoch 0.0360, total 12.8713
+(T) | Epoch=384, loss=5.6351, this epoch 0.0321, total 12.9034
++++model saved ! 2015.pth
+(T) | Epoch=385, loss=5.6238, this epoch 0.0341, total 12.9375
++++model saved ! 2015.pth
+(T) | Epoch=386, loss=5.7229, this epoch 0.0346, total 12.9721
+(T) | Epoch=387, loss=5.6496, this epoch 0.0320, total 13.0041
+(T) | Epoch=388, loss=6.1392, this epoch 0.0318, total 13.0358
+(T) | Epoch=389, loss=5.6634, this epoch 0.0319, total 13.0678
+(T) | Epoch=390, loss=5.7063, this epoch 0.0320, total 13.0998
+(T) | Epoch=391, loss=5.6987, this epoch 0.0314, total 13.1312
+(T) | Epoch=392, loss=5.7294, this epoch 0.0321, total 13.1633
+(T) | Epoch=393, loss=5.6754, this epoch 0.0319, total 13.1952
+(T) | Epoch=394, loss=5.7814, this epoch 0.0321, total 13.2273
+(T) | Epoch=395, loss=5.8021, this epoch 0.0320, total 13.2592
+(T) | Epoch=396, loss=5.8031, this epoch 0.0322, total 13.2914
+(T) | Epoch=397, loss=5.6319, this epoch 0.0317, total 13.3231
+(T) | Epoch=398, loss=5.7853, this epoch 0.0323, total 13.3554
+(T) | Epoch=399, loss=5.6296, this epoch 0.0316, total 13.3871
+(T) | Epoch=400, loss=5.6490, this epoch 0.0321, total 13.4192
+(T) | Epoch=401, loss=5.7986, this epoch 0.0320, total 13.4512
+(T) | Epoch=402, loss=5.6431, this epoch 0.0316, total 13.4828
+(T) | Epoch=403, loss=5.6802, this epoch 0.0317, total 13.5145
+(T) | Epoch=404, loss=5.6245, this epoch 0.0317, total 13.5462
+(T) | Epoch=405, loss=5.7746, this epoch 0.0318, total 13.5780
+(T) | Epoch=406, loss=5.6705, this epoch 0.0320, total 13.6101
+(T) | Epoch=407, loss=5.6289, this epoch 0.0317, total 13.6418
+(T) | Epoch=408, loss=5.7029, this epoch 0.0318, total 13.6736
+(T) | Epoch=409, loss=5.6253, this epoch 0.0323, total 13.7059
+(T) | Epoch=410, loss=5.6343, this epoch 0.0318, total 13.7376
+(T) | Epoch=411, loss=5.6245, this epoch 0.0321, total 13.7698
+(T) | Epoch=412, loss=5.6564, this epoch 0.0319, total 13.8016
+(T) | Epoch=413, loss=5.6143, this epoch 0.0319, total 13.8336
++++model saved ! 2015.pth
+(T) | Epoch=414, loss=5.6432, this epoch 0.0390, total 13.8725
+(T) | Epoch=415, loss=5.6183, this epoch 0.0319, total 13.9044
+(T) | Epoch=416, loss=5.6235, this epoch 0.0322, total 13.9366
+(T) | Epoch=417, loss=5.6092, this epoch 0.0317, total 13.9683
++++model saved ! 2015.pth
+(T) | Epoch=418, loss=5.6010, this epoch 0.0356, total 14.0039
++++model saved ! 2015.pth
+(T) | Epoch=419, loss=5.6307, this epoch 0.0345, total 14.0384
+(T) | Epoch=420, loss=5.6201, this epoch 0.0321, total 14.0704
+(T) | Epoch=421, loss=5.6316, this epoch 0.0320, total 14.1025
+(T) | Epoch=422, loss=5.6100, this epoch 0.0318, total 14.1343
+(T) | Epoch=423, loss=5.6114, this epoch 0.0321, total 14.1664
+(T) | Epoch=424, loss=5.5928, this epoch 0.0320, total 14.1984
++++model saved ! 2015.pth
+(T) | Epoch=425, loss=5.5823, this epoch 0.0353, total 14.2336
++++model saved ! 2015.pth
+(T) | Epoch=426, loss=5.5938, this epoch 0.0394, total 14.2730
+(T) | Epoch=427, loss=5.5967, this epoch 0.0375, total 14.3105
+(T) | Epoch=428, loss=5.8263, this epoch 0.0362, total 14.3468
+(T) | Epoch=429, loss=5.6086, this epoch 0.0357, total 14.3824
+(T) | Epoch=430, loss=5.6640, this epoch 0.0353, total 14.4177
+(T) | Epoch=431, loss=5.6659, this epoch 0.0346, total 14.4524
+(T) | Epoch=432, loss=5.6694, this epoch 0.0350, total 14.4874
+(T) | Epoch=433, loss=5.6486, this epoch 0.0364, total 14.5237
+(T) | Epoch=434, loss=5.6605, this epoch 0.0344, total 14.5581
+(T) | Epoch=435, loss=5.6211, this epoch 0.0344, total 14.5925
+(T) | Epoch=436, loss=5.6037, this epoch 0.0355, total 14.6280
+(T) | Epoch=437, loss=5.6058, this epoch 0.0365, total 14.6645
+(T) | Epoch=438, loss=5.5894, this epoch 0.0364, total 14.7009
+(T) | Epoch=439, loss=5.6193, this epoch 0.0350, total 14.7359
+(T) | Epoch=440, loss=5.6378, this epoch 0.0361, total 14.7720
+(T) | Epoch=441, loss=5.5811, this epoch 0.0354, total 14.8074
++++model saved ! 2015.pth
+(T) | Epoch=442, loss=5.5801, this epoch 0.0398, total 14.8472
++++model saved ! 2015.pth
+(T) | Epoch=443, loss=5.6150, this epoch 0.0381, total 14.8852
+(T) | Epoch=444, loss=5.6088, this epoch 0.0361, total 14.9213
+(T) | Epoch=445, loss=5.5915, this epoch 0.0351, total 14.9564
+(T) | Epoch=446, loss=5.6201, this epoch 0.0349, total 14.9913
+(T) | Epoch=447, loss=5.5942, this epoch 0.0350, total 15.0263
+(T) | Epoch=448, loss=5.5718, this epoch 0.0356, total 15.0619
++++model saved ! 2015.pth
+(T) | Epoch=449, loss=5.5742, this epoch 0.0399, total 15.1018
+(T) | Epoch=450, loss=5.7692, this epoch 0.0346, total 15.1364
+(T) | Epoch=451, loss=5.6039, this epoch 0.0353, total 15.1717
+(T) | Epoch=452, loss=5.5646, this epoch 0.0351, total 15.2068
++++model saved ! 2015.pth
+(T) | Epoch=453, loss=5.5757, this epoch 0.0383, total 15.2451
+(T) | Epoch=454, loss=5.6640, this epoch 0.0355, total 15.2806
+(T) | Epoch=455, loss=5.5973, this epoch 0.0355, total 15.3161
+(T) | Epoch=456, loss=5.5569, this epoch 0.0351, total 15.3512
++++model saved ! 2015.pth
+(T) | Epoch=457, loss=5.5710, this epoch 0.0385, total 15.3897
+(T) | Epoch=458, loss=5.5596, this epoch 0.0352, total 15.4249
+(T) | Epoch=459, loss=5.6418, this epoch 0.0345, total 15.4595
+(T) | Epoch=460, loss=5.5648, this epoch 0.0339, total 15.4934
+(T) | Epoch=461, loss=5.5519, this epoch 0.0346, total 15.5280
++++model saved ! 2015.pth
+(T) | Epoch=462, loss=5.5723, this epoch 0.0409, total 15.5689
+(T) | Epoch=463, loss=5.5987, this epoch 0.0371, total 15.6059
+(T) | Epoch=464, loss=5.5527, this epoch 0.0362, total 15.6421
+(T) | Epoch=465, loss=5.7483, this epoch 0.0355, total 15.6776
+(T) | Epoch=466, loss=5.5585, this epoch 0.0366, total 15.7142
+(T) | Epoch=467, loss=5.5772, this epoch 0.0349, total 15.7491
+(T) | Epoch=468, loss=5.6270, this epoch 0.0350, total 15.7841
+(T) | Epoch=469, loss=5.5949, this epoch 0.0351, total 15.8191
+(T) | Epoch=470, loss=5.5489, this epoch 0.0348, total 15.8539
++++model saved ! 2015.pth
+(T) | Epoch=471, loss=5.5304, this epoch 0.0364, total 15.8904
++++model saved ! 2015.pth
+(T) | Epoch=472, loss=5.5543, this epoch 0.0371, total 15.9274
+(T) | Epoch=473, loss=5.5463, this epoch 0.0345, total 15.9620
+(T) | Epoch=474, loss=5.5953, this epoch 0.0349, total 15.9969
+(T) | Epoch=475, loss=5.5330, this epoch 0.0357, total 16.0326
+(T) | Epoch=476, loss=5.5348, this epoch 0.0354, total 16.0680
+(T) | Epoch=477, loss=5.5811, this epoch 0.0355, total 16.1035
+(T) | Epoch=478, loss=5.5706, this epoch 0.0353, total 16.1387
+(T) | Epoch=479, loss=5.5405, this epoch 0.0355, total 16.1743
+(T) | Epoch=480, loss=5.5176, this epoch 0.0352, total 16.2095
++++model saved ! 2015.pth
+(T) | Epoch=481, loss=5.6058, this epoch 0.0396, total 16.2490
+(T) | Epoch=482, loss=5.6233, this epoch 0.0350, total 16.2841
+(T) | Epoch=483, loss=5.6471, this epoch 0.0353, total 16.3194
+(T) | Epoch=484, loss=5.5231, this epoch 0.0353, total 16.3547
+(T) | Epoch=485, loss=5.5079, this epoch 0.0356, total 16.3903
++++model saved ! 2015.pth
+(T) | Epoch=486, loss=5.5254, this epoch 0.0395, total 16.4298
+(T) | Epoch=487, loss=5.5195, this epoch 0.0358, total 16.4656
+(T) | Epoch=488, loss=5.5244, this epoch 0.0373, total 16.5028
+(T) | Epoch=489, loss=5.5229, this epoch 0.0353, total 16.5381
+(T) | Epoch=490, loss=5.5271, this epoch 0.0354, total 16.5735
+(T) | Epoch=491, loss=5.5365, this epoch 0.0353, total 16.6088
+(T) | Epoch=492, loss=5.5180, this epoch 0.0362, total 16.6451
+(T) | Epoch=493, loss=5.5220, this epoch 0.0365, total 16.6816
+(T) | Epoch=494, loss=5.5225, this epoch 0.0349, total 16.7165
+(T) | Epoch=495, loss=5.5047, this epoch 0.0350, total 16.7516
++++model saved ! 2015.pth
+(T) | Epoch=496, loss=5.5099, this epoch 0.0390, total 16.7906
+(T) | Epoch=497, loss=5.5129, this epoch 0.0351, total 16.8257
+(T) | Epoch=498, loss=5.5669, this epoch 0.0354, total 16.8611
+(T) | Epoch=499, loss=5.5703, this epoch 0.0356, total 16.8967
+(T) | Epoch=500, loss=5.7100, this epoch 0.0357, total 16.9325
+(T) | Epoch=501, loss=5.5306, this epoch 0.0351, total 16.9675
+(T) | Epoch=502, loss=5.5339, this epoch 0.0353, total 17.0028
+(T) | Epoch=503, loss=5.6995, this epoch 0.0351, total 17.0379
+(T) | Epoch=504, loss=5.5783, this epoch 0.0360, total 17.0739
+(T) | Epoch=505, loss=5.5024, this epoch 0.0354, total 17.1093
++++model saved ! 2015.pth
+(T) | Epoch=506, loss=5.5075, this epoch 0.0402, total 17.1495
+(T) | Epoch=507, loss=5.5265, this epoch 0.0354, total 17.1849
+(T) | Epoch=508, loss=5.5061, this epoch 0.0350, total 17.2200
+(T) | Epoch=509, loss=5.5186, this epoch 0.0344, total 17.2543
+(T) | Epoch=510, loss=5.5107, this epoch 0.0356, total 17.2899
+(T) | Epoch=511, loss=5.5461, this epoch 0.0358, total 17.3257
+(T) | Epoch=512, loss=5.7290, this epoch 0.0355, total 17.3612
+(T) | Epoch=513, loss=5.5089, this epoch 0.0366, total 17.3978
+(T) | Epoch=514, loss=5.5272, this epoch 0.0359, total 17.4336
+(T) | Epoch=515, loss=5.5530, this epoch 0.0345, total 17.4681
+(T) | Epoch=516, loss=5.6394, this epoch 0.0341, total 17.5023
+(T) | Epoch=517, loss=5.5084, this epoch 0.0350, total 17.5373
+(T) | Epoch=518, loss=5.5411, this epoch 0.0359, total 17.5731
+(T) | Epoch=519, loss=5.5215, this epoch 0.0355, total 17.6086
+(T) | Epoch=520, loss=5.5195, this epoch 0.0364, total 17.6450
+(T) | Epoch=521, loss=5.5479, this epoch 0.0346, total 17.6797
+(T) | Epoch=522, loss=5.5244, this epoch 0.0350, total 17.7147
+(T) | Epoch=523, loss=5.5213, this epoch 0.0357, total 17.7504
+(T) | Epoch=524, loss=5.5479, this epoch 0.0360, total 17.7863
+(T) | Epoch=525, loss=5.5083, this epoch 0.0348, total 17.8211
+(T) | Epoch=526, loss=5.5456, this epoch 0.0365, total 17.8576
+(T) | Epoch=527, loss=5.4948, this epoch 0.0337, total 17.8913
++++model saved ! 2015.pth
+(T) | Epoch=528, loss=5.4968, this epoch 0.0377, total 17.9290
+(T) | Epoch=529, loss=5.5076, this epoch 0.0353, total 17.9643
+(T) | Epoch=530, loss=5.5327, this epoch 0.0350, total 17.9993
+(T) | Epoch=531, loss=5.5713, this epoch 0.0335, total 18.0328
+(T) | Epoch=532, loss=5.6160, this epoch 0.0364, total 18.0692
+(T) | Epoch=533, loss=5.5135, this epoch 0.0352, total 18.1044
+(T) | Epoch=534, loss=5.4969, this epoch 0.0352, total 18.1396
+(T) | Epoch=535, loss=5.4910, this epoch 0.0359, total 18.1755
++++model saved ! 2015.pth
+(T) | Epoch=536, loss=5.4898, this epoch 0.0387, total 18.2142
++++model saved ! 2015.pth
+(T) | Epoch=537, loss=5.5257, this epoch 0.0388, total 18.2530
+(T) | Epoch=538, loss=5.6139, this epoch 0.0369, total 18.2899
+(T) | Epoch=539, loss=5.4861, this epoch 0.0356, total 18.3255
++++model saved ! 2015.pth
+(T) | Epoch=540, loss=5.4897, this epoch 0.0384, total 18.3638
+(T) | Epoch=541, loss=5.5241, this epoch 0.0357, total 18.3995
+(T) | Epoch=542, loss=5.4993, this epoch 0.0350, total 18.4345
+(T) | Epoch=543, loss=5.4942, this epoch 0.0348, total 18.4693
+(T) | Epoch=544, loss=5.5019, this epoch 0.0347, total 18.5040
+(T) | Epoch=545, loss=5.5600, this epoch 0.0341, total 18.5381
+(T) | Epoch=546, loss=5.4851, this epoch 0.0342, total 18.5723
++++model saved ! 2015.pth
+(T) | Epoch=547, loss=5.5043, this epoch 0.0368, total 18.6091
+(T) | Epoch=548, loss=5.4940, this epoch 0.0351, total 18.6442
+(T) | Epoch=549, loss=5.5042, this epoch 0.0353, total 18.6795
+(T) | Epoch=550, loss=5.4759, this epoch 0.0341, total 18.7136
++++model saved ! 2015.pth
+(T) | Epoch=551, loss=5.4752, this epoch 0.0384, total 18.7520
++++model saved ! 2015.pth
+(T) | Epoch=552, loss=5.4952, this epoch 0.0372, total 18.7892
+(T) | Epoch=553, loss=5.4935, this epoch 0.0367, total 18.8259
+(T) | Epoch=554, loss=5.4751, this epoch 0.0362, total 18.8621
++++model saved ! 2015.pth
+(T) | Epoch=555, loss=5.4965, this epoch 0.0362, total 18.8983
+(T) | Epoch=556, loss=5.5815, this epoch 0.0357, total 18.9341
+(T) | Epoch=557, loss=5.5229, this epoch 0.0360, total 18.9700
+(T) | Epoch=558, loss=5.4744, this epoch 0.0353, total 19.0054
++++model saved ! 2015.pth
+(T) | Epoch=559, loss=5.4474, this epoch 0.0398, total 19.0452
++++model saved ! 2015.pth
+(T) | Epoch=560, loss=5.5479, this epoch 0.0375, total 19.0827
+(T) | Epoch=561, loss=5.4840, this epoch 0.0352, total 19.1179
+(T) | Epoch=562, loss=5.5715, this epoch 0.0338, total 19.1517
+(T) | Epoch=563, loss=5.5611, this epoch 0.0378, total 19.1895
+(T) | Epoch=564, loss=5.4614, this epoch 0.0367, total 19.2262
+(T) | Epoch=565, loss=5.4688, this epoch 0.0361, total 19.2622
+(T) | Epoch=566, loss=5.4696, this epoch 0.0370, total 19.2993
+(T) | Epoch=567, loss=5.4319, this epoch 0.0356, total 19.3349
++++model saved ! 2015.pth
+(T) | Epoch=568, loss=5.4508, this epoch 0.0374, total 19.3723
+(T) | Epoch=569, loss=5.4502, this epoch 0.0346, total 19.4069
+(T) | Epoch=570, loss=5.4961, this epoch 0.0360, total 19.4429
+(T) | Epoch=571, loss=5.4572, this epoch 0.0341, total 19.4769
+(T) | Epoch=572, loss=5.4483, this epoch 0.0365, total 19.5134
+(T) | Epoch=573, loss=5.5154, this epoch 0.0345, total 19.5479
+(T) | Epoch=574, loss=5.6055, this epoch 0.0369, total 19.5848
+(T) | Epoch=575, loss=5.4274, this epoch 0.0362, total 19.6210
++++model saved ! 2015.pth
+(T) | Epoch=576, loss=5.4405, this epoch 0.0350, total 19.6560
+(T) | Epoch=577, loss=5.4236, this epoch 0.0337, total 19.6897
++++model saved ! 2015.pth
+(T) | Epoch=578, loss=5.5314, this epoch 0.0381, total 19.7278
+(T) | Epoch=579, loss=5.4374, this epoch 0.0349, total 19.7627
+(T) | Epoch=580, loss=5.5776, this epoch 0.0354, total 19.7981
+(T) | Epoch=581, loss=5.4703, this epoch 0.0362, total 19.8344
+(T) | Epoch=582, loss=5.4895, this epoch 0.0352, total 19.8696
+(T) | Epoch=583, loss=5.4737, this epoch 0.0347, total 19.9043
+(T) | Epoch=584, loss=5.4435, this epoch 0.0335, total 19.9378
+(T) | Epoch=585, loss=5.5486, this epoch 0.0360, total 19.9738
+(T) | Epoch=586, loss=5.4407, this epoch 0.0369, total 20.0107
+(T) | Epoch=587, loss=5.5306, this epoch 0.0360, total 20.0467
+(T) | Epoch=588, loss=5.4879, this epoch 0.0354, total 20.0821
+(T) | Epoch=589, loss=5.5169, this epoch 0.0358, total 20.1179
+(T) | Epoch=590, loss=5.4176, this epoch 0.0348, total 20.1527
++++model saved ! 2015.pth
+(T) | Epoch=591, loss=5.4208, this epoch 0.0382, total 20.1909
+(T) | Epoch=592, loss=5.4524, this epoch 0.0350, total 20.2259
+(T) | Epoch=593, loss=5.4195, this epoch 0.0352, total 20.2611
+(T) | Epoch=594, loss=5.4701, this epoch 0.0359, total 20.2969
+(T) | Epoch=595, loss=5.4970, this epoch 0.0353, total 20.3322
+(T) | Epoch=596, loss=5.4730, this epoch 0.0347, total 20.3669
+(T) | Epoch=597, loss=5.4421, this epoch 0.0357, total 20.4026
+(T) | Epoch=598, loss=5.4445, this epoch 0.0367, total 20.4392
+(T) | Epoch=599, loss=5.4172, this epoch 0.0361, total 20.4753
++++model saved ! 2015.pth
+(T) | Epoch=600, loss=5.5159, this epoch 0.0383, total 20.5136
+(T) | Epoch=601, loss=5.4970, this epoch 0.0348, total 20.5485
+(T) | Epoch=602, loss=5.4325, this epoch 0.0354, total 20.5838
+(T) | Epoch=603, loss=5.5419, this epoch 0.0350, total 20.6189
+(T) | Epoch=604, loss=5.4116, this epoch 0.0356, total 20.6545
++++model saved ! 2015.pth
+(T) | Epoch=605, loss=5.4865, this epoch 0.0378, total 20.6923
+(T) | Epoch=606, loss=5.4889, this epoch 0.0351, total 20.7274
+(T) | Epoch=607, loss=5.4396, this epoch 0.0343, total 20.7617
+(T) | Epoch=608, loss=5.4612, this epoch 0.0342, total 20.7959
+(T) | Epoch=609, loss=5.4624, this epoch 0.0358, total 20.8316
+(T) | Epoch=610, loss=5.4615, this epoch 0.0359, total 20.8675
+(T) | Epoch=611, loss=5.4251, this epoch 0.0350, total 20.9026
+(T) | Epoch=612, loss=5.4204, this epoch 0.0372, total 20.9397
+(T) | Epoch=613, loss=5.4145, this epoch 0.0360, total 20.9757
+(T) | Epoch=614, loss=5.4624, this epoch 0.0362, total 21.0119
+(T) | Epoch=615, loss=5.4508, this epoch 0.0364, total 21.0483
+(T) | Epoch=616, loss=5.4546, this epoch 0.0354, total 21.0837
+(T) | Epoch=617, loss=5.4380, this epoch 0.0361, total 21.1198
+(T) | Epoch=618, loss=5.4733, this epoch 0.0358, total 21.1556
+(T) | Epoch=619, loss=5.4242, this epoch 0.0344, total 21.1900
+(T) | Epoch=620, loss=5.4412, this epoch 0.0352, total 21.2252
+(T) | Epoch=621, loss=5.4385, this epoch 0.0361, total 21.2613
+(T) | Epoch=622, loss=5.4858, this epoch 0.0345, total 21.2958
+(T) | Epoch=623, loss=5.4506, this epoch 0.0349, total 21.3307
+(T) | Epoch=624, loss=5.4998, this epoch 0.0354, total 21.3661
+(T) | Epoch=625, loss=5.4677, this epoch 0.0351, total 21.4012
+(T) | Epoch=626, loss=5.4413, this epoch 0.0344, total 21.4356
+(T) | Epoch=627, loss=5.4364, this epoch 0.0350, total 21.4706
+(T) | Epoch=628, loss=5.4343, this epoch 0.0348, total 21.5054
+(T) | Epoch=629, loss=5.4081, this epoch 0.0356, total 21.5411
++++model saved ! 2015.pth
+(T) | Epoch=630, loss=5.4620, this epoch 0.0387, total 21.5797
+(T) | Epoch=631, loss=5.4445, this epoch 0.0355, total 21.6152
+(T) | Epoch=632, loss=5.4433, this epoch 0.0369, total 21.6521
+(T) | Epoch=633, loss=5.4194, this epoch 0.0359, total 21.6880
+(T) | Epoch=634, loss=5.4160, this epoch 0.0348, total 21.7228
+(T) | Epoch=635, loss=5.4433, this epoch 0.0363, total 21.7591
+(T) | Epoch=636, loss=5.4212, this epoch 0.0344, total 21.7935
+(T) | Epoch=637, loss=5.4297, this epoch 0.0352, total 21.8287
+(T) | Epoch=638, loss=5.4148, this epoch 0.0355, total 21.8642
+(T) | Epoch=639, loss=5.4705, this epoch 0.0357, total 21.8999
+(T) | Epoch=640, loss=5.4337, this epoch 0.0357, total 21.9357
+(T) | Epoch=641, loss=5.4097, this epoch 0.0346, total 21.9702
+(T) | Epoch=642, loss=5.4437, this epoch 0.0371, total 22.0074
+(T) | Epoch=643, loss=5.4339, this epoch 0.0355, total 22.0429
+(T) | Epoch=644, loss=5.4434, this epoch 0.0350, total 22.0779
+(T) | Epoch=645, loss=5.4642, this epoch 0.0345, total 22.1124
+(T) | Epoch=646, loss=5.4253, this epoch 0.0363, total 22.1487
+(T) | Epoch=647, loss=5.4262, this epoch 0.0348, total 22.1835
+(T) | Epoch=648, loss=5.4339, this epoch 0.0354, total 22.2189
+(T) | Epoch=649, loss=5.4385, this epoch 0.0366, total 22.2555
+(T) | Epoch=650, loss=5.5167, this epoch 0.0357, total 22.2913
+(T) | Epoch=651, loss=5.4159, this epoch 0.0351, total 22.3264
+(T) | Epoch=652, loss=5.4582, this epoch 0.0348, total 22.3612
+(T) | Epoch=653, loss=5.4319, this epoch 0.0350, total 22.3963
+(T) | Epoch=654, loss=5.4571, this epoch 0.0365, total 22.4327
+(T) | Epoch=655, loss=5.4420, this epoch 0.0357, total 22.4684
+(T) | Epoch=656, loss=5.4341, this epoch 0.0360, total 22.5044
+(T) | Epoch=657, loss=5.4329, this epoch 0.0359, total 22.5404
+(T) | Epoch=658, loss=5.4333, this epoch 0.0361, total 22.5765
+(T) | Epoch=659, loss=5.4382, this epoch 0.0369, total 22.6133
+(T) | Epoch=660, loss=5.4371, this epoch 0.0354, total 22.6487
+(T) | Epoch=661, loss=5.4103, this epoch 0.0356, total 22.6843
+(T) | Epoch=662, loss=5.5076, this epoch 0.0358, total 22.7201
+(T) | Epoch=663, loss=5.4612, this epoch 0.0353, total 22.7554
+(T) | Epoch=664, loss=5.4908, this epoch 0.0356, total 22.7911
+(T) | Epoch=665, loss=5.4660, this epoch 0.0361, total 22.8272
+(T) | Epoch=666, loss=5.4197, this epoch 0.0358, total 22.8630
+(T) | Epoch=667, loss=5.4501, this epoch 0.0340, total 22.8970
+(T) | Epoch=668, loss=5.4159, this epoch 0.0347, total 22.9316
+(T) | Epoch=669, loss=5.4453, this epoch 0.0364, total 22.9680
+(T) | Epoch=670, loss=5.4237, this epoch 0.0342, total 23.0022
+(T) | Epoch=671, loss=5.4573, this epoch 0.0320, total 23.0342
+(T) | Epoch=672, loss=5.4141, this epoch 0.0323, total 23.0665
+(T) | Epoch=673, loss=5.4395, this epoch 0.0318, total 23.0983
+(T) | Epoch=674, loss=5.4635, this epoch 0.0317, total 23.1300
+(T) | Epoch=675, loss=5.4262, this epoch 0.0319, total 23.1620
+(T) | Epoch=676, loss=5.4594, this epoch 0.0316, total 23.1936
+(T) | Epoch=677, loss=5.4965, this epoch 0.0320, total 23.2256
+(T) | Epoch=678, loss=5.4616, this epoch 0.0318, total 23.2574
+(T) | Epoch=679, loss=5.4284, this epoch 0.0321, total 23.2895
+(T) | Epoch=680, loss=5.4588, this epoch 0.0320, total 23.3215
+(T) | Epoch=681, loss=5.4447, this epoch 0.0316, total 23.3532
+(T) | Epoch=682, loss=5.4379, this epoch 0.0318, total 23.3850
+(T) | Epoch=683, loss=5.4235, this epoch 0.0320, total 23.4170
+(T) | Epoch=684, loss=5.4333, this epoch 0.0329, total 23.4499
+(T) | Epoch=685, loss=5.4458, this epoch 0.0364, total 23.4863
+(T) | Epoch=686, loss=5.4598, this epoch 0.0364, total 23.5228
+(T) | Epoch=687, loss=5.4424, this epoch 0.0344, total 23.5572
+(T) | Epoch=688, loss=5.4928, this epoch 0.0345, total 23.5917
+(T) | Epoch=689, loss=5.4219, this epoch 0.0341, total 23.6259
+(T) | Epoch=690, loss=5.5298, this epoch 0.0346, total 23.6605
+(T) | Epoch=691, loss=5.4650, this epoch 0.0361, total 23.6966
+(T) | Epoch=692, loss=5.4194, this epoch 0.0343, total 23.7309
+(T) | Epoch=693, loss=5.4316, this epoch 0.0357, total 23.7666
+(T) | Epoch=694, loss=5.4423, this epoch 0.0364, total 23.8029
+(T) | Epoch=695, loss=5.4183, this epoch 0.0329, total 23.8358
+(T) | Epoch=696, loss=5.4062, this epoch 0.0352, total 23.8710
++++model saved ! 2015.pth
+(T) | Epoch=697, loss=5.4258, this epoch 0.0395, total 23.9106
+(T) | Epoch=698, loss=5.4237, this epoch 0.0355, total 23.9461
+(T) | Epoch=699, loss=5.4454, this epoch 0.0352, total 23.9813
+(T) | Epoch=700, loss=5.4193, this epoch 0.0356, total 24.0169
+(T) | Epoch=701, loss=5.4290, this epoch 0.0354, total 24.0522
+(T) | Epoch=702, loss=5.4216, this epoch 0.0351, total 24.0873
+(T) | Epoch=703, loss=5.4069, this epoch 0.0349, total 24.1223
+(T) | Epoch=704, loss=5.4401, this epoch 0.0345, total 24.1567
+(T) | Epoch=705, loss=5.4019, this epoch 0.0335, total 24.1902
++++model saved ! 2015.pth
+(T) | Epoch=706, loss=5.4247, this epoch 0.0399, total 24.2301
+(T) | Epoch=707, loss=5.4189, this epoch 0.0366, total 24.2667
+(T) | Epoch=708, loss=5.4577, this epoch 0.0354, total 24.3021
+(T) | Epoch=709, loss=5.4363, this epoch 0.0352, total 24.3373
+(T) | Epoch=710, loss=5.5907, this epoch 0.0367, total 24.3741
+(T) | Epoch=711, loss=5.4281, this epoch 0.0349, total 24.4090
+(T) | Epoch=712, loss=5.4471, this epoch 0.0342, total 24.4432
+(T) | Epoch=713, loss=5.5388, this epoch 0.0353, total 24.4785
+(T) | Epoch=714, loss=5.4691, this epoch 0.0352, total 24.5138
+(T) | Epoch=715, loss=5.4815, this epoch 0.0364, total 24.5501
+(T) | Epoch=716, loss=5.4330, this epoch 0.0351, total 24.5852
+(T) | Epoch=717, loss=5.4849, this epoch 0.0357, total 24.6209
+(T) | Epoch=718, loss=5.4736, this epoch 0.0356, total 24.6566
+(T) | Epoch=719, loss=5.4405, this epoch 0.0348, total 24.6914
+(T) | Epoch=720, loss=5.4314, this epoch 0.0357, total 24.7270
+(T) | Epoch=721, loss=5.4195, this epoch 0.0344, total 24.7614
+(T) | Epoch=722, loss=5.4418, this epoch 0.0363, total 24.7978
+(T) | Epoch=723, loss=5.4372, this epoch 0.0354, total 24.8332
+(T) | Epoch=724, loss=5.4222, this epoch 0.0355, total 24.8686
+(T) | Epoch=725, loss=5.4197, this epoch 0.0360, total 24.9046
+(T) | Epoch=726, loss=5.4148, this epoch 0.0357, total 24.9403
+(T) | Epoch=727, loss=5.4119, this epoch 0.0359, total 24.9762
+(T) | Epoch=728, loss=5.4644, this epoch 0.0360, total 25.0122
+(T) | Epoch=729, loss=5.4374, this epoch 0.0366, total 25.0489
+(T) | Epoch=730, loss=5.4118, this epoch 0.0343, total 25.0831
+(T) | Epoch=731, loss=5.4253, this epoch 0.0346, total 25.1178
+(T) | Epoch=732, loss=5.4440, this epoch 0.0366, total 25.1544
+(T) | Epoch=733, loss=5.4575, this epoch 0.0361, total 25.1905
+(T) | Epoch=734, loss=5.4488, this epoch 0.0358, total 25.2263
+(T) | Epoch=735, loss=5.4628, this epoch 0.0370, total 25.2633
+(T) | Epoch=736, loss=5.4593, this epoch 0.0345, total 25.2978
+(T) | Epoch=737, loss=5.4256, this epoch 0.0342, total 25.3320
+(T) | Epoch=738, loss=5.4405, this epoch 0.0352, total 25.3672
+(T) | Epoch=739, loss=5.4154, this epoch 0.0358, total 25.4030
+(T) | Epoch=740, loss=5.4582, this epoch 0.0344, total 25.4374
+(T) | Epoch=741, loss=5.4113, this epoch 0.0352, total 25.4726
+(T) | Epoch=742, loss=5.4187, this epoch 0.0366, total 25.5092
+(T) | Epoch=743, loss=5.4172, this epoch 0.0364, total 25.5456
+(T) | Epoch=744, loss=5.4427, this epoch 0.0364, total 25.5820
+(T) | Epoch=745, loss=5.4065, this epoch 0.0354, total 25.6174
+(T) | Epoch=746, loss=5.4178, this epoch 0.0363, total 25.6537
+(T) | Epoch=747, loss=5.4082, this epoch 0.0349, total 25.6886
+(T) | Epoch=748, loss=5.4092, this epoch 0.0353, total 25.7239
+(T) | Epoch=749, loss=5.4257, this epoch 0.0326, total 25.7564
+(T) | Epoch=750, loss=5.4157, this epoch 0.0321, total 25.7885
+(T) | Epoch=751, loss=5.4049, this epoch 0.0322, total 25.8207
+(T) | Epoch=752, loss=5.4359, this epoch 0.0322, total 25.8529
+(T) | Epoch=753, loss=5.4137, this epoch 0.0322, total 25.8851
+(T) | Epoch=754, loss=5.4173, this epoch 0.0319, total 25.9169
+(T) | Epoch=755, loss=5.4475, this epoch 0.0322, total 25.9492
+(T) | Epoch=756, loss=5.3961, this epoch 0.0321, total 25.9812
++++model saved ! 2015.pth
+(T) | Epoch=757, loss=5.4194, this epoch 0.0347, total 26.0159
+(T) | Epoch=758, loss=5.4402, this epoch 0.0320, total 26.0479
+(T) | Epoch=759, loss=5.3966, this epoch 0.0324, total 26.0803
+(T) | Epoch=760, loss=5.4200, this epoch 0.0319, total 26.1122
+(T) | Epoch=761, loss=5.3845, this epoch 0.0319, total 26.1441
++++model saved ! 2015.pth
+(T) | Epoch=762, loss=5.3988, this epoch 0.0359, total 26.1801
+(T) | Epoch=763, loss=5.4750, this epoch 0.0322, total 26.2122
+(T) | Epoch=764, loss=5.4162, this epoch 0.0321, total 26.2443
+(T) | Epoch=765, loss=5.4422, this epoch 0.0319, total 26.2763
+(T) | Epoch=766, loss=5.5121, this epoch 0.0324, total 26.3087
+(T) | Epoch=767, loss=5.4584, this epoch 0.0322, total 26.3409
+(T) | Epoch=768, loss=5.4172, this epoch 0.0320, total 26.3728
+(T) | Epoch=769, loss=5.4208, this epoch 0.0319, total 26.4047
+(T) | Epoch=770, loss=5.4166, this epoch 0.0323, total 26.4370
+(T) | Epoch=771, loss=5.4355, this epoch 0.0321, total 26.4691
+(T) | Epoch=772, loss=5.4709, this epoch 0.0323, total 26.5014
+(T) | Epoch=773, loss=5.4954, this epoch 0.0319, total 26.5332
+(T) | Epoch=774, loss=5.4251, this epoch 0.0322, total 26.5654
+(T) | Epoch=775, loss=5.4180, this epoch 0.0318, total 26.5973
+(T) | Epoch=776, loss=5.4287, this epoch 0.0321, total 26.6294
+(T) | Epoch=777, loss=5.4704, this epoch 0.0320, total 26.6614
+(T) | Epoch=778, loss=5.5037, this epoch 0.0318, total 26.6932
+(T) | Epoch=779, loss=5.4191, this epoch 0.0323, total 26.7256
+(T) | Epoch=780, loss=5.4512, this epoch 0.0323, total 26.7579
+(T) | Epoch=781, loss=5.4152, this epoch 0.0322, total 26.7901
+(T) | Epoch=782, loss=5.4582, this epoch 0.0321, total 26.8222
+(T) | Epoch=783, loss=5.4308, this epoch 0.0323, total 26.8545
+(T) | Epoch=784, loss=5.4130, this epoch 0.0319, total 26.8864
+(T) | Epoch=785, loss=5.4435, this epoch 0.0322, total 26.9186
+(T) | Epoch=786, loss=5.4635, this epoch 0.0320, total 26.9506
+(T) | Epoch=787, loss=5.4419, this epoch 0.0323, total 26.9829
+(T) | Epoch=788, loss=5.4201, this epoch 0.0319, total 27.0148
+(T) | Epoch=789, loss=5.4423, this epoch 0.0325, total 27.0472
+(T) | Epoch=790, loss=5.4163, this epoch 0.0320, total 27.0793
+(T) | Epoch=791, loss=5.4335, this epoch 0.0321, total 27.1114
+(T) | Epoch=792, loss=5.4253, this epoch 0.0319, total 27.1433
+(T) | Epoch=793, loss=5.4450, this epoch 0.0322, total 27.1755
+(T) | Epoch=794, loss=5.4272, this epoch 0.0323, total 27.2078
+(T) | Epoch=795, loss=5.4188, this epoch 0.0323, total 27.2400
+(T) | Epoch=796, loss=5.4334, this epoch 0.0320, total 27.2721
+(T) | Epoch=797, loss=5.4449, this epoch 0.0323, total 27.3043
+(T) | Epoch=798, loss=5.4082, this epoch 0.0319, total 27.3363
+(T) | Epoch=799, loss=5.4425, this epoch 0.0321, total 27.3684
+(T) | Epoch=800, loss=5.4000, this epoch 0.0322, total 27.4006
+(T) | Epoch=801, loss=5.4356, this epoch 0.0322, total 27.4328
+(T) | Epoch=802, loss=5.4099, this epoch 0.0319, total 27.4647
+(T) | Epoch=803, loss=5.4111, this epoch 0.0324, total 27.4970
+(T) | Epoch=804, loss=5.4193, this epoch 0.0319, total 27.5289
+(T) | Epoch=805, loss=5.4219, this epoch 0.0319, total 27.5608
+(T) | Epoch=806, loss=5.4181, this epoch 0.0323, total 27.5931
+(T) | Epoch=807, loss=5.4005, this epoch 0.0321, total 27.6252
+(T) | Epoch=808, loss=5.4204, this epoch 0.0321, total 27.6573
+(T) | Epoch=809, loss=5.4343, this epoch 0.0325, total 27.6899
+(T) | Epoch=810, loss=5.4133, this epoch 0.0323, total 27.7222
+(T) | Epoch=811, loss=5.5339, this epoch 0.0324, total 27.7546
+(T) | Epoch=812, loss=5.4393, this epoch 0.0321, total 27.7867
+(T) | Epoch=813, loss=5.4313, this epoch 0.0322, total 27.8188
+(T) | Epoch=814, loss=5.4279, this epoch 0.0325, total 27.8513
+(T) | Epoch=815, loss=5.4574, this epoch 0.0322, total 27.8835
+(T) | Epoch=816, loss=5.4458, this epoch 0.0321, total 27.9156
+(T) | Epoch=817, loss=5.4677, this epoch 0.0323, total 27.9479
+(T) | Epoch=818, loss=5.4760, this epoch 0.0320, total 27.9799
+(T) | Epoch=819, loss=5.4289, this epoch 0.0320, total 28.0119
+(T) | Epoch=820, loss=5.5049, this epoch 0.0320, total 28.0439
+(T) | Epoch=821, loss=5.4277, this epoch 0.0322, total 28.0761
+(T) | Epoch=822, loss=5.4216, this epoch 0.0319, total 28.1080
+(T) | Epoch=823, loss=5.4211, this epoch 0.0320, total 28.1400
+(T) | Epoch=824, loss=5.4043, this epoch 0.0321, total 28.1721
+(T) | Epoch=825, loss=5.4267, this epoch 0.0319, total 28.2040
+(T) | Epoch=826, loss=5.4295, this epoch 0.0322, total 28.2362
+(T) | Epoch=827, loss=5.4058, this epoch 0.0321, total 28.2683
+(T) | Epoch=828, loss=5.4141, this epoch 0.0320, total 28.3002
+(T) | Epoch=829, loss=5.4243, this epoch 0.0319, total 28.3321
+(T) | Epoch=830, loss=5.4336, this epoch 0.0319, total 28.3640
+(T) | Epoch=831, loss=5.4176, this epoch 0.0325, total 28.3965
+(T) | Epoch=832, loss=5.4209, this epoch 0.0324, total 28.4290
+(T) | Epoch=833, loss=5.4289, this epoch 0.0318, total 28.4607
+(T) | Epoch=834, loss=5.4405, this epoch 0.0321, total 28.4928
+(T) | Epoch=835, loss=5.4143, this epoch 0.0322, total 28.5250
+(T) | Epoch=836, loss=5.4322, this epoch 0.0319, total 28.5569
+(T) | Epoch=837, loss=5.4464, this epoch 0.0320, total 28.5888
+(T) | Epoch=838, loss=5.4583, this epoch 0.0318, total 28.6207
+(T) | Epoch=839, loss=5.4405, this epoch 0.0321, total 28.6527
+(T) | Epoch=840, loss=5.4202, this epoch 0.0323, total 28.6850
+(T) | Epoch=841, loss=5.4316, this epoch 0.0320, total 28.7170
+(T) | Epoch=842, loss=5.4310, this epoch 0.0319, total 28.7490
+(T) | Epoch=843, loss=5.4353, this epoch 0.0320, total 28.7809
+(T) | Epoch=844, loss=5.4176, this epoch 0.0319, total 28.8128
+(T) | Epoch=845, loss=5.4257, this epoch 0.0322, total 28.8450
+(T) | Epoch=846, loss=5.4574, this epoch 0.0324, total 28.8774
+(T) | Epoch=847, loss=5.4434, this epoch 0.0320, total 28.9094
+(T) | Epoch=848, loss=5.4180, this epoch 0.0323, total 28.9417
+(T) | Epoch=849, loss=5.4609, this epoch 0.0319, total 28.9736
+(T) | Epoch=850, loss=5.4212, this epoch 0.0318, total 29.0054
+(T) | Epoch=851, loss=5.4165, this epoch 0.0320, total 29.0374
+(T) | Epoch=852, loss=5.4124, this epoch 0.0322, total 29.0696
+(T) | Epoch=853, loss=5.4425, this epoch 0.0320, total 29.1015
+(T) | Epoch=854, loss=5.4196, this epoch 0.0321, total 29.1336
+(T) | Epoch=855, loss=5.4314, this epoch 0.0320, total 29.1656
+(T) | Epoch=856, loss=5.4226, this epoch 0.0322, total 29.1978
+(T) | Epoch=857, loss=5.4565, this epoch 0.0323, total 29.2301
+(T) | Epoch=858, loss=5.4034, this epoch 0.0320, total 29.2621
+(T) | Epoch=859, loss=5.4184, this epoch 0.0324, total 29.2945
+(T) | Epoch=860, loss=5.4150, this epoch 0.0323, total 29.3268
+(T) | Epoch=861, loss=5.4462, this epoch 0.0322, total 29.3590
+(T) | Epoch=862, loss=5.4306, this epoch 0.0323, total 29.3913
+(T) | Epoch=863, loss=5.4252, this epoch 0.0323, total 29.4237
+(T) | Epoch=864, loss=5.3930, this epoch 0.0320, total 29.4556
+(T) | Epoch=865, loss=5.4282, this epoch 0.0322, total 29.4878
+(T) | Epoch=866, loss=5.4162, this epoch 0.0323, total 29.5202
+(T) | Epoch=867, loss=5.4387, this epoch 0.0319, total 29.5521
+(T) | Epoch=868, loss=5.4406, this epoch 0.0320, total 29.5840
+(T) | Epoch=869, loss=5.4154, this epoch 0.0321, total 29.6161
+(T) | Epoch=870, loss=5.4244, this epoch 0.0322, total 29.6484
+(T) | Epoch=871, loss=5.4149, this epoch 0.0321, total 29.6804
+(T) | Epoch=872, loss=5.4178, this epoch 0.0327, total 29.7131
+(T) | Epoch=873, loss=5.4021, this epoch 0.0323, total 29.7454
+(T) | Epoch=874, loss=5.4650, this epoch 0.0322, total 29.7776
+(T) | Epoch=875, loss=5.5361, this epoch 0.0324, total 29.8100
+(T) | Epoch=876, loss=5.4273, this epoch 0.0323, total 29.8423
+(T) | Epoch=877, loss=5.4411, this epoch 0.0328, total 29.8752
+(T) | Epoch=878, loss=5.4590, this epoch 0.0321, total 29.9073
+(T) | Epoch=879, loss=5.4435, this epoch 0.0322, total 29.9395
+(T) | Epoch=880, loss=5.4509, this epoch 0.0320, total 29.9714
+(T) | Epoch=881, loss=5.4579, this epoch 0.0319, total 30.0033
+(T) | Epoch=882, loss=5.4862, this epoch 0.0324, total 30.0357
+(T) | Epoch=883, loss=5.4253, this epoch 0.0323, total 30.0680
+(T) | Epoch=884, loss=5.4037, this epoch 0.0321, total 30.1001
+(T) | Epoch=885, loss=5.4443, this epoch 0.0324, total 30.1325
+(T) | Epoch=886, loss=5.4500, this epoch 0.0322, total 30.1647
+(T) | Epoch=887, loss=5.4160, this epoch 0.0324, total 30.1971
+(T) | Epoch=888, loss=5.4335, this epoch 0.0323, total 30.2294
+(T) | Epoch=889, loss=5.4077, this epoch 0.0321, total 30.2616
+(T) | Epoch=890, loss=5.6101, this epoch 0.0324, total 30.2939
+(T) | Epoch=891, loss=5.4297, this epoch 0.0321, total 30.3261
+(T) | Epoch=892, loss=5.3919, this epoch 0.0321, total 30.3582
+(T) | Epoch=893, loss=5.4209, this epoch 0.0321, total 30.3903
+(T) | Epoch=894, loss=5.4038, this epoch 0.0325, total 30.4228
+(T) | Epoch=895, loss=5.4084, this epoch 0.0319, total 30.4547
+(T) | Epoch=896, loss=5.4485, this epoch 0.0318, total 30.4866
+(T) | Epoch=897, loss=5.4330, this epoch 0.0320, total 30.5186
+(T) | Epoch=898, loss=5.4171, this epoch 0.0319, total 30.5505
+(T) | Epoch=899, loss=5.4283, this epoch 0.0318, total 30.5824
+(T) | Epoch=900, loss=5.4397, this epoch 0.0319, total 30.6143
+(T) | Epoch=901, loss=5.4326, this epoch 0.0324, total 30.6467
+(T) | Epoch=902, loss=5.4157, this epoch 0.0324, total 30.6791
+(T) | Epoch=903, loss=5.4243, this epoch 0.0318, total 30.7109
+(T) | Epoch=904, loss=5.5834, this epoch 0.0322, total 30.7431
+(T) | Epoch=905, loss=5.4097, this epoch 0.0320, total 30.7751
+(T) | Epoch=906, loss=5.4260, this epoch 0.0324, total 30.8075
+(T) | Epoch=907, loss=5.4390, this epoch 0.0317, total 30.8392
+(T) | Epoch=908, loss=5.3865, this epoch 0.0321, total 30.8714
+(T) | Epoch=909, loss=5.4051, this epoch 0.0319, total 30.9033
+(T) | Epoch=910, loss=5.4955, this epoch 0.0322, total 30.9354
+(T) | Epoch=911, loss=5.4004, this epoch 0.0320, total 30.9674
+(T) | Epoch=912, loss=5.4314, this epoch 0.0326, total 31.0000
+(T) | Epoch=913, loss=5.4301, this epoch 0.0323, total 31.0323
+(T) | Epoch=914, loss=5.4085, this epoch 0.0325, total 31.0647
+(T) | Epoch=915, loss=5.3981, this epoch 0.0322, total 31.0969
+(T) | Epoch=916, loss=5.4119, this epoch 0.0324, total 31.1293
+(T) | Epoch=917, loss=5.4188, this epoch 0.0322, total 31.1615
+(T) | Epoch=918, loss=5.4259, this epoch 0.0320, total 31.1935
+(T) | Epoch=919, loss=5.4013, this epoch 0.0323, total 31.2258
+(T) | Epoch=920, loss=5.4341, this epoch 0.0323, total 31.2581
+(T) | Epoch=921, loss=5.4200, this epoch 0.0319, total 31.2900
+(T) | Epoch=922, loss=5.4730, this epoch 0.0323, total 31.3223
+(T) | Epoch=923, loss=5.4465, this epoch 0.0321, total 31.3543
+(T) | Epoch=924, loss=5.4141, this epoch 0.0326, total 31.3870
+(T) | Epoch=925, loss=5.4197, this epoch 0.0322, total 31.4192
+(T) | Epoch=926, loss=5.4336, this epoch 0.0322, total 31.4514
+(T) | Epoch=927, loss=5.3979, this epoch 0.0322, total 31.4836
+(T) | Epoch=928, loss=5.4254, this epoch 0.0319, total 31.5155
+(T) | Epoch=929, loss=5.4589, this epoch 0.0318, total 31.5473
+(T) | Epoch=930, loss=5.4148, this epoch 0.0322, total 31.5795
+(T) | Epoch=931, loss=5.4018, this epoch 0.0318, total 31.6113
+(T) | Epoch=932, loss=5.4302, this epoch 0.0324, total 31.6438
+(T) | Epoch=933, loss=5.4161, this epoch 0.0321, total 31.6758
+(T) | Epoch=934, loss=5.5515, this epoch 0.0322, total 31.7081
+(T) | Epoch=935, loss=5.4279, this epoch 0.0321, total 31.7402
+(T) | Epoch=936, loss=5.4279, this epoch 0.0322, total 31.7723
+(T) | Epoch=937, loss=5.4303, this epoch 0.0319, total 31.8042
+(T) | Epoch=938, loss=5.4096, this epoch 0.0325, total 31.8367
+(T) | Epoch=939, loss=5.4341, this epoch 0.0322, total 31.8689
+(T) | Epoch=940, loss=5.4368, this epoch 0.0324, total 31.9013
+(T) | Epoch=941, loss=5.4104, this epoch 0.0324, total 31.9337
+(T) | Epoch=942, loss=5.4262, this epoch 0.0322, total 31.9659
+(T) | Epoch=943, loss=5.4188, this epoch 0.0321, total 31.9980
+(T) | Epoch=944, loss=5.4175, this epoch 0.0325, total 32.0304
+(T) | Epoch=945, loss=5.4122, this epoch 0.0321, total 32.0626
+(T) | Epoch=946, loss=5.4486, this epoch 0.0319, total 32.0944
+(T) | Epoch=947, loss=5.4245, this epoch 0.0325, total 32.1269
+(T) | Epoch=948, loss=5.4217, this epoch 0.0320, total 32.1589
+(T) | Epoch=949, loss=5.4283, this epoch 0.0320, total 32.1909
+(T) | Epoch=950, loss=5.4062, this epoch 0.0323, total 32.2233
+(T) | Epoch=951, loss=5.3816, this epoch 0.0317, total 32.2550
++++model saved ! 2015.pth
+(T) | Epoch=952, loss=5.4202, this epoch 0.0348, total 32.2898
+(T) | Epoch=953, loss=5.4301, this epoch 0.0320, total 32.3217
+(T) | Epoch=954, loss=5.3966, this epoch 0.0319, total 32.3536
+(T) | Epoch=955, loss=5.4472, this epoch 0.0336, total 32.3872
+(T) | Epoch=956, loss=5.5111, this epoch 0.0322, total 32.4195
+(T) | Epoch=957, loss=5.3976, this epoch 0.0318, total 32.4513
+(T) | Epoch=958, loss=5.4381, this epoch 0.0322, total 32.4835
+(T) | Epoch=959, loss=5.4287, this epoch 0.0318, total 32.5152
+(T) | Epoch=960, loss=5.4492, this epoch 0.0320, total 32.5472
+(T) | Epoch=961, loss=5.4044, this epoch 0.0319, total 32.5792
+(T) | Epoch=962, loss=5.4280, this epoch 0.0323, total 32.6115
+(T) | Epoch=963, loss=5.4228, this epoch 0.0321, total 32.6435
+(T) | Epoch=964, loss=5.4106, this epoch 0.0322, total 32.6757
+(T) | Epoch=965, loss=5.4098, this epoch 0.0323, total 32.7081
+(T) | Epoch=966, loss=5.4149, this epoch 0.0324, total 32.7405
+(T) | Epoch=967, loss=5.4256, this epoch 0.0322, total 32.7727
+(T) | Epoch=968, loss=5.4101, this epoch 0.0322, total 32.8049
+(T) | Epoch=969, loss=5.4323, this epoch 0.0324, total 32.8373
+(T) | Epoch=970, loss=5.4248, this epoch 0.0324, total 32.8697
+(T) | Epoch=971, loss=5.4357, this epoch 0.0321, total 32.9018
+(T) | Epoch=972, loss=5.4219, this epoch 0.0324, total 32.9342
+(T) | Epoch=973, loss=5.4065, this epoch 0.0320, total 32.9662
+(T) | Epoch=974, loss=5.4423, this epoch 0.0319, total 32.9981
+(T) | Epoch=975, loss=5.4193, this epoch 0.0325, total 33.0306
+(T) | Epoch=976, loss=5.4225, this epoch 0.0325, total 33.0631
+(T) | Epoch=977, loss=5.4086, this epoch 0.0322, total 33.0953
+(T) | Epoch=978, loss=5.4172, this epoch 0.0320, total 33.1272
+(T) | Epoch=979, loss=5.4167, this epoch 0.0320, total 33.1592
+(T) | Epoch=980, loss=5.4247, this epoch 0.0319, total 33.1911
+(T) | Epoch=981, loss=5.4049, this epoch 0.0322, total 33.2233
+(T) | Epoch=982, loss=5.4105, this epoch 0.0321, total 33.2554
+(T) | Epoch=983, loss=5.4069, this epoch 0.0323, total 33.2878
+(T) | Epoch=984, loss=5.4044, this epoch 0.0320, total 33.3198
+(T) | Epoch=985, loss=5.4384, this epoch 0.0322, total 33.3519
+(T) | Epoch=986, loss=5.4180, this epoch 0.0322, total 33.3841
+(T) | Epoch=987, loss=5.4089, this epoch 0.0319, total 33.4161
+(T) | Epoch=988, loss=5.3745, this epoch 0.0322, total 33.4483
++++model saved ! 2015.pth
+(T) | Epoch=989, loss=5.4240, this epoch 0.0357, total 33.4840
+(T) | Epoch=990, loss=5.4031, this epoch 0.0320, total 33.5160
+(T) | Epoch=991, loss=5.4785, this epoch 0.0326, total 33.5486
+(T) | Epoch=992, loss=5.4232, this epoch 0.0319, total 33.5805
+(T) | Epoch=993, loss=5.3853, this epoch 0.0322, total 33.6127
+(T) | Epoch=994, loss=5.4168, this epoch 0.0320, total 33.6447
+(T) | Epoch=995, loss=5.4464, this epoch 0.0321, total 33.6768
+(T) | Epoch=996, loss=5.4150, this epoch 0.0322, total 33.7090
+(T) | Epoch=997, loss=5.4085, this epoch 0.0321, total 33.7411
+(T) | Epoch=998, loss=5.4135, this epoch 0.0320, total 33.7731
+(T) | Epoch=999, loss=5.4203, this epoch 0.0321, total 33.8051
+(T) | Epoch=1000, loss=5.4372, this epoch 0.0325, total 33.8376
+=== Final ===
+
+==============================
+FINE-TUNING
+==============================
+Random seed set to 0
+Traceback (most recent call last):
+  File "/home/ADS/cyang314/ucr_work/HINI_Baseline/GRACEt/run_graph.py", line 59, in <module>
+    main()
+  File "/home/ADS/cyang314/ucr_work/HINI_Baseline/GRACEt/run_graph.py", line 55, in main
+    transfer2(pretrain_graph, downstream_graph, pretrained_gnn_state, args, config_transfer, args.gpu_id, args.seed, args.pretrain_dataset, args.test_dataset)
+  File "/home/ADS/cyang314/ucr_work/HINI_Baseline/GRACEt/model/GraphLoRA.py", line 85, in transfer2
+    emb = gnn(downstream_data.x, downstream_data.edge_index)        
+  File "/home/ADS/cyang314/.conda/envs/h1n1/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ADS/cyang314/.conda/envs/h1n1/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ADS/cyang314/ucr_work/HINI_Baseline/GRACEt/model/GNN_model.py", line 40, in forward
+    x = conv(x, edge_index)
+  File "/home/ADS/cyang314/.conda/envs/h1n1/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ADS/cyang314/.conda/envs/h1n1/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ADS/cyang314/.conda/envs/h1n1/lib/python3.10/site-packages/torch_geometric/nn/conv/gat_conv.py", line 366, in forward
+    out = self.propagate(edge_index, x=x, alpha=alpha, size=size)
+  File "/tmp/torch_geometric.nn.conv.gat_conv_GATConv_propagate_qo9mp6qk.py", line 212, in propagate
+    out = self.aggregate(
+  File "/home/ADS/cyang314/.conda/envs/h1n1/lib/python3.10/site-packages/torch_geometric/nn/conv/message_passing.py", line 594, in aggregate
+    return self.aggr_module(inputs, index, ptr=ptr, dim_size=dim_size,
+  File "/home/ADS/cyang314/.conda/envs/h1n1/lib/python3.10/site-packages/torch_geometric/experimental.py", line 117, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ADS/cyang314/.conda/envs/h1n1/lib/python3.10/site-packages/torch_geometric/nn/aggr/base.py", line 139, in __call__
+    raise e
+  File "/home/ADS/cyang314/.conda/envs/h1n1/lib/python3.10/site-packages/torch_geometric/nn/aggr/base.py", line 131, in __call__
+    return super().__call__(x, index=index, ptr=ptr, dim_size=dim_size,
+  File "/home/ADS/cyang314/.conda/envs/h1n1/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ADS/cyang314/.conda/envs/h1n1/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ADS/cyang314/.conda/envs/h1n1/lib/python3.10/site-packages/torch_geometric/nn/aggr/basic.py", line 22, in forward
+    return self.reduce(x, index, ptr, dim_size, dim, reduce='sum')
+  File "/home/ADS/cyang314/.conda/envs/h1n1/lib/python3.10/site-packages/torch_geometric/nn/aggr/base.py", line 185, in reduce
+    return scatter(x, index, dim, dim_size, reduce)
+  File "/home/ADS/cyang314/.conda/envs/h1n1/lib/python3.10/site-packages/torch_geometric/utils/_scatter.py", line 70, in scatter
+    return src.new_zeros(size).scatter_add_(dim, index, src)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 8.95 GiB. GPU 0 has a total capacity of 23.58 GiB of which 911.38 MiB is free. Including non-PyTorch memory, this process has 22.65 GiB memory in use. Of the allocated memory 22.34 GiB is allocated by PyTorch, and 17.95 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Running: year=2015 → downstream_year=2016, seed=1
+Random seed set to 42
+
+==============================
+PRE-TRAINING
+==============================
+create PreTrain instance...
+pre-training...
+(T) | Epoch=001, loss=6.4106, this epoch 0.2926, total 0.2926
++++model saved ! 2015.pth
+(T) | Epoch=002, loss=6.3826, this epoch 0.0433, total 0.3359
++++model saved ! 2015.pth
+(T) | Epoch=003, loss=6.3740, this epoch 0.0401, total 0.3760
++++model saved ! 2015.pth
+(T) | Epoch=004, loss=6.3877, this epoch 0.0394, total 0.4154
+(T) | Epoch=005, loss=6.3712, this epoch 0.0379, total 0.4532
++++model saved ! 2015.pth
+(T) | Epoch=006, loss=6.3668, this epoch 0.0387, total 0.4919
++++model saved ! 2015.pth
+(T) | Epoch=007, loss=6.3751, this epoch 0.0378, total 0.5297
+(T) | Epoch=008, loss=6.3626, this epoch 0.0365, total 0.5662
++++model saved ! 2015.pth
+(T) | Epoch=009, loss=6.3621, this epoch 0.0382, total 0.6045
++++model saved ! 2015.pth
+(T) | Epoch=010, loss=6.3616, this epoch 0.0387, total 0.6431
++++model saved ! 2015.pth
+(T) | Epoch=011, loss=6.3666, this epoch 0.0391, total 0.6823
+(T) | Epoch=012, loss=6.3615, this epoch 0.0354, total 0.7177
++++model saved ! 2015.pth
+(T) | Epoch=013, loss=6.3557, this epoch 0.0364, total 0.7540
++++model saved ! 2015.pth
+(T) | Epoch=014, loss=6.3672, this epoch 0.0393, total 0.7933
+(T) | Epoch=015, loss=6.3608, this epoch 0.0372, total 0.8305
+(T) | Epoch=016, loss=6.3647, this epoch 0.0356, total 0.8661
+(T) | Epoch=017, loss=6.3559, this epoch 0.0365, total 0.9026
+(T) | Epoch=018, loss=6.3552, this epoch 0.0363, total 0.9389
++++model saved ! 2015.pth
+(T) | Epoch=019, loss=6.3548, this epoch 0.0394, total 0.9783
++++model saved ! 2015.pth
+(T) | Epoch=020, loss=6.3544, this epoch 0.0399, total 1.0182
++++model saved ! 2015.pth
+(T) | Epoch=021, loss=6.3543, this epoch 0.0387, total 1.0569
++++model saved ! 2015.pth
+(T) | Epoch=022, loss=6.3559, this epoch 0.0375, total 1.0944
+(T) | Epoch=023, loss=6.3539, this epoch 0.0358, total 1.1302
++++model saved ! 2015.pth
+(T) | Epoch=024, loss=6.3535, this epoch 0.0366, total 1.1668
++++model saved ! 2015.pth
+(T) | Epoch=025, loss=6.3558, this epoch 0.0383, total 1.2051
+(T) | Epoch=026, loss=6.3545, this epoch 0.0371, total 1.2422
+(T) | Epoch=027, loss=6.3551, this epoch 0.0354, total 1.2775
+(T) | Epoch=028, loss=6.3527, this epoch 0.0350, total 1.3126
++++model saved ! 2015.pth
+(T) | Epoch=029, loss=6.3541, this epoch 0.0387, total 1.3513
+(T) | Epoch=030, loss=6.3523, this epoch 0.0369, total 1.3882
++++model saved ! 2015.pth
+(T) | Epoch=031, loss=6.3535, this epoch 0.0374, total 1.4256
+(T) | Epoch=032, loss=6.3522, this epoch 0.0355, total 1.4612
++++model saved ! 2015.pth
+(T) | Epoch=033, loss=6.3535, this epoch 0.0382, total 1.4993
+(T) | Epoch=034, loss=6.3556, this epoch 0.0361, total 1.5355
+(T) | Epoch=035, loss=6.3530, this epoch 0.0366, total 1.5721
+(T) | Epoch=036, loss=6.3526, this epoch 0.0371, total 1.6092
+(T) | Epoch=037, loss=6.3541, this epoch 0.0353, total 1.6445
+(T) | Epoch=038, loss=6.3529, this epoch 0.0351, total 1.6796
+(T) | Epoch=039, loss=6.3550, this epoch 0.0353, total 1.7149
+(T) | Epoch=040, loss=6.3527, this epoch 0.0362, total 1.7511
+(T) | Epoch=041, loss=6.3527, this epoch 0.0355, total 1.7866
+(T) | Epoch=042, loss=6.3526, this epoch 0.0354, total 1.8220
+(T) | Epoch=043, loss=6.3521, this epoch 0.0357, total 1.8577
++++model saved ! 2015.pth
+(T) | Epoch=044, loss=6.3527, this epoch 0.0384, total 1.8961
+(T) | Epoch=045, loss=6.3527, this epoch 0.0361, total 1.9322
+(T) | Epoch=046, loss=6.3531, this epoch 0.0361, total 1.9683
+(T) | Epoch=047, loss=6.3528, this epoch 0.0361, total 2.0044
+(T) | Epoch=048, loss=6.3525, this epoch 0.0355, total 2.0399
+(T) | Epoch=049, loss=6.3525, this epoch 0.0351, total 2.0750
+(T) | Epoch=050, loss=6.3525, this epoch 0.0344, total 2.1094
+(T) | Epoch=051, loss=6.3525, this epoch 0.0338, total 2.1432
+(T) | Epoch=052, loss=6.3531, this epoch 0.0336, total 2.1768
+(T) | Epoch=053, loss=6.3523, this epoch 0.0374, total 2.2142
+(T) | Epoch=054, loss=6.3524, this epoch 0.0359, total 2.2501
+(T) | Epoch=055, loss=6.3532, this epoch 0.0399, total 2.2900
+(T) | Epoch=056, loss=6.3526, this epoch 0.0363, total 2.3263
+(T) | Epoch=057, loss=6.3530, this epoch 0.0360, total 2.3624
+(T) | Epoch=058, loss=6.3536, this epoch 0.0366, total 2.3990
+(T) | Epoch=059, loss=6.3523, this epoch 0.0355, total 2.4345
+(T) | Epoch=060, loss=6.3521, this epoch 0.0359, total 2.4704
++++model saved ! 2015.pth
+(T) | Epoch=061, loss=6.3529, this epoch 0.0389, total 2.5093
+(T) | Epoch=062, loss=6.3528, this epoch 0.0366, total 2.5458
+(T) | Epoch=063, loss=6.3530, this epoch 0.0336, total 2.5795
+(T) | Epoch=064, loss=6.3521, this epoch 0.0349, total 2.6144
+(T) | Epoch=065, loss=6.3527, this epoch 0.0360, total 2.6505
+(T) | Epoch=066, loss=6.3521, this epoch 0.0361, total 2.6865
+(T) | Epoch=067, loss=6.3528, this epoch 0.0366, total 2.7232
+(T) | Epoch=068, loss=6.3520, this epoch 0.0360, total 2.7591
++++model saved ! 2015.pth
+(T) | Epoch=069, loss=6.3524, this epoch 0.0409, total 2.8000
+(T) | Epoch=070, loss=6.3523, this epoch 0.0368, total 2.8367
+(T) | Epoch=071, loss=6.3523, this epoch 0.0350, total 2.8718
+(T) | Epoch=072, loss=6.3518, this epoch 0.0376, total 2.9094
++++model saved ! 2015.pth
+(T) | Epoch=073, loss=6.3523, this epoch 0.0393, total 2.9487
+(T) | Epoch=074, loss=6.3519, this epoch 0.0366, total 2.9853
+(T) | Epoch=075, loss=6.3518, this epoch 0.0359, total 3.0213
++++model saved ! 2015.pth
+(T) | Epoch=076, loss=6.3517, this epoch 0.0377, total 3.0589
++++model saved ! 2015.pth
+(T) | Epoch=077, loss=6.3528, this epoch 0.0400, total 3.0990
+(T) | Epoch=078, loss=6.3522, this epoch 0.0367, total 3.1356
+(T) | Epoch=079, loss=6.3524, this epoch 0.0364, total 3.1720
+(T) | Epoch=080, loss=6.3519, this epoch 0.0351, total 3.2071
+(T) | Epoch=081, loss=6.3519, this epoch 0.0351, total 3.2422
+(T) | Epoch=082, loss=6.3520, this epoch 0.0341, total 3.2763
+(T) | Epoch=083, loss=6.3519, this epoch 0.0362, total 3.3125
+(T) | Epoch=084, loss=6.3520, this epoch 0.0363, total 3.3488
+(T) | Epoch=085, loss=6.3518, this epoch 0.0366, total 3.3854
+(T) | Epoch=086, loss=6.3520, this epoch 0.0362, total 3.4217
+(T) | Epoch=087, loss=6.3518, this epoch 0.0380, total 3.4597
+(T) | Epoch=088, loss=6.3520, this epoch 0.0369, total 3.4966
+(T) | Epoch=089, loss=6.3518, this epoch 0.0366, total 3.5332
+(T) | Epoch=090, loss=6.3515, this epoch 0.0359, total 3.5691
++++model saved ! 2015.pth
+(T) | Epoch=091, loss=6.3517, this epoch 0.0376, total 3.6067
+(T) | Epoch=092, loss=6.3517, this epoch 0.0362, total 3.6429
+(T) | Epoch=093, loss=6.3514, this epoch 0.0371, total 3.6801
++++model saved ! 2015.pth
+(T) | Epoch=094, loss=6.3514, this epoch 0.0388, total 3.7188
++++model saved ! 2015.pth
+(T) | Epoch=095, loss=6.3514, this epoch 0.0388, total 3.7576
++++model saved ! 2015.pth
+(T) | Epoch=096, loss=6.3531, this epoch 0.0396, total 3.7972
+(T) | Epoch=097, loss=6.3523, this epoch 0.0367, total 3.8339
+(T) | Epoch=098, loss=6.3519, this epoch 0.0357, total 3.8696
+(T) | Epoch=099, loss=6.3518, this epoch 0.0369, total 3.9065
+(T) | Epoch=100, loss=6.3520, this epoch 0.0367, total 3.9432
+(T) | Epoch=101, loss=6.3517, this epoch 0.0371, total 3.9802
+(T) | Epoch=102, loss=6.3516, this epoch 0.0362, total 4.0165
+(T) | Epoch=103, loss=6.3517, this epoch 0.0362, total 4.0526
+(T) | Epoch=104, loss=6.3515, this epoch 0.0369, total 4.0896
+(T) | Epoch=105, loss=6.3516, this epoch 0.0352, total 4.1248
+(T) | Epoch=106, loss=6.3517, this epoch 0.0369, total 4.1617
+(T) | Epoch=107, loss=6.3513, this epoch 0.0367, total 4.1983
++++model saved ! 2015.pth
+(T) | Epoch=108, loss=6.3518, this epoch 0.0376, total 4.2360
+(T) | Epoch=109, loss=6.3515, this epoch 0.0351, total 4.2711
+(T) | Epoch=110, loss=6.3517, this epoch 0.0361, total 4.3072
+(T) | Epoch=111, loss=6.3518, this epoch 0.0355, total 4.3427
+(T) | Epoch=112, loss=6.3517, this epoch 0.0360, total 4.3787
+(T) | Epoch=113, loss=6.3517, this epoch 0.0364, total 4.4151
+(T) | Epoch=114, loss=6.3514, this epoch 0.0350, total 4.4501
+(T) | Epoch=115, loss=6.3518, this epoch 0.0345, total 4.4845
+(T) | Epoch=116, loss=6.3527, this epoch 0.0349, total 4.5194
+(T) | Epoch=117, loss=6.3514, this epoch 0.0352, total 4.5547
+(T) | Epoch=118, loss=6.3515, this epoch 0.0355, total 4.5902
+(T) | Epoch=119, loss=6.3517, this epoch 0.0364, total 4.6266
+(T) | Epoch=120, loss=6.3517, this epoch 0.0358, total 4.6624
+(T) | Epoch=121, loss=6.3525, this epoch 0.0358, total 4.6982
+(T) | Epoch=122, loss=6.3514, this epoch 0.0357, total 4.7339
+(T) | Epoch=123, loss=6.3514, this epoch 0.0355, total 4.7695
+(T) | Epoch=124, loss=6.3514, this epoch 0.0352, total 4.8046
+(T) | Epoch=125, loss=6.3516, this epoch 0.0359, total 4.8405
+(T) | Epoch=126, loss=6.3515, this epoch 0.0352, total 4.8757
+(T) | Epoch=127, loss=6.3519, this epoch 0.0355, total 4.9112
+(T) | Epoch=128, loss=6.3516, this epoch 0.0360, total 4.9472
+(T) | Epoch=129, loss=6.3517, this epoch 0.0344, total 4.9816
+(T) | Epoch=130, loss=6.3514, this epoch 0.0371, total 5.0187
+(T) | Epoch=131, loss=6.3515, this epoch 0.0353, total 5.0541
+(T) | Epoch=132, loss=6.3514, this epoch 0.0354, total 5.0895
+(T) | Epoch=133, loss=6.3516, this epoch 0.0353, total 5.1248
+(T) | Epoch=134, loss=6.3519, this epoch 0.0368, total 5.1616
+(T) | Epoch=135, loss=6.3515, this epoch 0.0364, total 5.1980
+(T) | Epoch=136, loss=6.3518, this epoch 0.0348, total 5.2328
+(T) | Epoch=137, loss=6.3513, this epoch 0.0375, total 5.2702
+(T) | Epoch=138, loss=6.3516, this epoch 0.0368, total 5.3070
+(T) | Epoch=139, loss=6.3514, this epoch 0.0365, total 5.3435
+(T) | Epoch=140, loss=6.3512, this epoch 0.0368, total 5.3804
++++model saved ! 2015.pth
+(T) | Epoch=141, loss=6.3512, this epoch 0.0361, total 5.4165
+(T) | Epoch=142, loss=6.3515, this epoch 0.0347, total 5.4512
+(T) | Epoch=143, loss=6.3513, this epoch 0.0355, total 5.4867
+(T) | Epoch=144, loss=6.3516, this epoch 0.0357, total 5.5224
+(T) | Epoch=145, loss=6.3513, this epoch 0.0350, total 5.5574
+(T) | Epoch=146, loss=6.3514, this epoch 0.0342, total 5.5916
+(T) | Epoch=147, loss=6.3512, this epoch 0.0372, total 5.6288
+(T) | Epoch=148, loss=6.3513, this epoch 0.0367, total 5.6655
+(T) | Epoch=149, loss=6.3518, this epoch 0.0357, total 5.7012
+(T) | Epoch=150, loss=6.3517, this epoch 0.0358, total 5.7370
+(T) | Epoch=151, loss=6.3512, this epoch 0.0360, total 5.7730
+(T) | Epoch=152, loss=6.3516, this epoch 0.0351, total 5.8080
+(T) | Epoch=153, loss=6.3514, this epoch 0.0349, total 5.8429
+(T) | Epoch=154, loss=6.3515, this epoch 0.0356, total 5.8785
+(T) | Epoch=155, loss=6.3514, this epoch 0.0354, total 5.9139
+(T) | Epoch=156, loss=6.3514, this epoch 0.0360, total 5.9499
+(T) | Epoch=157, loss=6.3514, this epoch 0.0364, total 5.9863
+(T) | Epoch=158, loss=6.3514, this epoch 0.0363, total 6.0226
+(T) | Epoch=159, loss=6.3513, this epoch 0.0346, total 6.0572
+(T) | Epoch=160, loss=6.3514, this epoch 0.0356, total 6.0928
+(T) | Epoch=161, loss=6.3516, this epoch 0.0360, total 6.1288
+(T) | Epoch=162, loss=6.3514, this epoch 0.0353, total 6.1640
+(T) | Epoch=163, loss=6.3515, this epoch 0.0346, total 6.1986
+(T) | Epoch=164, loss=6.3522, this epoch 0.0364, total 6.2350
+(T) | Epoch=165, loss=6.3515, this epoch 0.0363, total 6.2714
+(T) | Epoch=166, loss=6.3515, this epoch 0.0375, total 6.3089
+(T) | Epoch=167, loss=6.3513, this epoch 0.0362, total 6.3451
+(T) | Epoch=168, loss=6.3511, this epoch 0.0355, total 6.3806
++++model saved ! 2015.pth
+(T) | Epoch=169, loss=6.3515, this epoch 0.0386, total 6.4192
+(T) | Epoch=170, loss=6.3515, this epoch 0.0364, total 6.4556
+(T) | Epoch=171, loss=6.3513, this epoch 0.0354, total 6.4910
+(T) | Epoch=172, loss=6.3517, this epoch 0.0359, total 6.5268
+(T) | Epoch=173, loss=6.3512, this epoch 0.0364, total 6.5633
+(T) | Epoch=174, loss=6.3514, this epoch 0.0361, total 6.5994
+(T) | Epoch=175, loss=6.3512, this epoch 0.0366, total 6.6360
+(T) | Epoch=176, loss=6.3514, this epoch 0.0367, total 6.6727
+(T) | Epoch=177, loss=6.3511, this epoch 0.0350, total 6.7077
++++model saved ! 2015.pth
+(T) | Epoch=178, loss=6.3512, this epoch 0.0376, total 6.7453
+(T) | Epoch=179, loss=6.3515, this epoch 0.0358, total 6.7811
+(T) | Epoch=180, loss=6.3511, this epoch 0.0357, total 6.8168
+(T) | Epoch=181, loss=6.3512, this epoch 0.0350, total 6.8517
+(T) | Epoch=182, loss=6.3516, this epoch 0.0362, total 6.8879
+(T) | Epoch=183, loss=6.3516, this epoch 0.0365, total 6.9244
+(T) | Epoch=184, loss=6.3515, this epoch 0.0357, total 6.9601
+(T) | Epoch=185, loss=6.3511, this epoch 0.0362, total 6.9963
++++model saved ! 2015.pth
+(T) | Epoch=186, loss=6.3513, this epoch 0.0380, total 7.0343
+(T) | Epoch=187, loss=6.3514, this epoch 0.0361, total 7.0704
+(T) | Epoch=188, loss=6.3516, this epoch 0.0357, total 7.1061
+(T) | Epoch=189, loss=6.3513, this epoch 0.0358, total 7.1419
+(T) | Epoch=190, loss=6.3512, this epoch 0.0360, total 7.1779
+(T) | Epoch=191, loss=6.3515, this epoch 0.0358, total 7.2137
+(T) | Epoch=192, loss=6.3511, this epoch 0.0356, total 7.2493
+(T) | Epoch=193, loss=6.3513, this epoch 0.0355, total 7.2848
+(T) | Epoch=194, loss=6.3513, this epoch 0.0371, total 7.3219
+(T) | Epoch=195, loss=6.3511, this epoch 0.0356, total 7.3576
+(T) | Epoch=196, loss=6.3515, this epoch 0.0357, total 7.3933
+(T) | Epoch=197, loss=6.3513, this epoch 0.0368, total 7.4301
+(T) | Epoch=198, loss=6.3510, this epoch 0.0348, total 7.4649
++++model saved ! 2015.pth
+(T) | Epoch=199, loss=6.3515, this epoch 0.0393, total 7.5041
+(T) | Epoch=200, loss=6.3515, this epoch 0.0364, total 7.5406
+(T) | Epoch=201, loss=6.3512, this epoch 0.0368, total 7.5773
+(T) | Epoch=202, loss=6.3512, this epoch 0.0365, total 7.6139
+(T) | Epoch=203, loss=6.3512, this epoch 0.0361, total 7.6499
+(T) | Epoch=204, loss=6.3512, this epoch 0.0363, total 7.6862
+(T) | Epoch=205, loss=6.3511, this epoch 0.0351, total 7.7214
+(T) | Epoch=206, loss=6.3512, this epoch 0.0366, total 7.7580
+(T) | Epoch=207, loss=6.3514, this epoch 0.0352, total 7.7932
+(T) | Epoch=208, loss=6.3515, this epoch 0.0379, total 7.8311
+(T) | Epoch=209, loss=6.3513, this epoch 0.0345, total 7.8656
+(T) | Epoch=210, loss=6.3514, this epoch 0.0352, total 7.9008
+(T) | Epoch=211, loss=6.3513, this epoch 0.0353, total 7.9361
+(T) | Epoch=212, loss=6.3509, this epoch 0.0355, total 7.9716
++++model saved ! 2015.pth
+(T) | Epoch=213, loss=6.3512, this epoch 0.0384, total 8.0100
+(T) | Epoch=214, loss=6.3511, this epoch 0.0360, total 8.0460
+(T) | Epoch=215, loss=6.3511, this epoch 0.0355, total 8.0816
+(T) | Epoch=216, loss=6.3513, this epoch 0.0351, total 8.1166
+(T) | Epoch=217, loss=6.3513, this epoch 0.0354, total 8.1521
+(T) | Epoch=218, loss=6.3511, this epoch 0.0345, total 8.1866
+(T) | Epoch=219, loss=6.3510, this epoch 0.0375, total 8.2241
+(T) | Epoch=220, loss=6.3511, this epoch 0.0358, total 8.2599
+(T) | Epoch=221, loss=6.3511, this epoch 0.0366, total 8.2965
+(T) | Epoch=222, loss=6.3512, this epoch 0.0354, total 8.3319
+(T) | Epoch=223, loss=6.3509, this epoch 0.0348, total 8.3667
+(T) | Epoch=224, loss=6.3513, this epoch 0.0369, total 8.4036
+(T) | Epoch=225, loss=6.3511, this epoch 0.0359, total 8.4395
+(T) | Epoch=226, loss=6.3511, this epoch 0.0352, total 8.4747
+(T) | Epoch=227, loss=6.3510, this epoch 0.0374, total 8.5121
+(T) | Epoch=228, loss=6.3510, this epoch 0.0345, total 8.5466
+(T) | Epoch=229, loss=6.3509, this epoch 0.0375, total 8.5842
+(T) | Epoch=230, loss=6.3511, this epoch 0.0363, total 8.6205
+(T) | Epoch=231, loss=6.3513, this epoch 0.0351, total 8.6556
+(T) | Epoch=232, loss=6.3510, this epoch 0.0373, total 8.6928
+(T) | Epoch=233, loss=6.3513, this epoch 0.0361, total 8.7290
+(T) | Epoch=234, loss=6.3513, this epoch 0.0362, total 8.7652
+(T) | Epoch=235, loss=6.3509, this epoch 0.0341, total 8.7993
++++model saved ! 2015.pth
+(T) | Epoch=236, loss=6.3510, this epoch 0.0380, total 8.8373
+(T) | Epoch=237, loss=6.3509, this epoch 0.0356, total 8.8729
+(T) | Epoch=238, loss=6.3516, this epoch 0.0364, total 8.9093
+(T) | Epoch=239, loss=6.3517, this epoch 0.0370, total 8.9463
+(T) | Epoch=240, loss=6.3510, this epoch 0.0368, total 8.9831
+(T) | Epoch=241, loss=6.3509, this epoch 0.0359, total 9.0190
+(T) | Epoch=242, loss=6.3513, this epoch 0.0343, total 9.0533
+(T) | Epoch=243, loss=6.3510, this epoch 0.0330, total 9.0863
+(T) | Epoch=244, loss=6.3512, this epoch 0.0328, total 9.1191
+(T) | Epoch=245, loss=6.3511, this epoch 0.0331, total 9.1522
+(T) | Epoch=246, loss=6.3511, this epoch 0.0323, total 9.1845
+(T) | Epoch=247, loss=6.3509, this epoch 0.0321, total 9.2166
++++model saved ! 2015.pth
+(T) | Epoch=248, loss=6.3510, this epoch 0.0351, total 9.2517
+(T) | Epoch=249, loss=6.3510, this epoch 0.0320, total 9.2837
+(T) | Epoch=250, loss=6.3509, this epoch 0.0325, total 9.3162
+(T) | Epoch=251, loss=6.3512, this epoch 0.0324, total 9.3486
+(T) | Epoch=252, loss=6.3508, this epoch 0.0324, total 9.3810
++++model saved ! 2015.pth
+(T) | Epoch=253, loss=6.3510, this epoch 0.0347, total 9.4157
+(T) | Epoch=254, loss=6.3510, this epoch 0.0321, total 9.4478
+(T) | Epoch=255, loss=6.3511, this epoch 0.0320, total 9.4798
+(T) | Epoch=256, loss=6.3510, this epoch 0.0328, total 9.5126
+(T) | Epoch=257, loss=6.3508, this epoch 0.0322, total 9.5449
++++model saved ! 2015.pth
+(T) | Epoch=258, loss=6.3512, this epoch 0.0343, total 9.5792
+(T) | Epoch=259, loss=6.3511, this epoch 0.0323, total 9.6115
+(T) | Epoch=260, loss=6.3508, this epoch 0.0320, total 9.6435
++++model saved ! 2015.pth
+(T) | Epoch=261, loss=6.3511, this epoch 0.0347, total 9.6782
+(T) | Epoch=262, loss=6.3508, this epoch 0.0323, total 9.7105
+(T) | Epoch=263, loss=6.3510, this epoch 0.0322, total 9.7427
+(T) | Epoch=264, loss=6.3508, this epoch 0.0324, total 9.7751
+(T) | Epoch=265, loss=6.3507, this epoch 0.0324, total 9.8075
++++model saved ! 2015.pth
+(T) | Epoch=266, loss=6.3511, this epoch 0.0341, total 9.8416
+(T) | Epoch=267, loss=6.3507, this epoch 0.0324, total 9.8740
++++model saved ! 2015.pth
+(T) | Epoch=268, loss=6.3509, this epoch 0.0347, total 9.9087
+(T) | Epoch=269, loss=6.3507, this epoch 0.0322, total 9.9409
+(T) | Epoch=270, loss=6.3509, this epoch 0.0323, total 9.9732
+(T) | Epoch=271, loss=6.3508, this epoch 0.0324, total 10.0055
+(T) | Epoch=272, loss=6.3506, this epoch 0.0321, total 10.0376
++++model saved ! 2015.pth
+(T) | Epoch=273, loss=6.3507, this epoch 0.0357, total 10.0734
+(T) | Epoch=274, loss=6.3506, this epoch 0.0323, total 10.1057
+(T) | Epoch=275, loss=6.3506, this epoch 0.0320, total 10.1377
+(T) | Epoch=276, loss=6.3507, this epoch 0.0324, total 10.1701
+(T) | Epoch=277, loss=6.3507, this epoch 0.0321, total 10.2022
+(T) | Epoch=278, loss=6.3505, this epoch 0.0319, total 10.2341
++++model saved ! 2015.pth
+(T) | Epoch=279, loss=6.3508, this epoch 0.0350, total 10.2691
+(T) | Epoch=280, loss=6.3505, this epoch 0.0320, total 10.3011
+(T) | Epoch=281, loss=6.3505, this epoch 0.0324, total 10.3335
+(T) | Epoch=282, loss=6.3506, this epoch 0.0322, total 10.3657
+(T) | Epoch=283, loss=6.3506, this epoch 0.0325, total 10.3982
+(T) | Epoch=284, loss=6.3504, this epoch 0.0324, total 10.4306
++++model saved ! 2015.pth
+(T) | Epoch=285, loss=6.3503, this epoch 0.0348, total 10.4654
++++model saved ! 2015.pth
+(T) | Epoch=286, loss=6.3504, this epoch 0.0349, total 10.5003
+(T) | Epoch=287, loss=6.3501, this epoch 0.0324, total 10.5326
++++model saved ! 2015.pth
+(T) | Epoch=288, loss=6.3501, this epoch 0.0345, total 10.5671
++++model saved ! 2015.pth
+(T) | Epoch=289, loss=6.3501, this epoch 0.0347, total 10.6018
++++model saved ! 2015.pth
+(T) | Epoch=290, loss=6.3501, this epoch 0.0348, total 10.6366
+(T) | Epoch=291, loss=6.3499, this epoch 0.0322, total 10.6688
++++model saved ! 2015.pth
+(T) | Epoch=292, loss=6.3500, this epoch 0.0344, total 10.7032
+(T) | Epoch=293, loss=6.3499, this epoch 0.0322, total 10.7354
++++model saved ! 2015.pth
+(T) | Epoch=294, loss=6.3497, this epoch 0.0344, total 10.7699
++++model saved ! 2015.pth
+(T) | Epoch=295, loss=6.3498, this epoch 0.0347, total 10.8045
+(T) | Epoch=296, loss=6.3496, this epoch 0.0319, total 10.8364
++++model saved ! 2015.pth
+(T) | Epoch=297, loss=6.3495, this epoch 0.0348, total 10.8712
++++model saved ! 2015.pth
+(T) | Epoch=298, loss=6.3496, this epoch 0.0349, total 10.9061
+(T) | Epoch=299, loss=6.3497, this epoch 0.0319, total 10.9380
+(T) | Epoch=300, loss=6.3493, this epoch 0.0325, total 10.9705
++++model saved ! 2015.pth
+(T) | Epoch=301, loss=6.3487, this epoch 0.0348, total 11.0053
++++model saved ! 2015.pth
+(T) | Epoch=302, loss=6.3492, this epoch 0.0346, total 11.0399
+(T) | Epoch=303, loss=6.3484, this epoch 0.0322, total 11.0721
++++model saved ! 2015.pth
+(T) | Epoch=304, loss=6.3487, this epoch 0.0347, total 11.1067
+(T) | Epoch=305, loss=6.3475, this epoch 0.0324, total 11.1391
++++model saved ! 2015.pth
+(T) | Epoch=306, loss=6.3481, this epoch 0.0348, total 11.1739
+(T) | Epoch=307, loss=6.3470, this epoch 0.0324, total 11.2063
++++model saved ! 2015.pth
+(T) | Epoch=308, loss=6.3471, this epoch 0.0341, total 11.2404
+(T) | Epoch=309, loss=6.3454, this epoch 0.0325, total 11.2729
++++model saved ! 2015.pth
+(T) | Epoch=310, loss=6.3455, this epoch 0.0351, total 11.3081
+(T) | Epoch=311, loss=6.3446, this epoch 0.0324, total 11.3405
++++model saved ! 2015.pth
+(T) | Epoch=312, loss=6.3436, this epoch 0.0344, total 11.3749
++++model saved ! 2015.pth
+(T) | Epoch=313, loss=6.3430, this epoch 0.0347, total 11.4096
++++model saved ! 2015.pth
+(T) | Epoch=314, loss=6.3401, this epoch 0.0346, total 11.4442
++++model saved ! 2015.pth
+(T) | Epoch=315, loss=6.3386, this epoch 0.0343, total 11.4785
++++model saved ! 2015.pth
+(T) | Epoch=316, loss=6.3358, this epoch 0.0347, total 11.5132
++++model saved ! 2015.pth
+(T) | Epoch=317, loss=6.3314, this epoch 0.0345, total 11.5477
++++model saved ! 2015.pth
+(T) | Epoch=318, loss=6.3269, this epoch 0.0341, total 11.5819
++++model saved ! 2015.pth
+(T) | Epoch=319, loss=6.3153, this epoch 0.0346, total 11.6165
++++model saved ! 2015.pth
+(T) | Epoch=320, loss=6.3054, this epoch 0.0344, total 11.6508
++++model saved ! 2015.pth
+(T) | Epoch=321, loss=6.2923, this epoch 0.0370, total 11.6878
++++model saved ! 2015.pth
+(T) | Epoch=322, loss=6.2679, this epoch 0.0377, total 11.7255
++++model saved ! 2015.pth
+(T) | Epoch=323, loss=6.2350, this epoch 0.0365, total 11.7620
++++model saved ! 2015.pth
+(T) | Epoch=324, loss=6.1811, this epoch 0.0392, total 11.8012
++++model saved ! 2015.pth
+(T) | Epoch=325, loss=6.1223, this epoch 0.0382, total 11.8395
++++model saved ! 2015.pth
+(T) | Epoch=326, loss=6.0537, this epoch 0.0376, total 11.8771
++++model saved ! 2015.pth
+(T) | Epoch=327, loss=5.9397, this epoch 0.0391, total 11.9162
++++model saved ! 2015.pth
+(T) | Epoch=328, loss=5.8229, this epoch 0.0373, total 11.9535
++++model saved ! 2015.pth
+(T) | Epoch=329, loss=5.7436, this epoch 0.0375, total 11.9910
++++model saved ! 2015.pth
+(T) | Epoch=330, loss=5.8730, this epoch 0.0382, total 12.0292
+(T) | Epoch=331, loss=5.8660, this epoch 0.0361, total 12.0652
+(T) | Epoch=332, loss=5.7268, this epoch 0.0357, total 12.1009
++++model saved ! 2015.pth
+(T) | Epoch=333, loss=6.5533, this epoch 0.0394, total 12.1403
+(T) | Epoch=334, loss=5.7881, this epoch 0.0361, total 12.1764
+(T) | Epoch=335, loss=5.7279, this epoch 0.0360, total 12.2124
+(T) | Epoch=336, loss=5.7077, this epoch 0.0351, total 12.2475
++++model saved ! 2015.pth
+(T) | Epoch=337, loss=5.7292, this epoch 0.0396, total 12.2871
+(T) | Epoch=338, loss=5.7176, this epoch 0.0358, total 12.3229
+(T) | Epoch=339, loss=5.7252, this epoch 0.0372, total 12.3600
+(T) | Epoch=340, loss=5.7787, this epoch 0.0344, total 12.3944
+(T) | Epoch=341, loss=5.6987, this epoch 0.0346, total 12.4290
++++model saved ! 2015.pth
+(T) | Epoch=342, loss=5.7908, this epoch 0.0369, total 12.4659
+(T) | Epoch=343, loss=5.7277, this epoch 0.0351, total 12.5010
+(T) | Epoch=344, loss=5.6856, this epoch 0.0357, total 12.5367
++++model saved ! 2015.pth
+(T) | Epoch=345, loss=5.6922, this epoch 0.0378, total 12.5745
+(T) | Epoch=346, loss=5.6787, this epoch 0.0361, total 12.6106
++++model saved ! 2015.pth
+(T) | Epoch=347, loss=5.7009, this epoch 0.0382, total 12.6488
+(T) | Epoch=348, loss=5.7159, this epoch 0.0347, total 12.6836
+(T) | Epoch=349, loss=5.7077, this epoch 0.0354, total 12.7190
+(T) | Epoch=350, loss=5.6646, this epoch 0.0359, total 12.7549
++++model saved ! 2015.pth
+(T) | Epoch=351, loss=5.6621, this epoch 0.0384, total 12.7933
++++model saved ! 2015.pth
+(T) | Epoch=352, loss=5.7667, this epoch 0.0387, total 12.8320
+(T) | Epoch=353, loss=5.6724, this epoch 0.0350, total 12.8669
+(T) | Epoch=354, loss=5.7083, this epoch 0.0350, total 12.9019
+(T) | Epoch=355, loss=5.6604, this epoch 0.0367, total 12.9386
++++model saved ! 2015.pth
+(T) | Epoch=356, loss=5.7055, this epoch 0.0402, total 12.9789
+(T) | Epoch=357, loss=5.6741, this epoch 0.0358, total 13.0147
+(T) | Epoch=358, loss=5.6842, this epoch 0.0367, total 13.0514
+(T) | Epoch=359, loss=5.6918, this epoch 0.0358, total 13.0873
+(T) | Epoch=360, loss=5.6949, this epoch 0.0360, total 13.1233
+(T) | Epoch=361, loss=5.8252, this epoch 0.0355, total 13.1587
+(T) | Epoch=362, loss=5.6978, this epoch 0.0347, total 13.1934
+(T) | Epoch=363, loss=5.7159, this epoch 0.0356, total 13.2291
+(T) | Epoch=364, loss=5.8784, this epoch 0.0345, total 13.2635
+(T) | Epoch=365, loss=5.8230, this epoch 0.0343, total 13.2978
+(T) | Epoch=366, loss=5.9978, this epoch 0.0354, total 13.3333
+(T) | Epoch=367, loss=5.6928, this epoch 0.0370, total 13.3703
+(T) | Epoch=368, loss=5.7134, this epoch 0.0347, total 13.4049
+(T) | Epoch=369, loss=5.7544, this epoch 0.0351, total 13.4400
+(T) | Epoch=370, loss=5.7785, this epoch 0.0354, total 13.4754
+(T) | Epoch=371, loss=5.7213, this epoch 0.0358, total 13.5112
+(T) | Epoch=372, loss=5.7511, this epoch 0.0359, total 13.5471
+(T) | Epoch=373, loss=5.7254, this epoch 0.0348, total 13.5819
+(T) | Epoch=374, loss=5.7416, this epoch 0.0352, total 13.6171
+(T) | Epoch=375, loss=5.6866, this epoch 0.0362, total 13.6533
+(T) | Epoch=376, loss=5.6758, this epoch 0.0356, total 13.6889
+(T) | Epoch=377, loss=5.7584, this epoch 0.0370, total 13.7259
+(T) | Epoch=378, loss=5.6620, this epoch 0.0353, total 13.7612
+(T) | Epoch=379, loss=5.6800, this epoch 0.0371, total 13.7983
+(T) | Epoch=380, loss=5.7039, this epoch 0.0364, total 13.8347
+(T) | Epoch=381, loss=5.7052, this epoch 0.0358, total 13.8705
+(T) | Epoch=382, loss=5.6552, this epoch 0.0366, total 13.9071
++++model saved ! 2015.pth
+(T) | Epoch=383, loss=5.6631, this epoch 0.0394, total 13.9466
+(T) | Epoch=384, loss=5.6351, this epoch 0.0347, total 13.9813
++++model saved ! 2015.pth
+(T) | Epoch=385, loss=5.6238, this epoch 0.0384, total 14.0197
++++model saved ! 2015.pth
+(T) | Epoch=386, loss=5.7229, this epoch 0.0378, total 14.0575
+(T) | Epoch=387, loss=5.6496, this epoch 0.0351, total 14.0926
+(T) | Epoch=388, loss=6.1392, this epoch 0.0350, total 14.1277
+(T) | Epoch=389, loss=5.6634, this epoch 0.0347, total 14.1624
+(T) | Epoch=390, loss=5.7063, this epoch 0.0356, total 14.1980
+(T) | Epoch=391, loss=5.6987, this epoch 0.0356, total 14.2336
+(T) | Epoch=392, loss=5.7294, this epoch 0.0353, total 14.2690
+(T) | Epoch=393, loss=5.6754, this epoch 0.0373, total 14.3063
+(T) | Epoch=394, loss=5.7814, this epoch 0.0366, total 14.3428
+(T) | Epoch=395, loss=5.8021, this epoch 0.0345, total 14.3774
+(T) | Epoch=396, loss=5.8031, this epoch 0.0348, total 14.4122
+(T) | Epoch=397, loss=5.6319, this epoch 0.0373, total 14.4495
+(T) | Epoch=398, loss=5.7853, this epoch 0.0370, total 14.4865
+(T) | Epoch=399, loss=5.6296, this epoch 0.0375, total 14.5240
+(T) | Epoch=400, loss=5.6490, this epoch 0.0367, total 14.5607
+(T) | Epoch=401, loss=5.7986, this epoch 0.0346, total 14.5953
+(T) | Epoch=402, loss=5.6431, this epoch 0.0381, total 14.6334
+(T) | Epoch=403, loss=5.6802, this epoch 0.0369, total 14.6702
+(T) | Epoch=404, loss=5.6245, this epoch 0.0365, total 14.7068
+(T) | Epoch=405, loss=5.7746, this epoch 0.0351, total 14.7418
+(T) | Epoch=406, loss=5.6705, this epoch 0.0373, total 14.7791
+(T) | Epoch=407, loss=5.6289, this epoch 0.0365, total 14.8156
+(T) | Epoch=408, loss=5.7029, this epoch 0.0360, total 14.8516
+(T) | Epoch=409, loss=5.6253, this epoch 0.0351, total 14.8868
+(T) | Epoch=410, loss=5.6343, this epoch 0.0349, total 14.9217
+(T) | Epoch=411, loss=5.6245, this epoch 0.0358, total 14.9575
+(T) | Epoch=412, loss=5.6564, this epoch 0.0398, total 14.9972
+(T) | Epoch=413, loss=5.6143, this epoch 0.0356, total 15.0328
++++model saved ! 2015.pth
+(T) | Epoch=414, loss=5.6432, this epoch 0.0371, total 15.0699
+(T) | Epoch=415, loss=5.6183, this epoch 0.0372, total 15.1071
+(T) | Epoch=416, loss=5.6235, this epoch 0.0350, total 15.1421
+(T) | Epoch=417, loss=5.6092, this epoch 0.0352, total 15.1774
++++model saved ! 2015.pth
+(T) | Epoch=418, loss=5.6010, this epoch 0.0410, total 15.2184
++++model saved ! 2015.pth
+(T) | Epoch=419, loss=5.6307, this epoch 0.0379, total 15.2563
+(T) | Epoch=420, loss=5.6201, this epoch 0.0351, total 15.2914
+(T) | Epoch=421, loss=5.6316, this epoch 0.0360, total 15.3273
+(T) | Epoch=422, loss=5.6100, this epoch 0.0366, total 15.3639
+(T) | Epoch=423, loss=5.6114, this epoch 0.0364, total 15.4003
+(T) | Epoch=424, loss=5.5928, this epoch 0.0378, total 15.4381
++++model saved ! 2015.pth
+(T) | Epoch=425, loss=5.5823, this epoch 0.0388, total 15.4769
++++model saved ! 2015.pth
+(T) | Epoch=426, loss=5.5938, this epoch 0.0449, total 15.5218
+(T) | Epoch=427, loss=5.5967, this epoch 0.0357, total 15.5574
+(T) | Epoch=428, loss=5.8263, this epoch 0.0350, total 15.5925
+(T) | Epoch=429, loss=5.6086, this epoch 0.0350, total 15.6275
+(T) | Epoch=430, loss=5.6640, this epoch 0.0358, total 15.6632
+(T) | Epoch=431, loss=5.6659, this epoch 0.0365, total 15.6997
+(T) | Epoch=432, loss=5.6694, this epoch 0.0337, total 15.7334
+(T) | Epoch=433, loss=5.6486, this epoch 0.0346, total 15.7680
+(T) | Epoch=434, loss=5.6605, this epoch 0.0360, total 15.8040
+(T) | Epoch=435, loss=5.6211, this epoch 0.0353, total 15.8393
+(T) | Epoch=436, loss=5.6037, this epoch 0.0325, total 15.8719
+(T) | Epoch=437, loss=5.6058, this epoch 0.0341, total 15.9059
+(T) | Epoch=438, loss=5.5894, this epoch 0.0368, total 15.9427
+(T) | Epoch=439, loss=5.6193, this epoch 0.0371, total 15.9798
+(T) | Epoch=440, loss=5.6378, this epoch 0.0371, total 16.0169
+(T) | Epoch=441, loss=5.5811, this epoch 0.0356, total 16.0525
++++model saved ! 2015.pth
+(T) | Epoch=442, loss=5.5801, this epoch 0.0386, total 16.0911
++++model saved ! 2015.pth
+(T) | Epoch=443, loss=5.6150, this epoch 0.0373, total 16.1284
+(T) | Epoch=444, loss=5.6088, this epoch 0.0375, total 16.1660
+(T) | Epoch=445, loss=5.5915, this epoch 0.0349, total 16.2008
+(T) | Epoch=446, loss=5.6201, this epoch 0.0347, total 16.2356
+(T) | Epoch=447, loss=5.5942, this epoch 0.0350, total 16.2706
+(T) | Epoch=448, loss=5.5718, this epoch 0.0374, total 16.3080
++++model saved ! 2015.pth
+(T) | Epoch=449, loss=5.5742, this epoch 0.0385, total 16.3465
+(T) | Epoch=450, loss=5.7692, this epoch 0.0353, total 16.3818
+(T) | Epoch=451, loss=5.6039, this epoch 0.0374, total 16.4192
+(T) | Epoch=452, loss=5.5646, this epoch 0.0362, total 16.4554
++++model saved ! 2015.pth
+(T) | Epoch=453, loss=5.5757, this epoch 0.0386, total 16.4940
+(T) | Epoch=454, loss=5.6640, this epoch 0.0359, total 16.5299
+(T) | Epoch=455, loss=5.5973, this epoch 0.0368, total 16.5667
+(T) | Epoch=456, loss=5.5569, this epoch 0.0358, total 16.6025
++++model saved ! 2015.pth
+(T) | Epoch=457, loss=5.5710, this epoch 0.0402, total 16.6426
+(T) | Epoch=458, loss=5.5596, this epoch 0.0353, total 16.6779
+(T) | Epoch=459, loss=5.6418, this epoch 0.0369, total 16.7149
+(T) | Epoch=460, loss=5.5648, this epoch 0.0359, total 16.7508
+(T) | Epoch=461, loss=5.5519, this epoch 0.0352, total 16.7860
++++model saved ! 2015.pth
+(T) | Epoch=462, loss=5.5723, this epoch 0.0382, total 16.8242
+(T) | Epoch=463, loss=5.5987, this epoch 0.0379, total 16.8621
+(T) | Epoch=464, loss=5.5527, this epoch 0.0358, total 16.8979
+(T) | Epoch=465, loss=5.7483, this epoch 0.0372, total 16.9351
+(T) | Epoch=466, loss=5.5585, this epoch 0.0364, total 16.9715
+(T) | Epoch=467, loss=5.5772, this epoch 0.0365, total 17.0080
+(T) | Epoch=468, loss=5.6270, this epoch 0.0353, total 17.0434
+(T) | Epoch=469, loss=5.5949, this epoch 0.0360, total 17.0793
+(T) | Epoch=470, loss=5.5489, this epoch 0.0360, total 17.1153
++++model saved ! 2015.pth
+(T) | Epoch=471, loss=5.5304, this epoch 0.0388, total 17.1541
++++model saved ! 2015.pth
+(T) | Epoch=472, loss=5.5543, this epoch 0.0391, total 17.1932
+(T) | Epoch=473, loss=5.5463, this epoch 0.0358, total 17.2290
+(T) | Epoch=474, loss=5.5953, this epoch 0.0353, total 17.2643
+(T) | Epoch=475, loss=5.5330, this epoch 0.0357, total 17.2999
+(T) | Epoch=476, loss=5.5348, this epoch 0.0350, total 17.3350
+(T) | Epoch=477, loss=5.5811, this epoch 0.0352, total 17.3702
+(T) | Epoch=478, loss=5.5706, this epoch 0.0354, total 17.4056
+(T) | Epoch=479, loss=5.5405, this epoch 0.0351, total 17.4407
+(T) | Epoch=480, loss=5.5176, this epoch 0.0356, total 17.4763
++++model saved ! 2015.pth
+(T) | Epoch=481, loss=5.6058, this epoch 0.0389, total 17.5152
+(T) | Epoch=482, loss=5.6233, this epoch 0.0366, total 17.5518
+(T) | Epoch=483, loss=5.6471, this epoch 0.0354, total 17.5872
+(T) | Epoch=484, loss=5.5231, this epoch 0.0367, total 17.6239
+(T) | Epoch=485, loss=5.5079, this epoch 0.0346, total 17.6585
++++model saved ! 2015.pth
+(T) | Epoch=486, loss=5.5254, this epoch 0.0399, total 17.6984
+(T) | Epoch=487, loss=5.5195, this epoch 0.0366, total 17.7350
+(T) | Epoch=488, loss=5.5244, this epoch 0.0350, total 17.7700
+(T) | Epoch=489, loss=5.5229, this epoch 0.0357, total 17.8057
+(T) | Epoch=490, loss=5.5271, this epoch 0.0352, total 17.8409
+(T) | Epoch=491, loss=5.5365, this epoch 0.0349, total 17.8759
+(T) | Epoch=492, loss=5.5180, this epoch 0.0339, total 17.9098
+(T) | Epoch=493, loss=5.5220, this epoch 0.0340, total 17.9437
+(T) | Epoch=494, loss=5.5225, this epoch 0.0369, total 17.9807
+(T) | Epoch=495, loss=5.5047, this epoch 0.0356, total 18.0163
++++model saved ! 2015.pth
+(T) | Epoch=496, loss=5.5099, this epoch 0.0402, total 18.0565
+(T) | Epoch=497, loss=5.5129, this epoch 0.0359, total 18.0924
+(T) | Epoch=498, loss=5.5669, this epoch 0.0362, total 18.1286
+(T) | Epoch=499, loss=5.5703, this epoch 0.0360, total 18.1646
+(T) | Epoch=500, loss=5.7100, this epoch 0.0367, total 18.2014
+(T) | Epoch=501, loss=5.5306, this epoch 0.0348, total 18.2361
+(T) | Epoch=502, loss=5.5339, this epoch 0.0372, total 18.2733
+(T) | Epoch=503, loss=5.6995, this epoch 0.0360, total 18.3093
+(T) | Epoch=504, loss=5.5783, this epoch 0.0363, total 18.3456
+(T) | Epoch=505, loss=5.5024, this epoch 0.0348, total 18.3804
++++model saved ! 2015.pth
+(T) | Epoch=506, loss=5.5075, this epoch 0.0388, total 18.4193
+(T) | Epoch=507, loss=5.5265, this epoch 0.0345, total 18.4538
+(T) | Epoch=508, loss=5.5061, this epoch 0.0352, total 18.4890
+(T) | Epoch=509, loss=5.5186, this epoch 0.0358, total 18.5248
+(T) | Epoch=510, loss=5.5107, this epoch 0.0362, total 18.5610
+(T) | Epoch=511, loss=5.5461, this epoch 0.0346, total 18.5956
+(T) | Epoch=512, loss=5.7290, this epoch 0.0357, total 18.6313
+(T) | Epoch=513, loss=5.5089, this epoch 0.0350, total 18.6663
+(T) | Epoch=514, loss=5.5272, this epoch 0.0361, total 18.7024
+(T) | Epoch=515, loss=5.5530, this epoch 0.0362, total 18.7387
+(T) | Epoch=516, loss=5.6394, this epoch 0.0352, total 18.7739
+(T) | Epoch=517, loss=5.5084, this epoch 0.0351, total 18.8090
+(T) | Epoch=518, loss=5.5411, this epoch 0.0345, total 18.8435
+(T) | Epoch=519, loss=5.5215, this epoch 0.0357, total 18.8792
+(T) | Epoch=520, loss=5.5195, this epoch 0.0360, total 18.9152
+(T) | Epoch=521, loss=5.5479, this epoch 0.0357, total 18.9509
+(T) | Epoch=522, loss=5.5244, this epoch 0.0356, total 18.9865
+(T) | Epoch=523, loss=5.5213, this epoch 0.0353, total 19.0218
+(T) | Epoch=524, loss=5.5479, this epoch 0.0334, total 19.0552
+(T) | Epoch=525, loss=5.5083, this epoch 0.0359, total 19.0911
+(T) | Epoch=526, loss=5.5456, this epoch 0.0348, total 19.1259
+(T) | Epoch=527, loss=5.4948, this epoch 0.0353, total 19.1612
++++model saved ! 2015.pth
+(T) | Epoch=528, loss=5.4968, this epoch 0.0385, total 19.1997
+(T) | Epoch=529, loss=5.5076, this epoch 0.0354, total 19.2351
+(T) | Epoch=530, loss=5.5327, this epoch 0.0369, total 19.2720
+(T) | Epoch=531, loss=5.5713, this epoch 0.0360, total 19.3080
+(T) | Epoch=532, loss=5.6160, this epoch 0.0363, total 19.3443
+(T) | Epoch=533, loss=5.5135, this epoch 0.0355, total 19.3799
+(T) | Epoch=534, loss=5.4969, this epoch 0.0367, total 19.4166
+(T) | Epoch=535, loss=5.4910, this epoch 0.0352, total 19.4518
++++model saved ! 2015.pth
+(T) | Epoch=536, loss=5.4898, this epoch 0.0376, total 19.4894
++++model saved ! 2015.pth
+(T) | Epoch=537, loss=5.5257, this epoch 0.0402, total 19.5296
+(T) | Epoch=538, loss=5.6139, this epoch 0.0351, total 19.5647
+(T) | Epoch=539, loss=5.4861, this epoch 0.0352, total 19.5999
++++model saved ! 2015.pth
+(T) | Epoch=540, loss=5.4897, this epoch 0.0374, total 19.6373
+(T) | Epoch=541, loss=5.5241, this epoch 0.0366, total 19.6739
+(T) | Epoch=542, loss=5.4993, this epoch 0.0357, total 19.7095
+(T) | Epoch=543, loss=5.4942, this epoch 0.0346, total 19.7441
+(T) | Epoch=544, loss=5.5019, this epoch 0.0352, total 19.7793
+(T) | Epoch=545, loss=5.5600, this epoch 0.0360, total 19.8153
+(T) | Epoch=546, loss=5.4851, this epoch 0.0353, total 19.8506
++++model saved ! 2015.pth
+(T) | Epoch=547, loss=5.5043, this epoch 0.0374, total 19.8880
+(T) | Epoch=548, loss=5.4940, this epoch 0.0357, total 19.9236
+(T) | Epoch=549, loss=5.5042, this epoch 0.0361, total 19.9598
+(T) | Epoch=550, loss=5.4759, this epoch 0.0368, total 19.9965
++++model saved ! 2015.pth
+(T) | Epoch=551, loss=5.4752, this epoch 0.0392, total 20.0357
++++model saved ! 2015.pth
+(T) | Epoch=552, loss=5.4952, this epoch 0.0385, total 20.0742
+(T) | Epoch=553, loss=5.4935, this epoch 0.0356, total 20.1098
+(T) | Epoch=554, loss=5.4751, this epoch 0.0362, total 20.1459
++++model saved ! 2015.pth
+(T) | Epoch=555, loss=5.4965, this epoch 0.0368, total 20.1828
+(T) | Epoch=556, loss=5.5815, this epoch 0.0355, total 20.2183
+(T) | Epoch=557, loss=5.5229, this epoch 0.0360, total 20.2543
+(T) | Epoch=558, loss=5.4744, this epoch 0.0357, total 20.2900
++++model saved ! 2015.pth
+(T) | Epoch=559, loss=5.4474, this epoch 0.0359, total 20.3258
++++model saved ! 2015.pth
+(T) | Epoch=560, loss=5.5479, this epoch 0.0363, total 20.3621
+(T) | Epoch=561, loss=5.4840, this epoch 0.0349, total 20.3971
+(T) | Epoch=562, loss=5.5715, this epoch 0.0342, total 20.4312
+(T) | Epoch=563, loss=5.5611, this epoch 0.0361, total 20.4674
+(T) | Epoch=564, loss=5.4614, this epoch 0.0372, total 20.5046
+(T) | Epoch=565, loss=5.4688, this epoch 0.0365, total 20.5411
+(T) | Epoch=566, loss=5.4696, this epoch 0.0361, total 20.5772
+(T) | Epoch=567, loss=5.4319, this epoch 0.0359, total 20.6131
++++model saved ! 2015.pth
+(T) | Epoch=568, loss=5.4508, this epoch 0.0381, total 20.6513
+(T) | Epoch=569, loss=5.4502, this epoch 0.0352, total 20.6865
+(T) | Epoch=570, loss=5.4961, this epoch 0.0348, total 20.7212
+(T) | Epoch=571, loss=5.4572, this epoch 0.0361, total 20.7573
+(T) | Epoch=572, loss=5.4483, this epoch 0.0348, total 20.7921
+(T) | Epoch=573, loss=5.5154, this epoch 0.0351, total 20.8272
+(T) | Epoch=574, loss=5.6055, this epoch 0.0361, total 20.8633
+(T) | Epoch=575, loss=5.4274, this epoch 0.0365, total 20.8997
++++model saved ! 2015.pth
+(T) | Epoch=576, loss=5.4405, this epoch 0.0375, total 20.9372
+(T) | Epoch=577, loss=5.4236, this epoch 0.0372, total 20.9744
++++model saved ! 2015.pth
+(T) | Epoch=578, loss=5.5314, this epoch 0.0382, total 21.0126
+(T) | Epoch=579, loss=5.4374, this epoch 0.0359, total 21.0485
+(T) | Epoch=580, loss=5.5776, this epoch 0.0364, total 21.0849
+(T) | Epoch=581, loss=5.4703, this epoch 0.0334, total 21.1183
+(T) | Epoch=582, loss=5.4895, this epoch 0.0354, total 21.1537
+(T) | Epoch=583, loss=5.4737, this epoch 0.0359, total 21.1896
+(T) | Epoch=584, loss=5.4435, this epoch 0.0358, total 21.2253
+(T) | Epoch=585, loss=5.5486, this epoch 0.0365, total 21.2618
+(T) | Epoch=586, loss=5.4407, this epoch 0.0353, total 21.2971
+(T) | Epoch=587, loss=5.5306, this epoch 0.0373, total 21.3344
+(T) | Epoch=588, loss=5.4879, this epoch 0.0355, total 21.3699
+(T) | Epoch=589, loss=5.5169, this epoch 0.0367, total 21.4066
+(T) | Epoch=590, loss=5.4176, this epoch 0.0362, total 21.4428
++++model saved ! 2015.pth
+(T) | Epoch=591, loss=5.4208, this epoch 0.0375, total 21.4802
+(T) | Epoch=592, loss=5.4524, this epoch 0.0354, total 21.5156
+(T) | Epoch=593, loss=5.4195, this epoch 0.0348, total 21.5504
+(T) | Epoch=594, loss=5.4701, this epoch 0.0343, total 21.5848
+(T) | Epoch=595, loss=5.4970, this epoch 0.0349, total 21.6197
+(T) | Epoch=596, loss=5.4730, this epoch 0.0356, total 21.6552
+(T) | Epoch=597, loss=5.4421, this epoch 0.0362, total 21.6915
+(T) | Epoch=598, loss=5.4445, this epoch 0.0362, total 21.7276
+(T) | Epoch=599, loss=5.4172, this epoch 0.0355, total 21.7631
++++model saved ! 2015.pth
+(T) | Epoch=600, loss=5.5159, this epoch 0.0383, total 21.8014
+(T) | Epoch=601, loss=5.4970, this epoch 0.0354, total 21.8368
+(T) | Epoch=602, loss=5.4325, this epoch 0.0372, total 21.8740
+(T) | Epoch=603, loss=5.5419, this epoch 0.0343, total 21.9083
+(T) | Epoch=604, loss=5.4116, this epoch 0.0350, total 21.9433
++++model saved ! 2015.pth
+(T) | Epoch=605, loss=5.4865, this epoch 0.0381, total 21.9813
+(T) | Epoch=606, loss=5.4889, this epoch 0.0356, total 22.0170
+(T) | Epoch=607, loss=5.4396, this epoch 0.0364, total 22.0534
+(T) | Epoch=608, loss=5.4612, this epoch 0.0341, total 22.0875
+(T) | Epoch=609, loss=5.4624, this epoch 0.0348, total 22.1222
+(T) | Epoch=610, loss=5.4615, this epoch 0.0350, total 22.1573
+(T) | Epoch=611, loss=5.4251, this epoch 0.0354, total 22.1927
+(T) | Epoch=612, loss=5.4204, this epoch 0.0347, total 22.2274
+(T) | Epoch=613, loss=5.4145, this epoch 0.0365, total 22.2639
+(T) | Epoch=614, loss=5.4624, this epoch 0.0334, total 22.2973
+(T) | Epoch=615, loss=5.4508, this epoch 0.0356, total 22.3329
+(T) | Epoch=616, loss=5.4546, this epoch 0.0369, total 22.3699
+(T) | Epoch=617, loss=5.4380, this epoch 0.0361, total 22.4059
+(T) | Epoch=618, loss=5.4733, this epoch 0.0351, total 22.4410
+(T) | Epoch=619, loss=5.4242, this epoch 0.0372, total 22.4783
+(T) | Epoch=620, loss=5.4412, this epoch 0.0351, total 22.5134
+(T) | Epoch=621, loss=5.4385, this epoch 0.0374, total 22.5508
+(T) | Epoch=622, loss=5.4858, this epoch 0.0354, total 22.5861
+(T) | Epoch=623, loss=5.4506, this epoch 0.0355, total 22.6216
+(T) | Epoch=624, loss=5.4998, this epoch 0.0351, total 22.6568
+(T) | Epoch=625, loss=5.4677, this epoch 0.0361, total 22.6929
+(T) | Epoch=626, loss=5.4413, this epoch 0.0361, total 22.7290
+(T) | Epoch=627, loss=5.4364, this epoch 0.0359, total 22.7649
+(T) | Epoch=628, loss=5.4343, this epoch 0.0345, total 22.7994
+(T) | Epoch=629, loss=5.4081, this epoch 0.0357, total 22.8351
++++model saved ! 2015.pth
+(T) | Epoch=630, loss=5.4620, this epoch 0.0384, total 22.8735
+(T) | Epoch=631, loss=5.4445, this epoch 0.0358, total 22.9093
+(T) | Epoch=632, loss=5.4433, this epoch 0.0351, total 22.9443
+(T) | Epoch=633, loss=5.4194, this epoch 0.0363, total 22.9806
+(T) | Epoch=634, loss=5.4160, this epoch 0.0364, total 23.0170
+(T) | Epoch=635, loss=5.4433, this epoch 0.0350, total 23.0520
+(T) | Epoch=636, loss=5.4212, this epoch 0.0355, total 23.0875
+(T) | Epoch=637, loss=5.4297, this epoch 0.0378, total 23.1253
+(T) | Epoch=638, loss=5.4148, this epoch 0.0354, total 23.1607
+(T) | Epoch=639, loss=5.4705, this epoch 0.0356, total 23.1964
+(T) | Epoch=640, loss=5.4337, this epoch 0.0353, total 23.2317
+(T) | Epoch=641, loss=5.4097, this epoch 0.0357, total 23.2674
+(T) | Epoch=642, loss=5.4437, this epoch 0.0355, total 23.3029
+(T) | Epoch=643, loss=5.4339, this epoch 0.0359, total 23.3388
+(T) | Epoch=644, loss=5.4434, this epoch 0.0363, total 23.3751
+(T) | Epoch=645, loss=5.4642, this epoch 0.0362, total 23.4113
+(T) | Epoch=646, loss=5.4253, this epoch 0.0365, total 23.4479
+(T) | Epoch=647, loss=5.4262, this epoch 0.0354, total 23.4832
+(T) | Epoch=648, loss=5.4339, this epoch 0.0366, total 23.5198
+(T) | Epoch=649, loss=5.4385, this epoch 0.0350, total 23.5549
+(T) | Epoch=650, loss=5.5167, this epoch 0.0353, total 23.5902
+(T) | Epoch=651, loss=5.4159, this epoch 0.0359, total 23.6261
+(T) | Epoch=652, loss=5.4582, this epoch 0.0354, total 23.6615
+(T) | Epoch=653, loss=5.4319, this epoch 0.0362, total 23.6977
+(T) | Epoch=654, loss=5.4571, this epoch 0.0358, total 23.7334
+(T) | Epoch=655, loss=5.4420, this epoch 0.0351, total 23.7685
+(T) | Epoch=656, loss=5.4341, this epoch 0.0369, total 23.8054
+(T) | Epoch=657, loss=5.4329, this epoch 0.0357, total 23.8412
+(T) | Epoch=658, loss=5.4333, this epoch 0.0353, total 23.8765
+(T) | Epoch=659, loss=5.4382, this epoch 0.0360, total 23.9125
+(T) | Epoch=660, loss=5.4371, this epoch 0.0331, total 23.9456
+(T) | Epoch=661, loss=5.4103, this epoch 0.0378, total 23.9834
+(T) | Epoch=662, loss=5.5076, this epoch 0.0349, total 24.0184
+(T) | Epoch=663, loss=5.4612, this epoch 0.0374, total 24.0558
+(T) | Epoch=664, loss=5.4908, this epoch 0.0367, total 24.0925
+(T) | Epoch=665, loss=5.4660, this epoch 0.0364, total 24.1289
+(T) | Epoch=666, loss=5.4197, this epoch 0.0366, total 24.1656
+(T) | Epoch=667, loss=5.4501, this epoch 0.0353, total 24.2009
+(T) | Epoch=668, loss=5.4159, this epoch 0.0358, total 24.2366
+(T) | Epoch=669, loss=5.4453, this epoch 0.0350, total 24.2717
+(T) | Epoch=670, loss=5.4237, this epoch 0.0346, total 24.3063
+(T) | Epoch=671, loss=5.4573, this epoch 0.0342, total 24.3404
+(T) | Epoch=672, loss=5.4141, this epoch 0.0349, total 24.3753
+(T) | Epoch=673, loss=5.4395, this epoch 0.0377, total 24.4130
+(T) | Epoch=674, loss=5.4635, this epoch 0.0362, total 24.4493
+(T) | Epoch=675, loss=5.4262, this epoch 0.0353, total 24.4846
+(T) | Epoch=676, loss=5.4594, this epoch 0.0365, total 24.5211
+(T) | Epoch=677, loss=5.4965, this epoch 0.0364, total 24.5575
+(T) | Epoch=678, loss=5.4616, this epoch 0.0367, total 24.5942
+(T) | Epoch=679, loss=5.4284, this epoch 0.0348, total 24.6290
+(T) | Epoch=680, loss=5.4588, this epoch 0.0359, total 24.6649
+(T) | Epoch=681, loss=5.4447, this epoch 0.0349, total 24.6998
+(T) | Epoch=682, loss=5.4379, this epoch 0.0353, total 24.7352
+(T) | Epoch=683, loss=5.4235, this epoch 0.0348, total 24.7700
+(T) | Epoch=684, loss=5.4333, this epoch 0.0352, total 24.8052
+(T) | Epoch=685, loss=5.4458, this epoch 0.0361, total 24.8413
+(T) | Epoch=686, loss=5.4598, this epoch 0.0364, total 24.8777
+(T) | Epoch=687, loss=5.4424, this epoch 0.0357, total 24.9133
+(T) | Epoch=688, loss=5.4928, this epoch 0.0361, total 24.9495
+(T) | Epoch=689, loss=5.4219, this epoch 0.0358, total 24.9852
+(T) | Epoch=690, loss=5.5298, this epoch 0.0361, total 25.0214
+(T) | Epoch=691, loss=5.4650, this epoch 0.0345, total 25.0559
+(T) | Epoch=692, loss=5.4194, this epoch 0.0378, total 25.0937
+(T) | Epoch=693, loss=5.4316, this epoch 0.0362, total 25.1299
+(T) | Epoch=694, loss=5.4423, this epoch 0.0353, total 25.1652
+(T) | Epoch=695, loss=5.4183, this epoch 0.0355, total 25.2007
+(T) | Epoch=696, loss=5.4062, this epoch 0.0355, total 25.2362
++++model saved ! 2015.pth
+(T) | Epoch=697, loss=5.4258, this epoch 0.0397, total 25.2759
+(T) | Epoch=698, loss=5.4237, this epoch 0.0349, total 25.3109
+(T) | Epoch=699, loss=5.4454, this epoch 0.0359, total 25.3468
+(T) | Epoch=700, loss=5.4193, this epoch 0.0358, total 25.3825
+(T) | Epoch=701, loss=5.4290, this epoch 0.0349, total 25.4174
+(T) | Epoch=702, loss=5.4216, this epoch 0.0351, total 25.4525
+(T) | Epoch=703, loss=5.4069, this epoch 0.0351, total 25.4876
+(T) | Epoch=704, loss=5.4401, this epoch 0.0349, total 25.5226
+(T) | Epoch=705, loss=5.4019, this epoch 0.0348, total 25.5573
++++model saved ! 2015.pth
+(T) | Epoch=706, loss=5.4247, this epoch 0.0373, total 25.5946
+(T) | Epoch=707, loss=5.4189, this epoch 0.0376, total 25.6322
+(T) | Epoch=708, loss=5.4577, this epoch 0.0365, total 25.6687
+(T) | Epoch=709, loss=5.4363, this epoch 0.0371, total 25.7058
+(T) | Epoch=710, loss=5.5907, this epoch 0.0370, total 25.7427
+(T) | Epoch=711, loss=5.4281, this epoch 0.0355, total 25.7783
+(T) | Epoch=712, loss=5.4471, this epoch 0.0346, total 25.8129
+(T) | Epoch=713, loss=5.5388, this epoch 0.0343, total 25.8472
+(T) | Epoch=714, loss=5.4691, this epoch 0.0346, total 25.8818
+(T) | Epoch=715, loss=5.4815, this epoch 0.0342, total 25.9161
+(T) | Epoch=716, loss=5.4330, this epoch 0.0355, total 25.9516
+(T) | Epoch=717, loss=5.4849, this epoch 0.0352, total 25.9868
+(T) | Epoch=718, loss=5.4736, this epoch 0.0349, total 26.0216
+(T) | Epoch=719, loss=5.4405, this epoch 0.0347, total 26.0564
+(T) | Epoch=720, loss=5.4314, this epoch 0.0352, total 26.0916
+(T) | Epoch=721, loss=5.4195, this epoch 0.0354, total 26.1270
+(T) | Epoch=722, loss=5.4418, this epoch 0.0338, total 26.1608
+(T) | Epoch=723, loss=5.4372, this epoch 0.0343, total 26.1951
+(T) | Epoch=724, loss=5.4222, this epoch 0.0367, total 26.2318
+(T) | Epoch=725, loss=5.4197, this epoch 0.0359, total 26.2677
+(T) | Epoch=726, loss=5.4148, this epoch 0.0342, total 26.3019
+(T) | Epoch=727, loss=5.4119, this epoch 0.0370, total 26.3388
+(T) | Epoch=728, loss=5.4644, this epoch 0.0370, total 26.3759

@@ -53,7 +53,7 @@ class LogReg(nn.Module):
         torch.nn.init.xavier_uniform_(self.fc.weight)
 
 
-def transfer2(pretrain_data, downstream_data, pretrained_gnn_state, args, config, gpu_id, seed, is_reduction = False):
+def transfer2(pretrain_data, downstream_data, pretrained_gnn_state, args, config, gpu_id, seed, pre_dataset, downstream_dataset,is_reduction = False):
     set_seed(seed)
     device = torch.device('cuda:{}'.format(gpu_id) if torch.cuda.is_available() else 'cpu')
     pretrain_data = pretrain_data
@@ -67,51 +67,50 @@ def transfer2(pretrain_data, downstream_data, pretrained_gnn_state, args, config
 
     pretrain_data.edge_index = add_remaining_self_loops(pretrain_data.edge_index, num_nodes=pretrain_data.num_nodes)[0]
     downstream_data.edge_index = add_remaining_self_loops(downstream_data.edge_index, num_nodes=downstream_data.num_nodes)[0]
-    pretrain_data = pretrain_data.to(device)
-    downstream_data = downstream_data.to(device)
+    # pretrain_data = pretrain_data.to(device)
+    # downstream_data = downstream_data.to(device)
 
     gnn = GNN(pretrain_data.x.shape[1], config['output_dim'], act(config['activation']), config['gnn_type'], config['num_layers'])
     gnn.load_state_dict(pretrained_gnn_state)
-    gnn.to(device)
+    # gnn.to(device)
     gnn.eval()
     for param in gnn.conv.parameters():
         param.requires_grad = False
 
     gnn2 = GNNLoRA(pretrain_data.x.shape[1], config['output_dim'], act(config['activation']), gnn, config['gnn_type'], config['num_layers'], r=args.r)
-    gnn2.to(device)
+    # gnn2.to(device)
     gnn2.train()
 
-    SMMD = SMMDLoss().to(device)
-
+    SMMD = SMMDLoss()
     projector = Projector(downstream_data.x.shape[1], pretrain_data.x.shape[1])
-    projector = projector.to(device)
+    # projector = projector.to(device)
     projector.train()
 
     # optimizer
     num_classes = 13
     logreg = LogReg(config['output_dim'], num_classes)
-    logreg = logreg.to(device)
+    # logreg = logreg.to(device)
     loss_fn = nn.CrossEntropyLoss()
 
     index = np.arange(downstream_data.x.shape[0])
     np.random.shuffle(index)
-    train_mask = torch.zeros(downstream_data.x.shape[0]).bool().to(device)
-    val_mask = torch.zeros(downstream_data.x.shape[0]).bool().to(device)
-    test_mask = torch.zeros(downstream_data.x.shape[0]).bool().to(device)
+    train_mask = torch.zeros(downstream_data.x.shape[0]).bool()
+    val_mask = torch.zeros(downstream_data.x.shape[0]).bool()
+    test_mask = torch.zeros(downstream_data.x.shape[0]).bool()
     train_mask[index[:int(len(index) * 0.7)]] = True
     val_mask[index[int(len(index) * 0.7):int(len(index) * 1)]] = True
     test_mask[index[int(len(index) * 1):]] = True
 
-    mask = torch.zeros((downstream_data.x.shape[0], downstream_data.x.shape[0])).to(device)
-    idx_a = torch.tensor([]).to(device)
-    idx_b = torch.tensor([]).to(device)
+    mask = torch.zeros((downstream_data.x.shape[0], downstream_data.x.shape[0]))
+    idx_a = torch.tensor([])
+    idx_b = torch.tensor([])
     for i in range(num_classes):
         train_idx = torch.nonzero(train_mask, as_tuple=False).squeeze()
         train_label = downstream_data.y[train_idx]
         idx_a = torch.concat((idx_a, train_idx[train_label == i].repeat_interleave(len(train_idx[train_label == i]))))
         idx_b = torch.concat((idx_b, train_idx[train_label == i].repeat(len(train_idx[train_label == i]))))
-    mask = torch.sparse_coo_tensor(indices=torch.stack((idx_a, idx_b)), values=torch.ones(len(idx_a)).to(device), size=[downstream_data.x.shape[0], downstream_data.x.shape[0]]).to_dense()
-    mask = args.sup_weight * (mask - torch.diag_embed(torch.diag(mask))) + torch.eye(downstream_data.x.shape[0]).to(device)
+    mask = torch.sparse_coo_tensor(indices=torch.stack((idx_a, idx_b)), values=torch.ones(len(idx_a)), size=[downstream_data.x.shape[0], downstream_data.x.shape[0]]).to_dense()
+    mask = args.sup_weight * (mask - torch.diag_embed(torch.diag(mask))) + torch.eye(downstream_data.x.shape[0])
     
     optimizer = torch.optim.Adam([{"params": projector.parameters(), 'lr': args.lr1, 'weight_decay': args.wd1}, {"params": logreg.parameters(), 'lr': args.lr2, 'weight_decay': args.wd2}, {"params": gnn2.parameters(), 'lr': args.lr3, 'weight_decay': args.wd3}])
 
@@ -144,7 +143,7 @@ def transfer2(pretrain_data, downstream_data, pretrained_gnn_state, args, config
   
         pos_weight = float(target_adj.shape[0] * target_adj.shape[0] - target_adj.sum()) / target_adj.sum()
         weight_mask = target_adj.view(-1) == 1
-        weight_tensor = torch.ones(weight_mask.size(0)).to(device)
+        weight_tensor = torch.ones(weight_mask.size(0))
         weight_tensor[weight_mask] = pos_weight
 
         feature_map = projector(downstream_data.x)
@@ -216,6 +215,6 @@ def transfer2(pretrain_data, downstream_data, pretrained_gnn_state, args, config
     result_path = './result'
     mkdir(result_path)
     with open(result_path + '/result.txt', 'a') as f:
-        f.write('2010 to 2011: seed: %d, epoch: %d, train_loss: %f, train_acc: %f, train_recall: %f, train_f1: %f, val_acc: %f, val_recall: %f, val_f1: %f\n' % 
+        f.write(f'{pre_dataset} to {downstream_dataset}: seed: %d, epoch: %d, train_loss: %f, train_acc: %f, train_recall: %f, train_f1: %f, val_acc: %f, val_recall: %f, val_f1: %f\n' % 
                 (seed, best_epoch, best_loss, best_train_acc, best_train_recall, best_train_f1, best_val_acc, best_val_recall, best_val_f1))
 

@@ -27,13 +27,9 @@ def set_seed(seed: int = 42):
 def main():
 
     set_seed(42)
-    
-    pretrain_graph_file_path = 'H1N1_graph_2011.pt'
-    pretrain_graph = torch.load(pretrain_graph_file_path)
-    downstream_graph_file_path = 'H1N1_graph_2012.pt'
-    downstream_graph = torch.load(downstream_graph_file_path)
-
     parser = argparse.ArgumentParser()
+    parser.add_argument('--pretrain_dataset', type=str, default='2011')
+    parser.add_argument('--test_dataset', type=str, default='2012')
     parser.add_argument('--gpu_id', type=int, default=0)
     parser.add_argument('--config', type=str, default='./config.yaml')
     parser.add_argument('--para_config', type=str, default='./config2.yaml')
@@ -45,15 +41,20 @@ def main():
     args = parser.parse_args()
     args = get_parameter(args)
 
+    pretrain_graph_file_path = f'H1N1_graph_{args.pretrain_dataset}.pt'
+    pretrain_graph = torch.load(pretrain_graph_file_path, weights_only=False)
+    downstream_graph_file_path = f'H1N1_graph_{args.test_dataset}.pt'
+    downstream_graph = torch.load(downstream_graph_file_path, weights_only=False)
+
     # pretrain
     print("\n" + "="*30 + "\nPRE-TRAINING\n" + "="*30)
     config_pretrain = yaml.load(open(args.config), Loader=SafeLoader)['Cora']
-    pretrained_gnn_state = pretrain2(pretrain_graph, "GRACE", config_pretrain, args.gpu_id, args.is_reduction)
+    pretrained_gnn_state = pretrain2(pretrain_graph, "GRACE", config_pretrain, args.gpu_id, args.pretrain_dataset, args.is_reduction)
 
     # --- 微调 ---
     if pretrained_gnn_state:
         print("\n" + "="*30 + "\nLoRA FINE-TUNING\n" + "="*30)
         config_transfer = yaml.load(open(args.config), Loader=SafeLoader)['transfer']
-        transfer2(pretrain_graph, downstream_graph, pretrained_gnn_state, args, config_transfer, args.gpu_id, args.seed, args.is_reduction)
+        transfer2(pretrain_graph, downstream_graph, pretrained_gnn_state, args, config_transfer, args.gpu_id, args.seed, args.pretrain_dataset, args.test_dataset,args.is_reduction)
 if __name__ == '__main__':
     main()

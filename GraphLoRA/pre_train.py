@@ -7,12 +7,12 @@ from util import get_dataset, act, mkdir
 from torch_geometric.transforms import SVDFeatureReduction
 
 
-def pretrain2(data, pretext, config, gpu, is_reduction=False):
+def pretrain2(data, pretext, config, gpu, pre_dataset, is_reduction=False):
     if is_reduction:
         feature_reduce = SVDFeatureReduction(out_channels=100)
         data = feature_reduce(data)
     device = torch.device('cuda:{}'.format(gpu) if torch.cuda.is_available() else 'cpu')
-    data = data.to(device)
+    # data = data
 
     pre_trained_model_path = './pre_trained_gnn/'
     mkdir(pre_trained_model_path)
@@ -34,7 +34,7 @@ def pretrain2(data, pretext, config, gpu, is_reduction=False):
         pretrain_model = GRACE(gnn, output_dim, num_proj_dim, drop_edge_rate, drop_feature_rate, tau)
     else:
         pretrain_model = GRACE(gnn, output_dim, num_proj_dim, drop_edge_rate, drop_feature_rate, tau)
-    pretrain_model.to(device)
+    # pretrain_model
     print("pre-training...")
     optimizer = torch.optim.Adam(pretrain_model.parameters(), lr=learning_rate, weight_decay=weight_decay)
 
@@ -42,7 +42,7 @@ def pretrain2(data, pretext, config, gpu, is_reduction=False):
     prev = start
     pretrain_model.train()
     min_loss = 100000
-    model_path = pre_trained_model_path + "{}.pth".format(2010)
+    model_path = pre_trained_model_path + "{}.pth".format(pre_dataset)
     for epoch in range(1, num_epochs + 1):
         optimizer.zero_grad()
         loss = pretrain_model.compute_loss(data.x, data.edge_index)
@@ -56,7 +56,7 @@ def pretrain2(data, pretext, config, gpu, is_reduction=False):
             min_loss = loss
             best_model_state = pretrain_model.gnn.state_dict()
             torch.save(pretrain_model.gnn.state_dict(), model_path)
-            print("+++model saved ! {}.pth".format(2010))
+            print("+++model saved ! {}.pth".format(pre_dataset))
     print("=== Final ===")
 
     return best_model_state
