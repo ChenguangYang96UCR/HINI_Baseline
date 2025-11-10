@@ -39,6 +39,7 @@ class Arguments:
         self.parser.add_argument('--walk_length', type=int, default=50, help="Walk length for node2vec")
         self.parser.add_argument('--context_size', type=int, default=10, help="Context size for node2vec")
         self.parser.add_argument('--walk_per_nodes', type=int, default=10, help="Walk per nodes for node2vec")
+        self.parser.add_argument('--year', type=str, default='2009')
         
     def parse_args(self):
         return self.parser.parse_args()

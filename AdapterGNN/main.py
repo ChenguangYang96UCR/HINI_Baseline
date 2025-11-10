@@ -136,15 +136,17 @@ def main():
     parser.add_argument('--config', type=str, default='config.yaml')
     parser.add_argument('--is_reduction', type=bool, default=True)
     parser.add_argument('--is_pretrain', type=bool, default=False)
+    parser.add_argument('--pretrain_dataset', type=str, default='2009')
+    parser.add_argument('--test_dataset', type=str, default='2010')
 
 
     args = parser.parse_args()
     set_seed(args.seed)
     device = torch.device("cuda:" + str(args.device)) if torch.cuda.is_available() else torch.device("cpu")
-    data_file_path = 'H1N1_graph_2011.pt'
-    data = torch.load(data_file_path)
+    data_file_path = f'H1N1_graph_{args.test_dataset}.pt'
+    data = torch.load(data_file_path, weights_only=False)
     data = data.to(device)
-    model_path = "./pre_trained_gnn/{}.pth".format('2010')
+    model_path = "./pre_trained_gnn/{}.pth".format(args.pretrain_dataset)
     
     config_test = yaml.load(open(args.config), Loader=SafeLoader)['Cora']                
     input_dim = data.x.shape[1]
@@ -158,7 +160,7 @@ def main():
     data.val_mask = val_mask
 
     gnn = GNN(input_dim, config_test['output_dim'], act(config_test['activation']), config_test['gnn_type'], config_test['num_layers'])
-    gnn.load_state_dict(torch.load(model_path))
+    gnn.load_state_dict(torch.load(model_path, weights_only=False))
     gnn.to(device)
     for param in gnn.conv.parameters():
         param.requires_grad = False
@@ -215,7 +217,7 @@ def main():
         best_epoch, best_train_acc, best_val_acc, best_val_recall, best_val_f1))
     result_path = './result'
     with open(result_path + '/AdapterGNN.txt', 'a') as f:
-        f.write('2010 to 2011: seed: %d, epoch: %d, train_acc: %f, train_recall: %f, train_f1: %f, val_acc: %f, val_recall: %f, val_f1: %f\n' % 
+        f.write(f'{args.pretrain_dataset} to {args.test_dataset}: seed: %d, epoch: %d, train_acc: %f, train_recall: %f, train_f1: %f, val_acc: %f, val_recall: %f, val_f1: %f\n' % 
                 (args.seed, best_epoch, best_train_acc, best_train_recall, best_train_f1, best_val_acc, best_val_recall, best_val_f1))
 
 

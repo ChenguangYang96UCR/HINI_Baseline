@@ -111,7 +111,7 @@ def finetune(config, model, train_loader, device, full_x_sim, test_loader):
 def main(config):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu') 
     
-    dataset_obj = NodeDataset(config.dataset, n_seeds=config.seeds)
+    dataset_obj = NodeDataset(config.dataset, year=config.year, n_seeds=config.seeds)
     dataset_obj.print_statistics()
     
     # For large graph, we use cpu to preprocess it rather than gpu because of OOM problem.
@@ -151,7 +151,7 @@ def main(config):
         with open(result_path + '/GraphControl.txt', 'a') as f:
             # 使用您提供的格式
             # 注意: 'best_loss' 和 'best_train_*' 指标在当前脚本中未计算，因此用 'nan' 填充
-            f.write('2010: seed: %d, val_acc: %f, val_recall: %f, val_f1: %f\n' % 
+            f.write(f'{config.year}: seed: %d, val_acc: %f, val_recall: %f, val_f1: %f\n' % 
                     (seed, best_acc, best_recall, best_f1))
 
 

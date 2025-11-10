@@ -11,6 +11,7 @@ import numpy as np
 from torch_geometric.nn import GCNConv
 import random
 from sklearn.metrics import recall_score, f1_score
+import argparse
 
 def set_seed(seed: int = 42):
     random.seed(seed)
@@ -134,14 +135,19 @@ class GNN(torch.nn.Module):
     
 if __name__ == '__main__':
     set_seed(42)
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--pretrain_dataset', type=str, default='2009')
+    parser.add_argument('--test_dataset', type=str, default='2010')
+    parser.add_argument('--seed', type=int, default=0)
+    args = parser.parse_args()
     
-    pretrain_graph_file_path = 'H1N1_graph_2010.pt'
-    pretrain_graph = torch.load(pretrain_graph_file_path) 
+    pretrain_graph_file_path = f'H1N1_graph_{args.pretrain_dataset}.pt'
+    pretrain_graph = torch.load(pretrain_graph_file_path, weights_only = False) 
     config_pretrain = yaml.load(open('config.yaml'), Loader=SafeLoader)['Cora']
     gpu_id = 0
     pretrained_gnn_state = pretrain2(pretrain_graph, "GRACE", config_pretrain, gpu_id)   
 
-    seed = 0
+    seed = args.seed
     set_seed(seed)
 
     num_layers = 2
@@ -151,8 +157,8 @@ if __name__ == '__main__':
     trade_off_lambda = 0.01
 
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    data_file_path = 'H1N1_graph_2011.pt'
-    data = torch.load(data_file_path)
+    data_file_path = f'H1N1_graph_{args.test_dataset}.pt'
+    data = torch.load(data_file_path,  weights_only = False)
     data.edge_index = add_self_loops(data.edge_index, num_nodes=data.x.shape[0])[0]
     data = data.to(device)
     adj_mask = to_dense_adj(data.edge_index, max_num_nodes=data.num_nodes)[0]
@@ -274,5 +280,5 @@ if __name__ == '__main__':
     result_path = './result'
     mkdir(result_path)
     with open(result_path + '/GTOT.txt', 'a') as f:
-        f.write('2010 to 2011: seed: %d, epoch: %d, train_loss: %f, train_acc: %f, train_recall: %f, train_f1: %f, val_acc: %f, val_recall: %f, val_f1: %f\n' % 
+        f.write(f'{args.pretrain_dataset} to {args.test_dataset}: seed: %d, epoch: %d, train_loss: %f, train_acc: %f, train_recall: %f, train_f1: %f, val_acc: %f, val_recall: %f, val_f1: %f\n' % 
                 (seed, best_epoch, best_loss, best_train_acc, best_train_recall, best_train_f1, best_val_acc, best_val_recall, best_val_f1))

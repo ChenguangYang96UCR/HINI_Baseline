@@ -5,7 +5,7 @@ from .gcc import change_params_key
 
 def load_model(input_dim: int, output_dim: int, config):
     if config.model in ['GCC', 'GCC_GraphControl']:
-        state_dict = torch.load('checkpoint/gcc.pth', map_location='cpu')
+        state_dict = torch.load('checkpoint/gcc.pth', map_location='cpu', weights_only=False)
         opt = state_dict['opt']
         model = register.models[config.model](
             positional_embedding_size=opt.positional_embedding_size,

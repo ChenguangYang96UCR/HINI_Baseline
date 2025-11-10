@@ -2,7 +2,7 @@
 
 SEED=(0 1 2 3 4)
 # years=(2009 2010 2011 2012 2013 2014 2015 2016)
-years=(2016)
+years=(2015 2016)
 
 for year in "${years[@]}" ;do
     downstream_year=$((year+1))
