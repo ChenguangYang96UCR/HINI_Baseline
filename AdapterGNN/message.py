@@ -22,25 +22,18 @@ from torch import Tensor
 from torch.utils.hooks import RemovableHandle
 
 from torch_geometric.nn.aggr import Aggregation
-try:
-    from torch_geometric.inspector import Inspector, Signature
-except Exception:  # PyG <= 2.3-ish
-    from torch_geometric.nn.conv.utils.inspector import Inspector  # no Signature back then
-
-# These old templating utilities are no longer needed; kept only for back-compat if you call them elsewhere.
-try:
-    from torch_geometric.template import module_from_template
-except Exception:  # old PyG
-    from torch_geometric.nn.conv.utils.jit import class_from_module_repr
-
-# Typing utils existed only on very old PyG; we won't use them anymore.
-try:
-    from torch_geometric.nn.conv.utils.typing import (
-        parse_types, resolve_types, sanitize, split_types_repr
-    )
-except Exception:
-    parse_types = resolve_types = sanitize = split_types_repr = None
-
+from torch_geometric.nn.conv.utils.inspector import (
+    Inspector,
+    func_body_repr,
+    func_header_repr,
+)
+from torch_geometric.nn.conv.utils.jit import class_from_module_repr
+from torch_geometric.nn.conv.utils.typing import (
+    parse_types,
+    resolve_types,
+    sanitize,
+    split_types_repr,
+)
 from torch_geometric.nn.resolver import aggregation_resolver as aggr_resolver
 from torch_geometric.typing import Adj, Size, SparseTensor
 from torch_geometric.utils import (
@@ -48,18 +41,12 @@ from torch_geometric.utils import (
     is_torch_sparse_tensor,
     to_edge_index,
 )
-
-# ptr2index canonical import moved; keep a fallback for older builds
-try:
-    from torch_geometric.index import ptr2index
-except Exception:
-    from torch_geometric.utils.sparse import ptr2index
+from torch_geometric.utils.sparse import ptr2index
 
 FUSE_AGGRS = {'add', 'sum', 'mean', 'min', 'max'}
 
 
 def ptr2ind(ptr: Tensor) -> Tensor:
-    # Unused helper; retained in case external code references it.
     ind = torch.arange(ptr.numel() - 1, device=ptr.device)
     return ind.repeat_interleave(ptr[1:] - ptr[:-1])
 
@@ -76,6 +63,52 @@ class MessagePassing(torch.nn.Module):
     function, *e.g.*, sum, mean, min, max or mul, and
     :math:`\gamma_{\mathbf{\Theta}}` and :math:`\phi_{\mathbf{\Theta}}` denote
     differentiable functions such as MLPs.
+    See `here <https://pytorch-geometric.readthedocs.io/en/latest/tutorial/
+    create_gnn.html>`__ for the accompanying tutorial.
+
+    Args:
+        aggr (str or [str] or Aggregation, optional): The aggregation scheme
+            to use, *e.g.*, :obj:`"add"`, :obj:`"sum"` :obj:`"mean"`,
+            :obj:`"min"`, :obj:`"max"` or :obj:`"mul"`.
+            In addition, can be any
+            :class:`~torch_geometric.nn.aggr.Aggregation` module (or any string
+            that automatically resolves to it).
+            If given as a list, will make use of multiple aggregations in which
+            different outputs will get concatenated in the last dimension.
+            If set to :obj:`None`, the :class:`MessagePassing` instantiation is
+            expected to implement its own aggregation logic via
+            :meth:`aggregate`. (default: :obj:`"add"`)
+        aggr_kwargs (Dict[str, Any], optional): Arguments passed to the
+            respective aggregation function in case it gets automatically
+            resolved. (default: :obj:`None`)
+        flow (str, optional): The flow direction of message passing
+            (:obj:`"source_to_target"` or :obj:`"target_to_source"`).
+            (default: :obj:`"source_to_target"`)
+        node_dim (int, optional): The axis along which to propagate.
+            (default: :obj:`-2`)
+        decomposed_layers (int, optional): The number of feature decomposition
+            layers, as introduced in the `"Optimizing Memory Efficiency of
+            Graph Neural Networks on Edge Computing Platforms"
+            <https://arxiv.org/abs/2104.03058>`_ paper.
+            Feature decomposition reduces the peak memory usage by slicing
+            the feature dimensions into separated feature decomposition layers
+            during GNN aggregation.
+            This method can accelerate GNN execution on CPU-based platforms
+            (*e.g.*, 2-3x speedup on the
+            :class:`~torch_geometric.datasets.Reddit` dataset) for common GNN
+            models such as :class:`~torch_geometric.nn.models.GCN`,
+            :class:`~torch_geometric.nn.models.GraphSAGE`,
+            :class:`~torch_geometric.nn.models.GIN`, etc.
+            However, this method is not applicable to all GNN operators
+            available, in particular for operators in which message computation
+            can not easily be decomposed, *e.g.* in attention-based GNNs.
+            The selection of the optimal value of :obj:`decomposed_layers`
+            depends both on the specific graph dataset and available hardware
+            resources.
+            A value of :obj:`2` is suitable in most cases.
+            Although the peak memory usage is directly associated with the
+            granularity of feature decomposition, the same is not necessarily
+            true for execution speedups. (default: :obj:`1`)
     """
 
     special_args: Set[str] = {
@@ -113,22 +146,20 @@ class MessagePassing(torch.nn.Module):
         self.node_dim = node_dim
         self.decomposed_layers = decomposed_layers
 
-        # ----- Inspector setup (PyG 2.7 compatible) -----
-        self.inspector = Inspector(self.__class__)
-        # Record signatures; use excludes to drop self or legacy 'aggr' args:
-        self.inspector.inspect_signature(self.message)
-        self.inspector.inspect_signature(self.aggregate, exclude=[0, 'aggr'])
-        self.inspector.inspect_signature(self.message_and_aggregate, [0])  # exclude first positional (self/edge_index)
-        self.inspector.inspect_signature(self.update, exclude=[0])
-        self.inspector.inspect_signature(self.edge_update)
+        self.inspector = Inspector(self)
+        self.inspector.inspect(self.message)
+        self.inspector.inspect(self.aggregate, pop_first=True)
+        self.inspector.params['aggregate'].pop('aggr', None)
+        self.inspector.inspect(self.message_and_aggregate, pop_first=True)
+        self.inspector.inspect(self.update, pop_first=True)
+        self.inspector.inspect(self.edge_update)
 
-        # Build param sets using flat name helpers and excludes:
-        self._user_args = set(self.inspector.get_flat_param_names(
-            ['message', 'aggregate', 'update'], exclude=self.special_args))
-        self._fused_user_args = set(self.inspector.get_flat_param_names(
-            ['message_and_aggregate', 'update'], exclude=self.special_args))
-        self._edge_user_args = set(self.inspector.get_param_names(
-            'edge_update', exclude=self.special_args))
+        self._user_args = self.inspector.keys(
+            ['message', 'aggregate', 'update']).difference(self.special_args)
+        self._fused_user_args = self.inspector.keys(
+            ['message_and_aggregate', 'update']).difference(self.special_args)
+        self._edge_user_args = self.inspector.keys(['edge_update']).difference(
+            self.special_args)
 
         # Support for "fused" message passing.
         self.fuse = self.inspector.implements('message_and_aggregate')
@@ -345,7 +376,38 @@ class MessagePassing(torch.nn.Module):
         return out
 
     def propagate(self, edge_index: Adj, size: Size = None, **kwargs):
-        r"""The initial call to start propagating messages."""
+        r"""The initial call to start propagating messages.
+
+        Args:
+            edge_index (torch.Tensor or SparseTensor): A :class:`torch.Tensor`,
+                a :class:`torch_sparse.SparseTensor` or a
+                :class:`torch.sparse.Tensor` that defines the underlying
+                graph connectivity/message passing flow.
+                :obj:`edge_index` holds the indices of a general (sparse)
+                assignment matrix of shape :obj:`[N, M]`.
+                If :obj:`edge_index` is a :obj:`torch.Tensor`, its :obj:`dtype`
+                should be :obj:`torch.long` and its shape needs to be defined
+                as :obj:`[2, num_messages]` where messages from nodes in
+                :obj:`edge_index[0]` are sent to nodes in :obj:`edge_index[1]`
+                (in case :obj:`flow="source_to_target"`).
+                If :obj:`edge_index` is a :class:`torch_sparse.SparseTensor` or
+                a :class:`torch.sparse.Tensor`, its sparse indices
+                :obj:`(row, col)` should relate to :obj:`row = edge_index[1]`
+                and :obj:`col = edge_index[0]`.
+                The major difference between both formats is that we need to
+                input the *transposed* sparse adjacency matrix into
+                :meth:`propagate`.
+            size ((int, int), optional): The size :obj:`(N, M)` of the
+                assignment matrix in case :obj:`edge_index` is a
+                :class:`torch.Tensor`.
+                If set to :obj:`None`, the size will be automatically inferred
+                and assumed to be quadratic.
+                This argument is ignored in case :obj:`edge_index` is a
+                :class:`torch_sparse.SparseTensor` or
+                a :class:`torch.sparse.Tensor`. (default: :obj:`None`)
+            **kwargs: Any additional data which is needed to construct and
+                aggregate messages, and to update node embeddings.
+        """
         decomposed_layers = 1 if self.explain else self.decomposed_layers
 
         for hook in self._propagate_forward_pre_hooks.values():
@@ -360,7 +422,7 @@ class MessagePassing(torch.nn.Module):
             coll_dict = self._collect(self._fused_user_args, edge_index, size,
                                       kwargs)
 
-            msg_aggr_kwargs = self.inspector.collect_param_data(
+            msg_aggr_kwargs = self.inspector.distribute(
                 'message_and_aggregate', coll_dict)
             for hook in self._message_and_aggregate_forward_pre_hooks.values():
                 res = hook(self, (edge_index, msg_aggr_kwargs))
@@ -372,7 +434,7 @@ class MessagePassing(torch.nn.Module):
                 if res is not None:
                     out = res
 
-            update_kwargs = self.inspector.collect_param_data('update', coll_dict)
+            update_kwargs = self.inspector.distribute('update', coll_dict)
             out = self.update(out, **update_kwargs)
 
         else:  # Otherwise, run both functions in separation.
@@ -393,7 +455,7 @@ class MessagePassing(torch.nn.Module):
                 coll_dict = self._collect(self._user_args, edge_index, size,
                                           kwargs)
 
-                msg_kwargs = self.inspector.collect_param_data('message', coll_dict)
+                msg_kwargs = self.inspector.distribute('message', coll_dict)
                 for hook in self._message_forward_pre_hooks.values():
                     res = hook(self, (msg_kwargs, ))
                     if res is not None:
@@ -405,11 +467,11 @@ class MessagePassing(torch.nn.Module):
                         out = res
 
                 if self.explain:
-                    explain_msg_kwargs = self.inspector.collect_param_data(
+                    explain_msg_kwargs = self.inspector.distribute(
                         'explain_message', coll_dict)
                     out = self.explain_message(out, **explain_msg_kwargs)
 
-                aggr_kwargs = self.inspector.collect_param_data('aggregate', coll_dict)
+                aggr_kwargs = self.inspector.distribute('aggregate', coll_dict)
                 for hook in self._aggregate_forward_pre_hooks.values():
                     res = hook(self, (aggr_kwargs, ))
                     if res is not None:
@@ -422,7 +484,7 @@ class MessagePassing(torch.nn.Module):
                     if res is not None:
                         out = res
 
-                update_kwargs = self.inspector.collect_param_data('update', coll_dict)
+                update_kwargs = self.inspector.distribute('update', coll_dict)
                 out = self.update(out, **update_kwargs)
 
                 if decomposed_layers > 1:
@@ -439,7 +501,18 @@ class MessagePassing(torch.nn.Module):
         return out
 
     def edge_updater(self, edge_index: Adj, **kwargs):
-        r"""The initial call to compute or update features for each edge."""
+        r"""The initial call to compute or update features for each edge in the
+        graph.
+
+        Args:
+            edge_index (torch.Tensor or SparseTensor): A :obj:`torch.Tensor`, a
+                :class:`torch_sparse.SparseTensor` or a
+                :class:`torch.sparse.Tensor` that defines the underlying graph
+                connectivity/message passing flow.
+                See :meth:`propagate` for more information.
+            **kwargs: Any additional data which is needed to compute or update
+                features for each edge in the graph.
+        """
         for hook in self._edge_update_forward_pre_hooks.values():
             res = hook(self, (edge_index, kwargs))
             if res is not None:
@@ -450,7 +523,7 @@ class MessagePassing(torch.nn.Module):
         coll_dict = self._collect(self._edge_user_args, edge_index, size,
                                   kwargs)
 
-        edge_kwargs = self.inspector.collect_param_data('edge_update', coll_dict)
+        edge_kwargs = self.inspector.distribute('edge_update', coll_dict)
         out = self.edge_update(**edge_kwargs)
 
         for hook in self._edge_update_forward_hooks.values():
@@ -461,7 +534,15 @@ class MessagePassing(torch.nn.Module):
         return out
 
     def message(self, x_j: Tensor) -> Tensor:
-        r"""Constructs messages from node j to node i."""
+        r"""Constructs messages from node :math:`j` to node :math:`i`
+        in analogy to :math:`\phi_{\mathbf{\Theta}}` for each edge in
+        :obj:`edge_index`.
+        This function can take any argument as input which was initially
+        passed to :meth:`propagate`.
+        Furthermore, tensors passed to :meth:`propagate` can be mapped to the
+        respective nodes :math:`i` and :math:`j` by appending :obj:`_i` or
+        :obj:`_j` to the variable name, *.e.g.* :obj:`x_i` and :obj:`x_j`.
+        """
         return x_j
 
     @property
@@ -476,11 +557,16 @@ class MessagePassing(torch.nn.Module):
             methods = ['message', 'aggregate', 'update']
 
         self._explain = explain
-        self.inspector.inspect(self.explain_message)
+        self.inspector.inspect(self.explain_message, pop_first=True)
         self._user_args = self.inspector.keys(methods).difference(
             self.special_args)
 
     def explain_message(self, inputs: Tensor, size_i: int) -> Tensor:
+        # NOTE Replace this method in custom explainers per message-passing
+        # layer to customize how messages shall be explained, e.g., via:
+        # conv.explain_message = explain_message.__get__(conv, MessagePassing)
+        # see stackoverflow.com: 394770/override-a-method-at-instance-level
+
         edge_mask = self._edge_mask
 
         if edge_mask is None:
@@ -490,6 +576,8 @@ class MessagePassing(torch.nn.Module):
         if self._apply_sigmoid:
             edge_mask = edge_mask.sigmoid()
 
+        # Some ops add self-loops to `edge_index`. We need to do the same for
+        # `edge_mask` (but do not train these entries).
         if inputs.size(self.node_dim) != edge_mask.size(0):
             edge_mask = edge_mask[self._loop_mask]
             loop = edge_mask.new_ones(size_i)
@@ -503,6 +591,16 @@ class MessagePassing(torch.nn.Module):
     def aggregate(self, inputs: Tensor, index: Tensor,
                   ptr: Optional[Tensor] = None,
                   dim_size: Optional[int] = None) -> Tensor:
+        r"""Aggregates messages from neighbors as
+        :math:`\bigoplus_{j \in \mathcal{N}(i)}`.
+
+        Takes in the output of message computation as first argument and any
+        argument which was initially passed to :meth:`propagate`.
+
+        By default, this function will delegate its call to the underlying
+        :class:`~torch_geometric.nn.aggr.Aggregation` module to reduce messages
+        as specified in :meth:`__init__` by the :obj:`aggr` argument.
+        """
         return self.aggr_module(inputs, index, ptr=ptr, dim_size=dim_size,
                                 dim=self.node_dim)
 
@@ -510,81 +608,294 @@ class MessagePassing(torch.nn.Module):
         self,
         adj_t: Union[SparseTensor, Tensor],
     ) -> Tensor:
+        r"""Fuses computations of :func:`message` and :func:`aggregate` into a
+        single function.
+        If applicable, this saves both time and memory since messages do not
+        explicitly need to be materialized.
+        This function will only gets called in case it is implemented and
+        propagation takes place based on a :obj:`torch_sparse.SparseTensor`
+        or a :obj:`torch.sparse.Tensor`.
+        """
         raise NotImplementedError
 
     def update(self, inputs: Tensor) -> Tensor:
+        r"""Updates node embeddings in analogy to
+        :math:`\gamma_{\mathbf{\Theta}}` for each node
+        :math:`i \in \mathcal{V}`.
+        Takes in the output of aggregation as first argument and any argument
+        which was initially passed to :meth:`propagate`.
+        """
         return inputs
 
     def edge_update(self) -> Tensor:
+        r"""Computes or updates features for each edge in the graph.
+        This function can take any argument as input which was initially passed
+        to :meth:`edge_updater`.
+        Furthermore, tensors passed to :meth:`edge_updater` can be mapped to
+        the respective nodes :math:`i` and :math:`j` by appending :obj:`_i` or
+        :obj:`_j` to the variable name, *.e.g.* :obj:`x_i` and :obj:`x_j`.
+        """
         raise NotImplementedError
 
     def register_propagate_forward_pre_hook(self,
                                             hook: Callable) -> RemovableHandle:
+        r"""Registers a forward pre-hook on the module.
+        The hook will be called every time before :meth:`propagate` is invoked.
+        It should have the following signature:
+
+        .. code-block:: python
+
+            hook(module, inputs) -> None or modified input
+
+        The hook can modify the input.
+        Input keyword arguments are passed to the hook as a dictionary in
+        :obj:`inputs[-1]`.
+
+        Returns a :class:`torch.utils.hooks.RemovableHandle` that can be used
+        to remove the added hook by calling :obj:`handle.remove()`.
+        """
         handle = RemovableHandle(self._propagate_forward_pre_hooks)
         self._propagate_forward_pre_hooks[handle.id] = hook
         return handle
 
     def register_propagate_forward_hook(self,
                                         hook: Callable) -> RemovableHandle:
+        r"""Registers a forward hook on the module.
+        The hook will be called every time after :meth:`propagate` has computed
+        an output.
+        It should have the following signature:
+
+        .. code-block:: python
+
+            hook(module, inputs, output) -> None or modified output
+
+        The hook can modify the output.
+        Input keyword arguments are passed to the hook as a dictionary in
+        :obj:`inputs[-1]`.
+
+        Returns a :class:`torch.utils.hooks.RemovableHandle` that can be used
+        to remove the added hook by calling :obj:`handle.remove()`.
+        """
         handle = RemovableHandle(self._propagate_forward_hooks)
         self._propagate_forward_hooks[handle.id] = hook
         return handle
 
     def register_message_forward_pre_hook(self,
                                           hook: Callable) -> RemovableHandle:
+        r"""Registers a forward pre-hook on the module.
+        The hook will be called every time before :meth:`message` is invoked.
+        See :meth:`register_propagate_forward_pre_hook` for more information.
+        """
         handle = RemovableHandle(self._message_forward_pre_hooks)
         self._message_forward_pre_hooks[handle.id] = hook
         return handle
 
     def register_message_forward_hook(self, hook: Callable) -> RemovableHandle:
+        r"""Registers a forward hook on the module.
+        The hook will be called every time after :meth:`message` has computed
+        an output.
+        See :meth:`register_propagate_forward_hook` for more information.
+        """
         handle = RemovableHandle(self._message_forward_hooks)
         self._message_forward_hooks[handle.id] = hook
         return handle
 
     def register_aggregate_forward_pre_hook(self,
                                             hook: Callable) -> RemovableHandle:
+        r"""Registers a forward pre-hook on the module.
+        The hook will be called every time before :meth:`aggregate` is invoked.
+        See :meth:`register_propagate_forward_pre_hook` for more information.
+        """
         handle = RemovableHandle(self._aggregate_forward_pre_hooks)
         self._aggregate_forward_pre_hooks[handle.id] = hook
         return handle
 
     def register_aggregate_forward_hook(self,
                                         hook: Callable) -> RemovableHandle:
+        r"""Registers a forward hook on the module.
+        The hook will be called every time after :meth:`aggregate` has computed
+        an output.
+        See :meth:`register_propagate_forward_hook` for more information.
+        """
         handle = RemovableHandle(self._aggregate_forward_hooks)
         self._aggregate_forward_hooks[handle.id] = hook
         return handle
 
     def register_message_and_aggregate_forward_pre_hook(
             self, hook: Callable) -> RemovableHandle:
+        r"""Registers a forward pre-hook on the module.
+        The hook will be called every time before :meth:`message_and_aggregate`
+        is invoked.
+        See :meth:`register_propagate_forward_pre_hook` for more information.
+        """
         handle = RemovableHandle(self._message_and_aggregate_forward_pre_hooks)
         self._message_and_aggregate_forward_pre_hooks[handle.id] = hook
         return handle
 
     def register_message_and_aggregate_forward_hook(
             self, hook: Callable) -> RemovableHandle:
+        r"""Registers a forward hook on the module.
+        The hook will be called every time after :meth:`message_and_aggregate`
+        has computed an output.
+        See :meth:`register_propagate_forward_hook` for more information.
+        """
         handle = RemovableHandle(self._message_and_aggregate_forward_hooks)
         self._message_and_aggregate_forward_hooks[handle.id] = hook
         return handle
 
     def register_edge_update_forward_pre_hook(
             self, hook: Callable) -> RemovableHandle:
+        r"""Registers a forward pre-hook on the module.
+        The hook will be called every time before :meth:`edge_update` is
+        invoked. See :meth:`register_propagate_forward_pre_hook` for more
+        information.
+        """
         handle = RemovableHandle(self._edge_update_forward_pre_hooks)
         self._edge_update_forward_pre_hooks[handle.id] = hook
         return handle
 
     def register_edge_update_forward_hook(self,
                                           hook: Callable) -> RemovableHandle:
+        r"""Registers a forward hook on the module.
+        The hook will be called every time after :meth:`edge_update` has
+        computed an output.
+        See :meth:`register_propagate_forward_hook` for more information.
+        """
         handle = RemovableHandle(self._edge_update_forward_hooks)
         self._edge_update_forward_hooks[handle.id] = hook
         return handle
 
-    # PyG ≥ 2.5: jittable is deprecated/no-op; keep the method for API compatibility.
+    @torch.jit.unused
     def jittable(self, typing: Optional[str] = None) -> 'MessagePassing':
-        import warnings
-        warnings.warn(
-            f"'{self.__class__.__name__}.jittable' is deprecated and a no-op.",
-            stacklevel=2
+        r"""Analyzes the :class:`MessagePassing` instance and produces a new
+        jittable module that can be used in combination with
+        :meth:`torch.jit.script`.
+
+        Args:
+            typing (str, optional): If given, will generate a concrete instance
+                with :meth:`forward` types based on :obj:`typing`, *e.g.*,
+                :obj:`"(Tensor, Optional[Tensor]) -> Tensor"`.
+        """
+        try:
+            from jinja2 import Template
+        except ImportError:
+            raise ModuleNotFoundError(
+                "No module named 'jinja2' found on this machine. "
+                "Run 'pip install jinja2' to install the library.")
+
+        source = inspect.getsource(self.__class__)
+
+        # Find and parse `propagate()` types to format `{arg1: type1, ...}`.
+        if hasattr(self, 'propagate_type'):
+            prop_types = {
+                k: sanitize(str(v))
+                for k, v in self.propagate_type.items()
+            }
+        else:
+            match = re.search(r'#\s*propagate_type:\s*\((.*)\)', source)
+            if match is None:
+                raise TypeError(
+                    'TorchScript support requires the definition of the types '
+                    'passed to `propagate()`. Please specify them via\n\n'
+                    'propagate_type = {"arg1": type1, "arg2": type2, ... }\n\n'
+                    'or via\n\n'
+                    '# propagate_type: (arg1: type1, arg2: type2, ...)\n\n'
+                    'inside the `MessagePassing` module.')
+            prop_types = split_types_repr(match.group(1))
+            prop_types = dict([re.split(r'\s*:\s*', t) for t in prop_types])
+
+        # Find and parse `edge_updater` types to format `{arg1: type1, ...}`.
+        if 'edge_update' in self.__class__.__dict__.keys():
+            if hasattr(self, 'edge_updater_type'):
+                edge_updater_types = {
+                    k: sanitize(str(v))
+                    for k, v in self.edge_updater.items()
+                }
+            else:
+                match = re.search(r'#\s*edge_updater_type:\s*\((.*)\)', source)
+                if match is None:
+                    raise TypeError(
+                        'TorchScript support requires the definition of the '
+                        'types passed to `edge_updater()`. Please specify '
+                        'them via\n\n edge_updater_type = {"arg1": type1, '
+                        '"arg2": type2, ... }\n\n or via\n\n'
+                        '# edge_updater_type: (arg1: type1, arg2: type2, ...)'
+                        '\n\ninside the `MessagePassing` module.')
+                edge_updater_types = split_types_repr(match.group(1))
+                edge_updater_types = dict(
+                    [re.split(r'\s*:\s*', t) for t in edge_updater_types])
+        else:
+            edge_updater_types = {}
+
+        type_hints = get_type_hints(self.__class__.update)
+        prop_return_type = type_hints.get('return', 'Tensor')
+        if str(prop_return_type)[:6] == '<class':
+            prop_return_type = prop_return_type.__name__
+
+        type_hints = get_type_hints(self.__class__.edge_update)
+        edge_updater_return_type = type_hints.get('return', 'Tensor')
+        if str(edge_updater_return_type)[:6] == '<class':
+            edge_updater_return_type = edge_updater_return_type.__name__
+
+        # Parse `_collect()` types to format `{arg:1, type1, ...}`.
+        collect_types = self.inspector.types(
+            ['message', 'aggregate', 'update'])
+
+        # Parse `_collect()` types to format `{arg:1, type1, ...}`,
+        # specific to the argument used for edge updates.
+        edge_collect_types = self.inspector.types(['edge_update'])
+
+        # Collect `forward()` header, body and @overload types.
+        forward_types = parse_types(self.forward)
+        forward_types = [resolve_types(*types) for types in forward_types]
+        forward_types = list(chain.from_iterable(forward_types))
+
+        keep_annotation = len(forward_types) < 2
+        forward_header = func_header_repr(self.forward, keep_annotation)
+        forward_body = func_body_repr(self.forward, keep_annotation)
+
+        if keep_annotation:
+            forward_types = []
+        elif typing is not None:
+            forward_types = []
+            forward_body = 8 * ' ' + f'# type: {typing}\n{forward_body}'
+
+        root = os.path.dirname(osp.realpath(__file__))
+        with open(osp.join(root, 'message_passing.jinja'), 'r') as f:
+            template = Template(f.read())
+
+        uid = '%06x' % random.randrange(16**6)
+        cls_name = f'{self.__class__.__name__}Jittable_{uid}'
+        jit_module_repr = template.render(
+            uid=uid,
+            module=str(self.__class__.__module__),
+            cls_name=cls_name,
+            parent_cls_name=self.__class__.__name__,
+            prop_types=prop_types,
+            prop_return_type=prop_return_type,
+            fuse=self.fuse,
+            collect_types=collect_types,
+            user_args=self._user_args,
+            edge_user_args=self._edge_user_args,
+            forward_header=forward_header,
+            forward_types=forward_types,
+            forward_body=forward_body,
+            msg_args=self.inspector.keys(['message']),
+            aggr_args=self.inspector.keys(['aggregate']),
+            msg_and_aggr_args=self.inspector.keys(['message_and_aggregate']),
+            update_args=self.inspector.keys(['update']),
+            edge_collect_types=edge_collect_types,
+            edge_update_args=self.inspector.keys(['edge_update']),
+            edge_updater_types=edge_updater_types,
+            edge_updater_return_type=edge_updater_return_type,
+            check_input=inspect.getsource(self._check_input)[:-1],
         )
-        return self
+        # Instantiate a class from the rendered JIT module representation.
+        cls = class_from_module_repr(cls_name, jit_module_repr)
+        module = cls.__new__(cls)
+        module.__dict__ = self.__dict__.copy()
+        module.jittable = None
+        return module
 
     def __repr__(self) -> str:
         if hasattr(self, 'in_channels') and hasattr(self, 'out_channels'):

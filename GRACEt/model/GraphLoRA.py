@@ -36,28 +36,28 @@ class LogReg(nn.Module):
         torch.nn.init.xavier_uniform_(self.fc.weight)
 
 
-def transfer2(pretrain_data, downstream_data, pretrained_gnn_state, args, config, gpu_id, seed, train_dataset, test_dataset):
+def transfer2(pretrain_data, downstream_data, pretrained_gnn_state, args, config, gpu_id, seed, train_dataset, test_dataset, dataset):
     set_seed(seed)
     device = torch.device('cuda:{}'.format(gpu_id) if torch.cuda.is_available() else 'cpu')
-    pretrain_data = pretrain_data.to(device)
-    downstream_data = downstream_data.to(device)
+    pretrain_data = pretrain_data
+    downstream_data = downstream_data
 
     gnn = GNN(pretrain_data.x.shape[1], config['output_dim'], act(config['activation']), config['gnn_type'], config['num_layers'])
     gnn.load_state_dict(pretrained_gnn_state)
-    gnn.to(device)
+    # gnn.to(device)
 
     num_classes = 13
     logreg = LogReg(config['output_dim'], num_classes)
-    logreg = logreg.to(device)
+    # logreg = logreg.to(device)
     loss_fn = nn.CrossEntropyLoss()
 
     index = np.arange(downstream_data.x.shape[0])
     np.random.shuffle(index)
-    train_mask = torch.zeros(downstream_data.x.shape[0]).bool().to(device)
-    val_mask = torch.zeros(downstream_data.x.shape[0]).bool().to(device)
-    test_mask = torch.zeros(downstream_data.x.shape[0]).bool().to(device)
-    train_mask[index[:int(len(index) * 0.7)]] = True
-    val_mask[index[int(len(index) * 0.7):int(len(index) * 1)]] = True
+    train_mask = torch.zeros(downstream_data.x.shape[0]).bool()
+    val_mask = torch.zeros(downstream_data.x.shape[0]).bool()
+    test_mask = torch.zeros(downstream_data.x.shape[0]).bool()
+    train_mask[index[:int(len(index) * 0.1)]] = True
+    val_mask[index[int(len(index) * 0.2):int(len(index) * 1)]] = True
     test_mask[index[int(len(index) * 1):]] = True
 
     downstream_data.train_mask = train_mask
@@ -140,7 +140,7 @@ def transfer2(pretrain_data, downstream_data, pretrained_gnn_state, args, config
 
     print('epoch: {}, train_acc: {:4f}, val_acc: {:4f}, val_recall: {:4f}, val_f1: {:4f}'.format(
         best_epoch, best_train_acc, best_val_acc, best_val_recall, best_val_f1))
-    result_path = './result'
+    result_path = f'./result/{dataset}'
     mkdir(result_path)
     with open(result_path + '/result.txt', 'a') as f:
         f.write(f'{train_dataset} to {test_dataset}: seed: %d, epoch: %d, train_loss: %f, train_acc: %f, train_recall: %f, train_f1: %f, val_acc: %f, val_recall: %f, val_f1: %f\n' % 

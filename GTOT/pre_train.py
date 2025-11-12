@@ -7,11 +7,11 @@ from util import get_dataset, act, mkdir
 from torch_geometric.transforms import SVDFeatureReduction
 
 
-def pretrain2(data, pretext, config, gpu):
+def pretrain2(data, pretext, config, gpu, pre_dataset, dataset):
     device = torch.device('cuda:{}'.format(gpu) if torch.cuda.is_available() else 'cpu')
     data = data.to(device)
 
-    pre_trained_model_path = './pre_trained_gnn/'
+    pre_trained_model_path = f'./pre_trained_gnn/{dataset}/'
     mkdir(pre_trained_model_path)
     print("create PreTrain instance...")
     input_dim = data.x.shape[1]
@@ -39,7 +39,7 @@ def pretrain2(data, pretext, config, gpu):
     prev = start
     pretrain_model.train()
     min_loss = 100000
-    model_path = pre_trained_model_path + "{}.pth".format(2010)
+    model_path = pre_trained_model_path + "{}.pth".format(pre_dataset)
     for epoch in range(1, num_epochs + 1):
         optimizer.zero_grad()
         loss = pretrain_model.compute_loss(data.x, data.edge_index)
@@ -53,7 +53,7 @@ def pretrain2(data, pretext, config, gpu):
             min_loss = loss
             best_model_state = pretrain_model.gnn.state_dict()
             torch.save(pretrain_model.gnn.state_dict(), model_path)
-            print("+++model saved ! {}.pth".format(2010))
+            print("+++model saved ! {}.pth".format(pre_dataset))
     print("=== Final ===")
 
     return best_model_state

@@ -125,7 +125,7 @@ def main():
     parser.add_argument('--JK', type=str, default="last",
                         help='how the node features across layers are combined. last, sum, max or concat')
     parser.add_argument('--gnn_type', type=str, default="gin")
-    parser.add_argument('--dataset', type=str, default='CiteSeer')
+    parser.add_argument('--dataset', type=str, default='H1N1')
     parser.add_argument('--input_model_file', type=str, default='')
     parser.add_argument('--filename', type=str, default='', help='output filename')
     parser.add_argument('--seed', type=int, default=0, help="Seed for splitting the dataset.")
@@ -143,10 +143,14 @@ def main():
     args = parser.parse_args()
     set_seed(args.seed)
     device = torch.device("cuda:" + str(args.device)) if torch.cuda.is_available() else torch.device("cpu")
-    data_file_path = f'H1N1_graph_{args.test_dataset}.pt'
+    if args.dataset == 'H1N1':
+        data_file_path = f'H1N1/H1N1_graph_{args.test_dataset}.pt'
+    elif args.dataset == 'eth':
+        data_file_path = f'graph_dat_eth/{args.test_dataset}.pt'
+
     data = torch.load(data_file_path, weights_only=False)
     data = data.to(device)
-    model_path = "./pre_trained_gnn/{}.pth".format(args.pretrain_dataset)
+    model_path = F"./pre_trained_gnn/{args.dataset}/{args.pretrain_dataset}.pth"
     
     config_test = yaml.load(open(args.config), Loader=SafeLoader)['Cora']                
     input_dim = data.x.shape[1]
@@ -215,7 +219,8 @@ def main():
 
     print('epoch: {}, train_acc: {:4f}, val_acc: {:4f}, val_recall: {:4f}, val_f1: {:4f}'.format(
         best_epoch, best_train_acc, best_val_acc, best_val_recall, best_val_f1))
-    result_path = './result'
+    result_path = f'./result/{args.dataset}'
+    os.makedirs(result_path, exist_ok=True)
     with open(result_path + '/AdapterGNN.txt', 'a') as f:
         f.write(f'{args.pretrain_dataset} to {args.test_dataset}: seed: %d, epoch: %d, train_acc: %f, train_recall: %f, train_f1: %f, val_acc: %f, val_recall: %f, val_f1: %f\n' % 
                 (args.seed, best_epoch, best_train_acc, best_train_recall, best_train_f1, best_val_acc, best_val_recall, best_val_f1))

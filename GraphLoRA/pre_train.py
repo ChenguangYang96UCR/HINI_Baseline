@@ -7,14 +7,14 @@ from util import get_dataset, act, mkdir
 from torch_geometric.transforms import SVDFeatureReduction
 
 
-def pretrain2(data, pretext, config, gpu, pre_dataset, is_reduction=False):
+def pretrain2(data, pretext, config, gpu, pre_dataset, dataset, is_reduction=False):
     if is_reduction:
         feature_reduce = SVDFeatureReduction(out_channels=100)
         data = feature_reduce(data)
     device = torch.device('cuda:{}'.format(gpu) if torch.cuda.is_available() else 'cpu')
     # data = data
 
-    pre_trained_model_path = './pre_trained_gnn/'
+    pre_trained_model_path = f'./pre_trained_gnn/{dataset}/'
     mkdir(pre_trained_model_path)
     print("create PreTrain instance...")
     input_dim = data.x.shape[1]

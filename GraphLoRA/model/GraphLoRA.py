@@ -53,7 +53,7 @@ class LogReg(nn.Module):
         torch.nn.init.xavier_uniform_(self.fc.weight)
 
 
-def transfer2(pretrain_data, downstream_data, pretrained_gnn_state, args, config, gpu_id, seed, pre_dataset, downstream_dataset,is_reduction = False):
+def transfer2(pretrain_data, downstream_data, pretrained_gnn_state, args, config, gpu_id, seed, pre_dataset, downstream_dataset, dataset, is_reduction = False):
     set_seed(seed)
     device = torch.device('cuda:{}'.format(gpu_id) if torch.cuda.is_available() else 'cpu')
     pretrain_data = pretrain_data
@@ -212,7 +212,7 @@ def transfer2(pretrain_data, downstream_data, pretrained_gnn_state, args, config
 
     print('epoch: {}, train_acc: {:4f}, val_acc: {:4f}, val_recall: {:4f}, val_f1: {:4f}'.format(
         best_epoch, best_train_acc, best_val_acc, best_val_recall, best_val_f1))
-    result_path = './result'
+    result_path = f'./result/{dataset}'
     mkdir(result_path)
     with open(result_path + '/result.txt', 'a') as f:
         f.write(f'{pre_dataset} to {downstream_dataset}: seed: %d, epoch: %d, train_loss: %f, train_acc: %f, train_recall: %f, train_f1: %f, val_acc: %f, val_recall: %f, val_f1: %f\n' % 

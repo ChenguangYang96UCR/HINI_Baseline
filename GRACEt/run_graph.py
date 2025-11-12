@@ -30,29 +30,37 @@ def main():
     set_seed(42)
 
     parser = argparse.ArgumentParser()
+    parser.add_argument('--dataset', type=str, default='H1N1')
     parser.add_argument('--pretrain_dataset', type=str, default='2009')
     parser.add_argument('--test_dataset', type=str, default='2010')
     parser.add_argument('--gpu_id', type=int, default=0)
     parser.add_argument('--config', type=str, default='./config.yaml')
     parser.add_argument('--para_config', type=str, default='./config2.yaml')
     parser.add_argument('--seed', type=int, default=0)
+    parser.add_argument('--num_epochs', type=int, default=300)
     args = parser.parse_args()
     args = get_parameter(args)
 
-    pretrain_graph_file_path = f'H1N1_graph_{args.pretrain_dataset}.pt'
-    pretrain_graph = torch.load(pretrain_graph_file_path, weights_only=False)
-    downstream_graph_file_path = f'H1N1_graph_{args.test_dataset}.pt'
-    downstream_graph = torch.load(downstream_graph_file_path, weights_only=False)
+    if args.dataset == 'H1N1':
+        pretrain_graph_file_path = f'H1N1/H1N1_graph_{args.pretrain_dataset}.pt'
+        pretrain_graph = torch.load(pretrain_graph_file_path, weights_only=False)
+        downstream_graph_file_path = f'H1N1/H1N1_graph_{args.test_dataset}.pt'
+        downstream_graph = torch.load(downstream_graph_file_path, weights_only=False)
+    elif args.dataset == 'eth':
+        pretrain_graph_file_path = f'graph_dat_eth/{args.pretrain_dataset}.pt'
+        pretrain_graph = torch.load(pretrain_graph_file_path, weights_only=False).cpu()
+        downstream_graph_file_path = f'graph_dat_eth/{args.test_dataset}.pt'
+        downstream_graph = torch.load(downstream_graph_file_path, weights_only=False).cpu()
 
     # --- 预训练 ---
     print("\n" + "="*30 + "\nPRE-TRAINING\n" + "="*30)
     config_pretrain = yaml.load(open(args.config), Loader=SafeLoader)['Cora']   
-    pretrained_gnn_state = pretrain2(pretrain_graph, "GRACE", config_pretrain, args.gpu_id, args.pretrain_dataset)
+    pretrained_gnn_state = pretrain2(pretrain_graph, "GRACE", config_pretrain, args.gpu_id, args.pretrain_dataset, args.dataset)
 
     # --- 微调 ---
     print("\n" + "="*30 + "\nFINE-TUNING\n" + "="*30)
     config_transfer = yaml.load(open(args.config), Loader=SafeLoader)['transfer']
-    transfer2(pretrain_graph, downstream_graph, pretrained_gnn_state, args, config_transfer, args.gpu_id, args.seed, args.pretrain_dataset, args.test_dataset)
+    transfer2(pretrain_graph, downstream_graph, pretrained_gnn_state, args, config_transfer, args.gpu_id, args.seed, args.pretrain_dataset, args.test_dataset, args.dataset)
 
 
 if __name__ == '__main__':

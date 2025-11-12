@@ -136,16 +136,22 @@ class GNN(torch.nn.Module):
 if __name__ == '__main__':
     set_seed(42)
     parser = argparse.ArgumentParser()
+    parser.add_argument('--dataset', type=str, default='H1N1')
     parser.add_argument('--pretrain_dataset', type=str, default='2009')
     parser.add_argument('--test_dataset', type=str, default='2010')
     parser.add_argument('--seed', type=int, default=0)
+    parser.add_argument('--epochs', type=int, default=300)
     args = parser.parse_args()
     
-    pretrain_graph_file_path = f'H1N1_graph_{args.pretrain_dataset}.pt'
+    if args.dataset == 'H1N1':
+        pretrain_graph_file_path = f'H1N1/H1N1_graph_{args.pretrain_dataset}.pt'
+    elif args.dataset == 'eth':
+        pretrain_graph_file_path = f'graph_dat_eth/{args.pretrain_dataset}.pt'
+
     pretrain_graph = torch.load(pretrain_graph_file_path, weights_only = False) 
     config_pretrain = yaml.load(open('config.yaml'), Loader=SafeLoader)['Cora']
     gpu_id = 0
-    pretrained_gnn_state = pretrain2(pretrain_graph, "GRACE", config_pretrain, gpu_id)   
+    pretrained_gnn_state = pretrain2(pretrain_graph, "GRACE", config_pretrain, gpu_id, args.pretrain_dataset, args.dataset)   
 
     seed = args.seed
     set_seed(seed)
@@ -153,11 +159,15 @@ if __name__ == '__main__':
     num_layers = 2
     lr = 0.02
     wd = 0.02
-    epochs = 300
+    epochs = args.epochs
     trade_off_lambda = 0.01
 
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    data_file_path = f'H1N1_graph_{args.test_dataset}.pt'
+    if args.dataset == 'H1N1':
+        data_file_path = f'H1N1/H1N1_graph_{args.test_dataset}.pt'
+    elif args.dataset == 'eth':
+        data_file_path = f'graph_dat_eth/{args.test_dataset}.pt'
+
     data = torch.load(data_file_path,  weights_only = False)
     data.edge_index = add_self_loops(data.edge_index, num_nodes=data.x.shape[0])[0]
     data = data.to(device)
@@ -193,8 +203,8 @@ if __name__ == '__main__':
     train_mask = torch.zeros(data.x.shape[0]).bool().to(device)
     val_mask = torch.zeros(data.x.shape[0]).bool().to(device)
     test_mask = torch.zeros(data.x.shape[0]).bool().to(device)
-    train_mask[index[:int(len(index) * 0.7)]] = True
-    val_mask[index[int(len(index) * 0.7):int(len(index) * 1)]] = True
+    train_mask[index[:int(len(index) * 0.1)]] = True
+    val_mask[index[int(len(index) * 0.2):int(len(index) * 1)]] = True
 
     data.train_mask = train_mask
     data.val_mask = val_mask
@@ -277,8 +287,8 @@ if __name__ == '__main__':
 
     print('epoch: {}, train_acc: {:4f}, val_acc: {:4f}, val_recall: {:4f}, val_f1: {:4f}'.format(
         best_epoch, best_train_acc, best_val_acc, best_val_recall, best_val_f1))
-    result_path = './result'
+    result_path = f'./result/{args.dataset}'
     mkdir(result_path)
     with open(result_path + '/GTOT.txt', 'a') as f:
-        f.write(f'{args.pretrain_dataset} to {args.test_dataset}: seed: %d, epoch: %d, train_loss: %f, train_acc: %f, train_recall: %f, train_f1: %f, val_acc: %f, val_recall: %f, val_f1: %f\n' % 
+        f.write(f'{args.dataset}: {args.pretrain_dataset} to {args.test_dataset}: seed: %d, epoch: %d, train_loss: %f, train_acc: %f, train_recall: %f, train_f1: %f, val_acc: %f, val_recall: %f, val_f1: %f\n' % 
                 (seed, best_epoch, best_loss, best_train_acc, best_train_recall, best_train_f1, best_val_acc, best_val_recall, best_val_f1))

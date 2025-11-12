@@ -1,0 +1,10 @@
+2010: seed: 0, val_acc: 0.561798, val_recall: 0.310354, val_f1: 0.299461
+2009: seed: 0, val_acc: 0.414454, val_recall: 0.362251, val_f1: 0.297058
+2010: seed: 0, val_acc: 0.561798, val_recall: 0.310354, val_f1: 0.299461
+2011: seed: 0, val_acc: 0.470588, val_recall: 0.195011, val_f1: 0.160714
+2012: seed: 0, val_acc: 0.451220, val_recall: 0.319177, val_f1: 0.274573
+2013: seed: 0, val_acc: 0.530864, val_recall: 0.153112, val_f1: 0.125683
+2014: seed: 0, val_acc: 0.675000, val_recall: 0.464424, val_f1: 0.428941
+2015: seed: 0, val_acc: 0.701149, val_recall: 0.492229, val_f1: 0.467448
+2016: seed: 0, val_acc: 0.633005, val_recall: 0.370680, val_f1: 0.306456
+2017: seed: 0, val_acc: 0.679487, val_recall: 0.460859, val_f1: 0.409996
